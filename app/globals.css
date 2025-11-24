@@ -3,13 +3,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-geist-sans: var(--geist-sans); /* Thêm dòng này */
+  --font-geist-mono: var(--geist-mono); /* Thêm dòng này */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist-sans); /* Sẽ sử dụng font từ layout */
+  --font-mono: var(--font-geist-mono); /* Sẽ sử dụng font từ layout */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +24,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif; /* Ưu tiên Geist Sans */
+}
+
+html {
+  scroll-behavior: smooth; /* Thêm dòng này cho smooth scrolling */
 }
