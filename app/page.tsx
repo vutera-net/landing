@@ -1,18 +1,18 @@
 // app/page.tsx
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function Home() {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Xử lý đăng ký email ở đây
-    console.log('Email đã đăng ký:', email);
+    console.log("Email đã đăng ký:", email);
     setIsSubscribed(true);
-    setEmail('');
+    setEmail("");
   };
 
   return (
@@ -27,26 +27,43 @@ export default function Home() {
             <span className="ml-2 text-xl font-bold text-gray-800">Vutera</span>
           </div>
           <nav className="hidden md:flex space-x-8">
-            <a href="#services" className="text-gray-600 hover:text-indigo-600 transition-colors">Dịch vụ</a>
-            <a href="#about" className="text-gray-600 hover:text-indigo-600 transition-colors">Về chúng tôi</a>
-            <a href="#contact" className="text-gray-600 hover:text-indigo-600 transition-colors">Liên hệ</a>
+            <a
+              href="#services"
+              className="text-gray-600 hover:text-indigo-600 transition-colors"
+            >
+              Dịch vụ
+            </a>
+            <a
+              href="#about"
+              className="text-gray-600 hover:text-indigo-600 transition-colors"
+            >
+              Về chúng tôi
+            </a>
+            <a
+              href="#contact"
+              className="text-gray-600 hover:text-indigo-600 transition-colors"
+            >
+              Liên hệ
+            </a>
           </nav>
           <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
             Liên hệ ngay
           </button>
         </div>
       </header>
-
       {/* Hero Section */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Giải pháp công nghệ
-            <span className="text-indigo-600 block">cho tương lai doanh nghiệp</span>
+            <span className="text-indigo-600 block">
+              cho tương lai doanh nghiệp
+            </span>
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-            Vutera cung cấp các giải pháp công nghệ hiện đại giúp doanh nghiệp tối ưu hóa quy trình, 
-            nâng cao hiệu suất và phát triển bền vững trong kỷ nguyên số.
+            Vutera cung cấp các giải pháp công nghệ hiện đại giúp doanh nghiệp
+            tối ưu hóa quy trình, nâng cao hiệu suất và phát triển bền vững
+            trong kỷ nguyên số.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors">
@@ -58,49 +75,91 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section id="services" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Dịch vụ của chúng tôi</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Dịch vụ của chúng tôi
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-blue-50 p-6 rounded-xl">
               <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                  />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Phát triển phần mềm</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Phát triển phần mềm
+              </h3>
               <p className="text-gray-600">
-                Xây dựng ứng dụng web và mobile tùy chỉnh theo nhu cầu riêng của doanh nghiệp bạn.
+                Xây dựng ứng dụng web và mobile tùy chỉnh theo nhu cầu riêng của
+                doanh nghiệp bạn.
               </p>
             </div>
             <div className="bg-blue-50 p-6 rounded-xl">
               <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Tư vấn công nghệ</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Tư vấn công nghệ
+              </h3>
               <p className="text-gray-600">
-                Đánh giá và đề xuất giải pháp công nghệ phù hợp với mục tiêu và ngân sách của doanh nghiệp.
+                Đánh giá và đề xuất giải pháp công nghệ phù hợp với mục tiêu và
+                ngân sách của doanh nghiệp.
               </p>
             </div>
             <div className="bg-blue-50 p-6 rounded-xl">
               <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+                  />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Điện toán đám mây</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Điện toán đám mây
+              </h3>
               <p className="text-gray-600">
-                Triển khai và quản lý hệ thống trên nền tảng đám mây, đảm bảo tính sẵn sàng và bảo mật.
+                Triển khai và quản lý hệ thống trên nền tảng đám mây, đảm bảo
+                tính sẵn sàng và bảo mật.
               </p>
             </div>
           </div>
         </div>
       </section>
-
       {/* About Section */}
       <section id="about" className="py-16">
         <div className="container mx-auto px-4">
@@ -111,14 +170,18 @@ export default function Home() {
               </div>
             </div>
             <div className="md:w-1/2 md:pl-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Về Vutera</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Về Vutera
+              </h2>
               <p className="text-gray-600 mb-4">
-                Vutera được thành lập với sứ mệnh mang đến các giải pháp công nghệ tiên tiến, 
-                giúp doanh nghiệp Việt Nam nâng cao năng lực cạnh tranh trong thời đại số.
+                Vutera được thành lập với sứ mệnh mang đến các giải pháp công
+                nghệ tiên tiến, giúp doanh nghiệp Việt Nam nâng cao năng lực
+                cạnh tranh trong thời đại số.
               </p>
               <p className="text-gray-600 mb-4">
-                Với đội ngũ chuyên gia giàu kinh nghiệm và đam mê công nghệ, chúng tôi cam kết 
-                cung cấp những sản phẩm và dịch vụ chất lượng cao, đáp ứng mọi nhu cầu của khách hàng.
+                Với đội ngũ chuyên gia giàu kinh nghiệm và đam mê công nghệ,
+                chúng tôi cam kết cung cấp những sản phẩm và dịch vụ chất lượng
+                cao, đáp ứng mọi nhu cầu của khách hàng.
               </p>
               <div className="flex mt-8">
                 <div className="mr-8">
@@ -138,13 +201,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-indigo-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Sẵn sàng chuyển đổi số?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Hãy để Vutera đồng hành cùng doanh nghiệp của bạn trên hành trình chuyển đổi số
+            Hãy để Vutera đồng hành cùng doanh nghiệp của bạn trên hành trình
+            chuyển đổi số
           </p>
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
             <div className="flex flex-col sm:flex-row gap-2">
@@ -156,18 +219,18 @@ export default function Home() {
                 className="flex-grow px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                 required
               />
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
               >
-                {isSubscribed ? 'Đã đăng ký!' : 'Nhận tư vấn'}
+                {isSubscribed ? "Đã đăng ký!" : "Nhận tư vấn"}
               </button>
             </div>
           </form>
         </div>
       </section>
-
       {/* Footer */}
+      // Footer section trong app/page.tsx - cập nhật phần footer
       <footer id="contact" className="bg-gray-800 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -185,19 +248,75 @@ export default function Home() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Liên kết</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Trang chủ</a></li>
-                <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Dịch vụ</a></li>
-                <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">Về chúng tôi</a></li>
-                <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Liên hệ</a></li>
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Trang chủ
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Dịch vụ
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Về chúng tôi
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Liên hệ
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Dịch vụ</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Phát triển phần mềm</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Tư vấn công nghệ</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Điện toán đám mây</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Bảo mật hệ thống</a></li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Phát triển phần mềm
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Tư vấn công nghệ
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Điện toán đám mây
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Bảo mật hệ thống
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
@@ -209,8 +328,28 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>© {new Date().getFullYear()} Vutera. Tất cả quyền được bảo lưu.</p>
+
+          {/* Thêm phần Legal Links */}
+          <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400 mb-4 md:mb-0">
+              <p>
+                © {new Date().getFullYear()} Vutera. Tất cả quyền được bảo lưu.
+              </p>
+            </div>
+            <div className="flex space-x-6">
+              <a
+                href="/privacy"
+                className="text-gray-400 hover:text-white transition-colors text-sm"
+              >
+                Chính sách bảo mật
+              </a>
+              <a
+                href="/terms"
+                className="text-gray-400 hover:text-white transition-colors text-sm"
+              >
+                Điều khoản sử dụng
+              </a>
+            </div>
           </div>
         </div>
       </footer>
