@@ -431,7 +431,7 @@ export default function Home() {
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   <div className="ml-4 text-xs dark:text-slate-500 text-slate-400 font-mono">
-                    Mobile App Architecture
+                    App Architecture
                   </div>
                 </div>
                 <div className="space-y-4 font-mono text-sm">
@@ -569,8 +569,7 @@ export default function Home() {
                 </span>
               </div>
               <p className="dark:text-slate-500 text-slate-600 leading-relaxed max-w-sm">
-                Đối tác tin cậy trong phát triển ứng dụng di động và giải pháp
-                phần mềm. Kết nối công nghệ với đời sống thực tiễn.
+                Giải pháp công nghệ tối ưu cho doanh nghiệp của bạn.
               </p>
             </div>
 
@@ -619,7 +618,7 @@ export default function Home() {
           </div>
 
           <div className="pt-8 border-t dark:border-slate-900 border-slate-200 flex flex-col md:flex-row justify-between items-center dark:text-slate-600 text-slate-500 text-sm">
-            <p>&copy; 2025 Vutera Studio. All rights reserved.</p>
+            <p>&copy; 2025 Vutera. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a
                 href="/privacy"

@@ -1,44 +1,11 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+
 // app/privacy/page.tsx
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center">
-            <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-              V
-            </div>
-            <span className="ml-2 text-xl font-bold text-gray-800">Vutera</span>
-          </div>
-          <nav className="hidden md:flex space-x-8">
-            <a
-              href="/"
-              className="text-gray-600 hover:text-indigo-600 transition-colors"
-            >
-              Trang chủ
-            </a>
-            <a
-              href="/#services"
-              className="text-gray-600 hover:text-indigo-600 transition-colors"
-            >
-              Dịch vụ
-            </a>
-            <a
-              href="/#about"
-              className="text-gray-600 hover:text-indigo-600 transition-colors"
-            >
-              Về chúng tôi
-            </a>
-          </nav>
-          <a
-            href="/#contact"
-            className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors"
-          >
-            Liên hệ ngay
-          </a>
-        </div>
-      </header>
+      <Header />
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12">
@@ -192,125 +159,7 @@ export default function PrivacyPolicy() {
         </div>
       </main>
 
-      {/* Footer (giống trang chủ) */}
-      <footer className="bg-gray-800 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center mb-4">
-                <div className="w-8 h-8 bg-indigo-500 rounded-lg flex items-center justify-center text-white font-bold">
-                  V
-                </div>
-                <span className="ml-2 text-xl font-bold">Vutera</span>
-              </div>
-              <p className="text-gray-400">
-                Giải pháp công nghệ tối ưu cho doanh nghiệp của bạn.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Liên kết</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    Trang chủ
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/#services"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    Dịch vụ
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/#about"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    Về chúng tôi
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/#contact"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    Liên hệ
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Dịch vụ</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    Phát triển phần mềm
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    Tư vấn công nghệ
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    Điện toán đám mây
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    Bảo mật hệ thống
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Liên hệ</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>Email: contact@vutera.net</li>
-                <li>Website: vutera.net</li>
-                <li>Điện thoại: +84 123 456 789</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 mb-4 md:mb-0">
-              <p>
-                © {new Date().getFullYear()} Vutera. Tất cả quyền được bảo lưu.
-              </p>
-            </div>
-            <div className="flex space-x-6">
-              <a href="/privacy" className="text-white font-medium text-sm">
-                Chính sách bảo mật
-              </a>
-              <a
-                href="/terms"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
-              >
-                Điều khoản sử dụng
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
