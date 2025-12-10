@@ -11,6 +11,7 @@ import {
   X,
 } from "lucide-react";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 interface ProcessItem {
   step: string;
@@ -99,8 +100,14 @@ export default function Home() {
             className="flex items-center space-x-2 cursor-pointer"
             onClick={() => scrollToSection("hero")}
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-xl">V</span>
+            <div className="w-10 h-10 rounded-xl overflow-hidden cursor-pointer">
+              <Image
+                src="/main_logo.png"
+                alt="Vutera Logo"
+                width={40}
+                height={40}
+                className="object-cover"
+              />
             </div>
             <span className="text-2xl font-bold bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-white dark:to-slate-400 bg-gradient-to-r from-slate-900 to-slate-600">
               Vutera
@@ -561,8 +568,14 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold">V</span>
+                <div className="w-10 h-10 rounded-xl overflow-hidden cursor-pointer">
+                  <Image
+                    src="/main_logo.png"
+                    alt="Vutera Logo"
+                    width={40}
+                    height={40}
+                    className="object-cover"
+                  />
                 </div>
                 <span className="text-xl font-bold dark:text-white text-slate-900">
                   Vutera
