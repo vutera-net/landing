@@ -102,7 +102,7 @@ export default function Home() {
           >
             <div className="w-10 h-10 rounded-xl overflow-hidden cursor-pointer">
               <Image
-                src="/main_logo.png"
+                src="/logo.png"
                 alt="Vutera Logo"
                 width={40}
                 height={40}
@@ -252,13 +252,23 @@ export default function Home() {
               {/* <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl h-80 w-full flex items-center justify-center text-white text-5xl font-bold">
                 VUTERA
               </div> */}
-              <div className="rounded-2xl w-full bg-white dark:bg-slate-900 border dark:border-slate-800 border-slate-200 flex items-center justify-center p-6">
+              {/* <div className="rounded-2xl w-full bg-white dark:bg-slate-900 border dark:border-slate-800 border-slate-200 flex items-center justify-center p-6">
                 <Image
                   src="/full_logo.png"
                   alt="Vutera Logo"
                   width={300}
                   height={300}
                   className="object-contain w-full max-w-[220px] md:max-w-[300px]"
+                  priority
+                />
+              </div> */}
+              <div className="rounded-2xl w-full h-80 bg-white dark:bg-slate-900 border dark:border-slate-800 border-slate-200 flex items-center justify-center">
+                <Image
+                  src="/logo.png"
+                  alt="Vutera Logo"
+                  width={320}
+                  height={320}
+                  className="object-contain h-full w-auto p-4"
                   priority
                 />
               </div>
@@ -477,7 +487,7 @@ export default function Home() {
                     <br />
                     const ecosystem = [
                     <br />
-                    &nbsp;&nbsp;&quot;Vutera Spirit&quot;, /* Tâm linh số */{" "}
+                    &nbsp;&nbsp;&quot;Vutera Harmony&quot;, /* Tâm linh số */{" "}
                     <br />
                     &nbsp;&nbsp;&quot;Vutera Finance&quot;, /* Tài chính cá nhân
                     */ <br />
@@ -594,7 +604,7 @@ export default function Home() {
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-10 h-10 rounded-xl overflow-hidden cursor-pointer">
                   <Image
-                    src="/main_logo.png"
+                    src="/logo.png"
                     alt="Vutera Logo"
                     width={40}
                     height={40}
@@ -606,7 +616,7 @@ export default function Home() {
                 </span>
               </div>
               <p className="dark:text-slate-500 text-slate-600 leading-relaxed max-w-sm">
-                Công nghệ khai sáng con người.
+                Technology for Humanity.
               </p>
             </div>
 
@@ -619,7 +629,7 @@ export default function Home() {
                   className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
                   onClick={() => scrollToSection("services")}
                 >
-                  Vutera Spirit
+                  Vutera Harmony
                 </li>
                 <li
                   className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"

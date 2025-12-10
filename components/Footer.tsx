@@ -33,7 +33,7 @@ export default function Footer() {
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 rounded-xl overflow-hidden cursor-pointer">
                 <Image
-                  src="/main_logo.png"
+                  src="/logo.png"
                   alt="Vutera Logo"
                   width={40}
                   height={40}
