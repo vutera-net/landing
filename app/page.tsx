@@ -22,23 +22,23 @@ interface ProcessItem {
 const processes: ProcessItem[] = [
   {
     step: "01",
-    title: "Khám phá & Tư vấn",
-    desc: "Phân tích yêu cầu, nghiên cứu thị trường và định hướng giải pháp công nghệ.",
+    title: "Thấu Hiểu (Insight)",
+    desc: "Ứng dụng AI và phân tích dữ liệu để thấu hiểu nhu cầu, bối cảnh và nguyện vọng sâu xa của bạn - dù là trong đời sống tinh thần, tài chính hay sự nghiệp.",
   },
   {
     step: "02",
-    title: "Thiết kế UI/UX",
-    desc: "Xây dựng wireframe và prototype, tối ưu trải nghiệm người dùng.",
+    title: "Cá Nhân Hóa (Personalization)",
+    desc: "Từ sự thấu hiểu đó, chúng tôi cung cấp giải pháp, gợi ý và lộ trình được cá nhân hóa, phù hợp duy nhất với bạn, thay vì một kết quả chung chung.",
   },
   {
     step: "03",
-    title: "Phát triển & Kiểm thử",
-    desc: "Coding với công nghệ mới nhất, kiểm thử đa tầng.",
+    title: "Hành Động Thông Minh (Smart Action)",
+    desc: "Biến những hiểu biết thành hành động cụ thể, dễ dàng thông qua các công cụ thông minh: từ app quản lý chi tiêu, lộ trình học tập, đến gợi ý phong thủy hay chiến dịch marketing tự động.",
   },
   {
     step: "04",
-    title: "Bàn giao & Bảo trì",
-    desc: "Deploy, hướng dẫn sử dụng và hỗ trợ kỹ thuật lâu dài.",
+    title: "Theo Dõi & Phát Triển (Growth)",
+    desc: "Đồng hành cùng bạn theo thời gian, điều chỉnh và đề xuất mới dựa trên sự thay đổi, giúp bạn không ngừng tối ưu và phát triển.",
   },
 ];
 
@@ -126,13 +126,13 @@ export default function Home() {
               onClick={() => scrollToSection("services")}
               className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
-              Dịch vụ
+              Sản phẩm
             </button>
             <button
               onClick={() => scrollToSection("process")}
               className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
-              Quy trình
+              Hành trình
             </button>
 
             <button
@@ -192,24 +192,22 @@ export default function Home() {
         <div className="absolute bottom-0 right-0 w-[600px] h-[400px] bg-purple-600/10 rounded-full blur-[100px] -z-10"></div>
 
         <div className="container mx-auto px-6 text-center">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border dark:border-slate-700 border-slate-300 text-sm text-slate-600 dark:text-slate-400 mb-8 animate-fade-in-up">
+          {/* <div className="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 border dark:border-slate-700 border-slate-300 text-sm text-slate-600 dark:text-slate-400 mb-8 animate-fade-in-up">
             <span className="flex h-2 w-2 rounded-full bg-green-500 mr-2"></span>
             Sẵn sàng cho các dự án 2025 - 2026
-          </div>
+          </div> */}
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight dark:text-white text-slate-900">
-            Giải pháp{" "}
+            Technology for{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-              công nghệ
-            </span>{" "}
-            <br />
-            cho tương lai doanh nghiệp
+              Humanity
+            </span>
           </h1>
 
           <p className="text-lg md:text-xl dark:text-slate-400 text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Vutera cung cấp các giải pháp công nghệ hiện đại giúp doanh nghiệp
-            tối ưu hóa quy trình, nâng cao hiệu suất và phát triển bền vững
-            trong kỷ nguyên số.
+            Ứng dụng công nghệ tiên tiến (AI, Dữ liệu lớn, Bản đồ số) để giải
+            quyết các nhu cầu thiết yếu và nâng cao chất lượng cuộc sống người
+            Việt, từ đời sống tinh thần đến vật chất.
           </p>
 
           <div className="flex flex-col md:flex-row justify-center items-center gap-4">
@@ -251,8 +249,18 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">
-              <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl h-80 w-full flex items-center justify-center text-white text-5xl font-bold">
+              {/* <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl h-80 w-full flex items-center justify-center text-white text-5xl font-bold">
                 VUTERA
+              </div> */}
+              <div className="rounded-2xl w-full bg-white dark:bg-slate-900 border dark:border-slate-800 border-slate-200 flex items-center justify-center p-6">
+                <Image
+                  src="/full_logo.png"
+                  alt="Vutera Logo"
+                  width={300}
+                  height={300}
+                  className="object-contain w-full max-w-[220px] md:max-w-[300px]"
+                  priority
+                />
               </div>
             </div>
             <div className="md:w-1/2 md:pl-12">
@@ -261,19 +269,17 @@ export default function Home() {
               </h2>
               <br />
               <p className="dark:text-slate-400 text-slate-600">
-                Vutera được thành lập với sứ mệnh mang đến các giải pháp công
-                nghệ tiên tiến, giúp doanh nghiệp Việt Nam nâng cao năng lực
-                cạnh tranh trong thời đại số.
+                Chúng tôi ứng dụng công nghệ không để thay thế con người – mà để
+                khai sáng và phụng sự con người.
               </p>
               <p className="dark:text-slate-400 text-slate-600">
-                Với đội ngũ chuyên gia giàu kinh nghiệm và đam mê công nghệ,
-                chúng tôi cam kết cung cấp những sản phẩm và dịch vụ chất lượng
-                cao, đáp ứng mọi nhu cầu của khách hàng.
+                VUTERA tin rằng: khi trí tuệ gặp nhân tâm, mọi vận mệnh đều có
+                thể được kiến tạo lại theo hướng tốt đẹp.
               </p>
             </div>
           </div>
         </div>
-        <div className="container mx-auto px-6">
+        <div hidden className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="p-6">
               <div className="text-4xl font-bold dark:text-white text-slate-900 mb-2">
@@ -316,10 +322,10 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-blue-600 dark:text-blue-400 font-semibold tracking-wider uppercase text-sm mb-4">
-              Lĩnh Vực Chuyên Môn
+              Sản Phẩm
             </h2>
             <h3 className="text-3xl md:text-5xl font-bold dark:text-white text-slate-900">
-              Giải Pháp Cho Mọi Ngành Nghề
+              Hệ sinh thái sản phẩm Vutera
             </h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -341,11 +347,10 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Phát triển phần mềm
+                Đời sống Tinh thần & Văn hóa
               </h3>
               <p className="text-gray-600">
-                Xây dựng ứng dụng web và mobile tùy chỉnh theo nhu cầu riêng của
-                doanh nghiệp bạn.
+                Ứng dụng Phong thủy, Tử vi, Xem ngày kết hợp AI.
               </p>
             </div>
             <div className="bg-blue-50 p-6 rounded-xl">
@@ -366,11 +371,10 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Tư vấn công nghệ
+                Quản lý Tài chính Cá nhân
               </h3>
               <p className="text-gray-600">
-                Đánh giá và đề xuất giải pháp công nghệ phù hợp với mục tiêu và
-                ngân sách của doanh nghiệp.
+                Fintech với mini app chi tiêu, tiết kiệm, liên kết ngân hàng.
               </p>
             </div>
             <div className="bg-blue-50 p-6 rounded-xl">
@@ -391,11 +395,10 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Điện toán đám mây
+                Phát triển Bản thân & Sự nghiệp
               </h3>
               <p className="text-gray-600">
-                Triển khai và quản lý hệ thống trên nền tảng đám mây, đảm bảo
-                tính sẵn sàng và bảo mật.
+                Nền tảng giáo dục kỹ năng online với AI.
               </p>
             </div>
           </div>
@@ -408,8 +411,8 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-16 items-center">
             <div className="w-full md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 dark:text-white text-slate-900">
-                Quy Trình Chuẩn <br />
-                Tại Vutera
+                Hành Trình Của Bạn <br />
+                Cùng VUTERA
               </h2>
               <div className="space-y-8">
                 {processes.map((item, index) => (
@@ -432,47 +435,65 @@ export default function Home() {
 
             <div className="w-full md:w-1/2 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl transform rotate-3 blur-lg opacity-30"></div>
+
               <div className="relative dark:bg-slate-900 bg-white border dark:border-slate-800 border-slate-300 rounded-3xl p-8 shadow-2xl">
+                {/* Window header */}
                 <div className="flex items-center gap-2 mb-6 border-b dark:border-slate-800 border-slate-200 pb-4">
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
+
                   <div className="ml-4 text-xs dark:text-slate-500 text-slate-400 font-mono">
-                    App Architecture
+                    Vutera Ecosystem
                   </div>
                 </div>
+
+                {/* Code-style content */}
                 <div className="space-y-4 font-mono text-sm">
                   <div className="text-purple-600 dark:text-purple-400">
                     const{" "}
                     <span className="text-blue-600 dark:text-blue-400">
-                      VuteraProject
+                      VuteraCore
                     </span>{" "}
-                    = async () ={">"} {"{"}
+                    = () =&gt; {"{"}
                   </div>
+
                   <div className="pl-4 dark:text-slate-300 text-slate-700">
                     <span className="dark:text-slate-500 text-slate-400">
-                      {"// Bắt đầu dự án"}
+                      {/* Comment */}
+                      {"// Hệ lõi công nghệ"}
                     </span>
                     <br />
-                    await{" "}
-                    <span className="text-yellow-600 dark:text-yellow-400">
-                      analyzeRequirements
-                    </span>
-                    ();
+                    const ai = createAIEngine();
+                    <br />
+                    const data = buildUnifiedUserProfile();
+                    <br />
+                    const engine = integrateSmartSuggestions(ai, data);
                     <br />
                     <br />
                     <span className="dark:text-slate-500 text-slate-400">
-                      {"// Tech Stack: Nodejs, Next.js"}
+                      {"// Kết nối đa sản phẩm"}
                     </span>
                     <br />
-                    return{" "}
-                    <span className="text-green-600 dark:text-green-400">
-                      HighQualityApp
-                    </span>
-                    ;<br />
+                    const ecosystem = [
+                    <br />
+                    &nbsp;&nbsp;&quot;Vutera Spirit&quot;, /* Tâm linh số */{" "}
+                    <br />
+                    &nbsp;&nbsp;&quot;Vutera Finance&quot;, /* Tài chính cá nhân
+                    */ <br />
+                    &nbsp;&nbsp;&quot;Vutera Learn&quot;, /* Học tập & phát
+                    triển */ <br />
+                    &nbsp;&nbsp;&quot;Vutera Biz&quot;, /* Kinh doanh cá nhân */{" "}
+                    <br />
+                    ];
+                    <br />
+                    <br />
+                    return {"{ ai, data, engine, ecosystem }"};
+                    <br />
                   </div>
+
                   <div className="text-purple-600 dark:text-purple-400">
-                    {"}"};
+                    {"};"}
                   </div>
                 </div>
               </div>
@@ -482,7 +503,10 @@ export default function Home() {
       </section>
 
       {/* Tech Stack Banner */}
-      <section className="py-12 border-y dark:border-slate-800 border-slate-200 dark:bg-slate-900/30 bg-white">
+      <section
+        hidden
+        className="py-12 border-y dark:border-slate-800 border-slate-200 dark:bg-slate-900/30 bg-white"
+      >
         <div className="container mx-auto px-6 text-center">
           <p className="dark:text-slate-500 text-slate-700 mb-8 font-medium">
             CÔNG NGHỆ CHÚNG TÔI SỬ DỤNG
@@ -514,11 +538,11 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-4xl relative z-10">
           <div className="bg-gradient-to-br from-blue-600/10 to-slate-100 dark:from-blue-900/50 dark:to-slate-900 rounded-3xl p-8 md:p-16 border dark:border-slate-700 border-slate-300 shadow-2xl text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 dark:text-white text-slate-900">
-              Sẵn sàng hiện thực hóa ý tưởng?
+              Kết nối với hệ sinh thái Vutera
             </h2>
             <p className="dark:text-slate-300 text-slate-700 mb-10 text-lg">
-              Đừng để ý tưởng tuyệt vời của bạn chỉ nằm trên giấy. Hãy để Vutera
-              giúp bạn xây dựng ứng dụng triệu người dùng.
+              Đăng ký để nhận bản dùng thử và cập nhật các sản phẩm mới nhất từ
+              chúng tôi.
             </p>
 
             <form className="max-w-md mx-auto space-y-4 text-left">
@@ -541,12 +565,12 @@ export default function Home() {
                   htmlFor="idea"
                   className="block text-sm font-medium dark:text-slate-400 text-slate-600 mb-2"
                 >
-                  Ý tưởng dự án (Tùy chọn)
+                  Sở thích của bạn (Tùy chọn)
                 </label>
                 <textarea
                   rows={3}
                   id="idea"
-                  placeholder="Tôi muốn làm app về..."
+                  placeholder="Tôi quan tâm về..."
                   className="w-full px-4 py-3 dark:bg-slate-950 bg-white border dark:border-slate-700 border-slate-300 rounded-xl focus:outline-none focus:border-blue-500 dark:text-white text-slate-900 placeholder-slate-400 dark:placeholder-slate-600 transition-colors"
                 ></textarea>
               </div>
@@ -555,7 +579,7 @@ export default function Home() {
                 className="w-full py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-blue-600/25 flex justify-center items-center"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Gửi yêu cầu tư vấn
+                Đăng ký
               </button>
             </form>
           </div>
@@ -582,32 +606,32 @@ export default function Home() {
                 </span>
               </div>
               <p className="dark:text-slate-500 text-slate-600 leading-relaxed max-w-sm">
-                Giải pháp công nghệ tối ưu cho doanh nghiệp của bạn.
+                Công nghệ khai sáng con người.
               </p>
             </div>
 
             <div>
               <h4 className="dark:text-white text-slate-900 font-bold mb-6">
-                Dịch vụ
+                Sản phẩm
               </h4>
               <ul className="space-y-4 dark:text-slate-400 text-slate-600">
                 <li
                   className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
                   onClick={() => scrollToSection("services")}
                 >
-                  Phát triển phần mềm
+                  Vutera Spirit
                 </li>
                 <li
                   className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
                   onClick={() => scrollToSection("services")}
                 >
-                  Tư vấn công nghệ
+                  Vutera Finance
                 </li>
                 <li
                   className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
                   onClick={() => scrollToSection("services")}
                 >
-                  Điện toán đám mây
+                  Vutera Learn
                 </li>
               </ul>
             </div>

@@ -7,28 +7,30 @@ const inter = Inter({ subsets: ["vietnamese"] });
 
 // Thiết lập Metadata (quan trọng cho SEO)
 export const metadata: Metadata = {
-  title: "Vutera - Giải pháp công nghệ tối ưu cho doanh nghiệp",
+  title: "VUTERA - Nền Tảng Công Nghệ Phục Vụ Cuộc Sống & Phát Triển Cá Nhân",
   description:
-    "Vutera cung cấp các giải pháp công nghệ hiện đại giúp doanh nghiệp tối ưu hóa quy trình và phát triển bền vững",
+    "VUTERA - Technology for Humanity. Khai sáng phong thủy, quản lý tài chính thông minh, giáo dục cá nhân hóa và giải pháp kinh doanh toàn diện. Ứng dụng công nghệ AI & dữ liệu để nâng tầm chất lượng sống của bạn.",
   keywords: [
     "Vutera",
-    "Giải pháp công nghệ",
-    "Công nghệ hiện đại",
+    "Giải pháp",
+    "Công nghệ",
     "Solution",
     "Fintech",
     "EdTech",
-    "tối ưu hóa quy trình",
-    "phát triển bền vững",
+    "khai sáng",
+    "con người",
   ],
-  authors: [{ name: "Vutera Team" }],
+  authors: [{ name: "VUTERA" }],
   openGraph: {
-    title: "Vutera: Solution Technology",
-    description: "Giải pháp công nghệ tối ưu cho doanh nghiệp.",
+    title: "VUTERA - Nền Tảng Công Nghệ Phục Vụ Cuộc Sống & Phát Triển Cá Nhân",
+    description:
+      "VUTERA - Technology for Humanity. Khai sáng phong thủy, quản lý tài chính thông minh, giáo dục cá nhân hóa và giải pháp kinh doanh toàn diện. Ứng dụng công nghệ AI & dữ liệu để nâng tầm chất lượng sống của bạn.",
     url: "https://vutera.net", // Thay thế bằng URL thực tế
     siteName: "Vutera",
     images: [
       {
-        url: "https://placehold.co/1200x630/0f172a/94a3b8?text=Vutera+Studio+Preview", // Placeholder
+        // url: "https://placehold.co/1200x630/0f172a/94a3b8?text=Vutera", // Placeholder
+        url: "https://vutera.net/full_logo.png",
         width: 1200,
         height: 630,
         alt: "Vutera Banner",

@@ -1,5 +1,6 @@
 // components/Header.tsx
 import React from "react";
+import Image from "next/image";
 
 {
   /* Header */
@@ -9,8 +10,14 @@ export default function Header() {
     <header className="bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
-          <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-            V
+          <div className="w-10 h-10 rounded-xl overflow-hidden cursor-pointer">
+            <Image
+              src="/main_logo.png"
+              alt="Vutera Logo"
+              width={40}
+              height={40}
+              className="object-cover"
+            />
           </div>
           <span className="ml-2 text-xl font-bold text-gray-800">Vutera</span>
         </div>
