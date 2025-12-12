@@ -7,24 +7,27 @@ const inter = Inter({ subsets: ["vietnamese"] });
 
 // Thiết lập Metadata (quan trọng cho SEO)
 export const metadata: Metadata = {
-  title: "VUTERA - Nền Tảng Công Nghệ Phục Vụ Cuộc Sống & Phát Triển Cá Nhân",
+  title: "VUTERA – Nền Tảng Công Nghệ Đổi Mới Vì Cuộc Sống Toàn Diện",
   description:
-    "VUTERA - Technology for Humanity. Khai sáng phong thủy, quản lý tài chính thông minh, giáo dục cá nhân hóa và giải pháp kinh doanh toàn diện. Ứng dụng công nghệ AI & dữ liệu để nâng tầm chất lượng sống của bạn.",
+    "VUTERA - Đổi mới vì cuộc sống. Ứng dụng AI trong Phong thủy thông minh, Quản lý tài chính cá nhân, Giáo dục trực tuyến & Giải pháp số cho Doanh nghiệp. Công nghệ khai sáng, phụng sự con người.",
   keywords: [
+    "ứng dụng phong thủy",
+    "app tử vi AI",
+    "fintech cá nhân",
+    "quản lý chi tiêu",
+    "học tiếng Anh AI",
+    "đào tạo online",
+    "phần mềm bán hàng SME",
+    "công nghệ bất động sản",
+    "nền tảng số đa dịch vụ",
+    "đổi mới cuộc sống",
     "Vutera",
-    "Giải pháp",
-    "Công nghệ",
-    "Solution",
-    "Fintech",
-    "EdTech",
-    "khai sáng",
-    "con người",
   ],
   authors: [{ name: "VUTERA" }],
   openGraph: {
-    title: "VUTERA - Nền Tảng Công Nghệ Phục Vụ Cuộc Sống & Phát Triển Cá Nhân",
+    title: "VUTERA – Nền Tảng Công Nghệ Đổi Mới Vì Cuộc Sống Toàn Diện",
     description:
-      "VUTERA - Technology for Humanity. Khai sáng phong thủy, quản lý tài chính thông minh, giáo dục cá nhân hóa và giải pháp kinh doanh toàn diện. Ứng dụng công nghệ AI & dữ liệu để nâng tầm chất lượng sống của bạn.",
+      "VUTERA - Đổi mới vì cuộc sống. Ứng dụng AI trong Phong thủy thông minh, Quản lý tài chính cá nhân, Giáo dục trực tuyến & Giải pháp số cho Doanh nghiệp. Công nghệ khai sáng, phụng sự con người.",
     url: "https://vutera.net", // Thay thế bằng URL thực tế
     siteName: "Vutera",
     images: [

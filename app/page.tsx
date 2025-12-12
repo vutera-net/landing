@@ -22,23 +22,23 @@ interface ProcessItem {
 const processes: ProcessItem[] = [
   {
     step: "01",
-    title: "Thấu Hiểu (Insight)",
-    desc: "Ứng dụng AI và phân tích dữ liệu để thấu hiểu nhu cầu, bối cảnh và nguyện vọng sâu xa của bạn - dù là trong đời sống tinh thần, tài chính hay sự nghiệp.",
+    title: "Hạt Giống Ý Tưởng",
+    desc: 'Từ những cuộc trò chuyện về sự xa rời văn hóa truyền thống trong đời sống số, chúng tôi nhận ra: Cần một cầu nối. Ý tưởng về một nền tảng "Phong thủy thông minh" đầu tiên được nhen nhóm, với niềm tin công nghệ có thể làm sáng tỏ những tri thức cổ.',
   },
   {
     step: "02",
-    title: "Cá Nhân Hóa (Personalization)",
-    desc: "Từ sự thấu hiểu đó, chúng tôi cung cấp giải pháp, gợi ý và lộ trình được cá nhân hóa, phù hợp duy nhất với bạn, thay vì một kết quả chung chung.",
+    title: "Thấu Hiểu & Kiến Tạo Nền Tảng",
+    desc: 'Chúng tôi mở rộng tầm nhìn. Nhu cầu không chỉ dừng ở tâm linh, mà còn là tài chính cá nhân lộn xộn, giáo dục thiếu cá nhân hóa, và doanh nghiệp nhỏ thiếu công cụ. Triết lý "Công nghệ khai sáng, Phụng sự con người" chính thức hình thành, trở thành kim chỉ nam.',
   },
   {
     step: "03",
-    title: "Hành Động Thông Minh (Smart Action)",
-    desc: "Biến những hiểu biết thành hành động cụ thể, dễ dàng thông qua các công cụ thông minh: từ app quản lý chi tiêu, lộ trình học tập, đến gợi ý phong thủy hay chiến dịch marketing tự động.",
+    title: "Ra Mắt & Kết Nối",
+    desc: 'Sản phẩm đầu tiên "VUTERA Phong Thủy AI" chính thức ra mắt, nhận được phản hồi tích cực về tính cá nhân hóa.',
   },
   {
     step: "04",
-    title: "Theo Dõi & Phát Triển (Growth)",
-    desc: "Đồng hành cùng bạn theo thời gian, điều chỉnh và đề xuất mới dựa trên sự thay đổi, giúp bạn không ngừng tối ưu và phát triển.",
+    title: "Tương Lai - Đồng Hành & Phát Triển Bền Vững",
+    desc: 'Phát triển thành một "Personal Life OS" (Hệ điều hành cuộc sống cá nhân), nơi AI thực sự hiểu bạn và chủ động đề xuất các giải pháp cho sức khỏe, mối quan hệ, sự nghiệp một cách hài hòa.',
   },
 ];
 
@@ -198,16 +198,16 @@ export default function Home() {
           </div> */}
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight dark:text-white text-slate-900">
-            Technology for{" "}
+            Đổi mới vì{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-              Humanity
+              cuộc sống
             </span>
           </h1>
 
           <p className="text-lg md:text-xl dark:text-slate-400 text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Ứng dụng công nghệ tiên tiến (AI, Dữ liệu lớn, Bản đồ số) để giải
-            quyết các nhu cầu thiết yếu và nâng cao chất lượng cuộc sống người
-            Việt, từ đời sống tinh thần đến vật chất.
+            VUTERA là nền tảng công nghệ đa dịch vụ, ứng dụng AI và dữ liệu để
+            đổi mới và nâng cao chất lượng mọi mặt đời sống cá nhân và kinh
+            doanh.
           </p>
 
           <div className="flex flex-col md:flex-row justify-center items-center gap-4">
@@ -279,12 +279,12 @@ export default function Home() {
               </h2>
               <br />
               <p className="dark:text-slate-400 text-slate-600">
-                Chúng tôi ứng dụng công nghệ không để thay thế con người – mà để
-                khai sáng và phụng sự con người.
+                Chào mừng bạn đến với VUTERA, nơi công nghệ được tạo ra với một
+                sứ mệnh duy nhất: phụng sự và nâng tầm cuộc sống con người.
               </p>
               <p className="dark:text-slate-400 text-slate-600">
-                VUTERA tin rằng: khi trí tuệ gặp nhân tâm, mọi vận mệnh đều có
-                thể được kiến tạo lại theo hướng tốt đẹp.
+                Chúng tôi ứng dụng công nghệ không để thay thế con người – mà để
+                khai sáng và phụng sự con người.
               </p>
             </div>
           </div>
@@ -357,10 +357,11 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Đời sống Tinh thần & Văn hóa
+                Đời Sống Tinh Thần & Văn Hóa Thông Minh
               </h3>
               <p className="text-gray-600">
-                Ứng dụng Phong thủy, Tử vi, Xem ngày kết hợp AI.
+                Kết nối trí tuệ cổ điển với công nghệ hiện đại, mang lại sự an
+                tâm và lựa chọn sáng suốt.
               </p>
             </div>
             <div className="bg-blue-50 p-6 rounded-xl">
@@ -381,10 +382,11 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Quản lý Tài chính Cá nhân
+                Tài Chính Cá Nhân Thông Minh
               </h3>
               <p className="text-gray-600">
-                Fintech với mini app chi tiêu, tiết kiệm, liên kết ngân hàng.
+                Biến việc quản lý tiền bạc từ phức tạp thành đơn giản, từ lo
+                lắng thành tự tin.
               </p>
             </div>
             <div className="bg-blue-50 p-6 rounded-xl">
@@ -405,10 +407,11 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Phát triển Bản thân & Sự nghiệp
+                Phát Triển Bản Thân & Sự Nghiệp
               </h3>
               <p className="text-gray-600">
-                Nền tảng giáo dục kỹ năng online với AI.
+                Lộ trình học tập được AI thiết kế riêng cho bạn, giúp bạn tiến
+                bộ nhanh gấp đôi.
               </p>
             </div>
           </div>
@@ -421,8 +424,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-16 items-center">
             <div className="w-full md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 dark:text-white text-slate-900">
-                Hành Trình Của Bạn <br />
-                Cùng VUTERA
+                Hành Trình Của VUTERA
               </h2>
               <div className="space-y-8">
                 {processes.map((item, index) => (
@@ -487,19 +489,18 @@ export default function Home() {
                     <br />
                     const ecosystem = [
                     <br />
-                    &nbsp;&nbsp;&quot;Vutera Harmony&quot;, /* Tâm linh số */{" "}
+                    &nbsp;&nbsp;&quot;Vutera Harmony&quot;,
                     <br />
-                    &nbsp;&nbsp;&quot;Vutera Finance&quot;, /* Tài chính cá nhân
-                    */ <br />
-                    &nbsp;&nbsp;&quot;Vutera Learn&quot;, /* Học tập & phát
-                    triển */ <br />
-                    &nbsp;&nbsp;&quot;Vutera Biz&quot;, /* Kinh doanh cá nhân */{" "}
+                    &nbsp;&nbsp;&quot;Vutera Wise&quot;,
+                    <br />
+                    &nbsp;&nbsp;&quot;Vutera Orbit&quot;,
+                    <br />
+                    &nbsp;&nbsp;&quot;Vutera Flow&quot;,
                     <br />
                     ];
                     <br />
                     <br />
                     return {"{ ai, data, engine, ecosystem }"};
-                    <br />
                   </div>
 
                   <div className="text-purple-600 dark:text-purple-400">
@@ -548,11 +549,11 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-4xl relative z-10">
           <div className="bg-gradient-to-br from-blue-600/10 to-slate-100 dark:from-blue-900/50 dark:to-slate-900 rounded-3xl p-8 md:p-16 border dark:border-slate-700 border-slate-300 shadow-2xl text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 dark:text-white text-slate-900">
-              Kết nối với hệ sinh thái Vutera
+              Đồng Hành Cùng Hệ Sinh Thái VUTERA Ngay Từ Đầu
             </h2>
             <p className="dark:text-slate-300 text-slate-700 mb-10 text-lg">
-              Đăng ký để nhận bản dùng thử và cập nhật các sản phẩm mới nhất từ
-              chúng tôi.
+              Bạn muốn trải nghiệm các giải pháp thông minh đầu tiên và nhận ưu
+              đãi đặc biệt? Hãy trở thành một phần của cộng đồng tiên phong.
             </p>
 
             <form className="max-w-md mx-auto space-y-4 text-left">
@@ -575,7 +576,7 @@ export default function Home() {
                   htmlFor="idea"
                   className="block text-sm font-medium dark:text-slate-400 text-slate-600 mb-2"
                 >
-                  Sở thích của bạn (Tùy chọn)
+                  Bạn quan tâm nhất đến lĩnh vực nào của VUTERA? (Tùy chọn)
                 </label>
                 <textarea
                   rows={3}
@@ -616,7 +617,7 @@ export default function Home() {
                 </span>
               </div>
               <p className="dark:text-slate-500 text-slate-600 leading-relaxed max-w-sm">
-                Technology for Humanity.
+                Đổi mới vì cuộc sống
               </p>
             </div>
 
@@ -635,13 +636,19 @@ export default function Home() {
                   className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
                   onClick={() => scrollToSection("services")}
                 >
-                  Vutera Finance
+                  Vutera Wise
                 </li>
                 <li
                   className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
                   onClick={() => scrollToSection("services")}
                 >
-                  Vutera Learn
+                  Vutera Orbit
+                </li>
+                <li
+                  className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
+                  onClick={() => scrollToSection("services")}
+                >
+                  Vutera Flow
                 </li>
               </ul>
             </div>
