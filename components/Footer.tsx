@@ -1,6 +1,6 @@
 // components/Footer.tsx
-import React from "react";
 import Image from "next/image";
+import React from "react";
 
 interface FooterLinkProps {
   href: string;
@@ -42,7 +42,7 @@ export default function Footer() {
               </div>
               <span className="ml-2 text-xl font-bold">Vutera</span>
             </div>
-            <p className="text-gray-400">Technology for Humanity.</p>
+            <p className="text-gray-400">Đổi mới vì cuộc sống</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Liên kết</h3>
@@ -86,34 +86,35 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="/harmony"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Phát triển phần mềm
+                  Vutera Harmony
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/flow"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Tư vấn công nghệ
+                  Vutera Flow
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/orbit"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Điện toán đám mây
+                  Vutera Orbit
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
                   className="text-gray-400 hover:text-white transition-colors"
+                  // className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
+                  href="/spark"
                 >
-                  Bảo mật hệ thống
+                  Vutera Spark
                 </a>
               </li>
             </ul>

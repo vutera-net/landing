@@ -32,7 +32,7 @@ export default function Header() {
             href="/#services"
             className="text-gray-600 hover:text-indigo-600 transition-colors"
           >
-            Dịch vụ
+            Sản phẩm
           </a>
           <a
             href="/#about"

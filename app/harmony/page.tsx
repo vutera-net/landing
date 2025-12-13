@@ -1,24 +1,19 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
-// app/terms/page.tsx - Tương tự structure như privacy page
-export default function TermsOfService() {
+export default function Harmony() {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header và Footer tương tự privacy page */}
       <Header />
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-sm p-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Điều khoản sử dụng
+            VUTERA Harmony: Cho đời sống tinh thần hài hòa.
           </h1>
-          <p className="text-gray-600 mb-8">
-            Cập nhật lần cuối: {new Date().toLocaleDateString("vi-VN")}
-          </p>
 
           <div className="text-center mt-8">
             <p className="text-lg font-bold text-gray-900 mb-2">
-              Điều khoản sử dụng sắp sửa phát hành!
+              VUTERA Harmony sắp sửa phát hành!
             </p>
             <p className="text-gray-600">
               Hãy truy cập lại trang sau một lúc để trải nghiệm!

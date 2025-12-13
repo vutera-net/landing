@@ -3,21 +3,60 @@
 import {
   ArrowRight,
   Code,
+  Compass,
   Globe,
+  GraduationCap,
   Mail,
   Menu,
   Smartphone,
+  TrendingUp,
   Users,
   X,
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import Image from "next/image";
+
+// Định nghĩa kiểu dữ liệu (Interface) cho TypeScript
+interface ServiceItem {
+  title: string;
+  description: string;
+  icon: ReactNode; // Kiểu cho component Icon
+  color: string;
+  tags: string[];
+}
 
 interface ProcessItem {
   step: string;
   title: string;
   desc: string;
 }
+
+const services: ServiceItem[] = [
+  {
+    title: "Tử Vi & Phong Thủy",
+    description:
+      "Số hóa huyền học phương Đông. Tích hợp thuật toán tính toán lá số chính xác, la bàn phong thủy AR và tư vấn trực tuyến.",
+    icon: <Compass className="w-10 h-10 text-purple-400" />,
+    color: "from-purple-900 to-indigo-900",
+    tags: ["Lá số tử vi", "Cân xương tính số", "Kết nối chuyên gia"],
+  },
+  {
+    title: "Tài Chính Cá Nhân",
+    description:
+      "Ứng dụng Fintech giúp quản lý chi tiêu, đầu tư thông minh và theo dõi dòng tiền với bảo mật tiêu chuẩn ngân hàng.",
+    icon: <TrendingUp className="w-10 h-10 text-emerald-400" />,
+    color: "from-emerald-900 to-teal-900",
+    tags: ["Quản lý chi tiêu", "Biểu đồ trực quan", "Bảo mật cao"],
+  },
+  {
+    title: "Giáo Dục (EdTech)",
+    description:
+      "Nền tảng học tập trực tuyến tương tác cao, LMS, ứng dụng học ngoại ngữ và thi thử với trải nghiệm người dùng tối ưu.",
+    icon: <GraduationCap className="w-10 h-10 text-amber-400" />,
+    color: "from-amber-900 to-orange-900",
+    tags: ["E-Learning", "Gamification", "Lớp học ảo"],
+  },
+];
 
 const processes: ProcessItem[] = [
   {
@@ -328,7 +367,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 relative">
+      {/* <section id="services" className="py-24 relative">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-blue-600 dark:text-blue-400 font-semibold tracking-wider uppercase text-sm mb-4">
@@ -416,6 +455,57 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section> */}
+
+      {/* Services Section */}
+      <section id="services" className="py-24 relative">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-blue-600 dark:text-blue-400 font-semibold tracking-wider uppercase text-sm mb-4">
+              Sản Phẩm
+            </h2>
+            <h3 className="text-3xl md:text-5xl font-bold dark:text-white text-slate-900">
+              Hệ sinh thái sản phẩm Vutera
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="group relative p-8 rounded-3xl dark:bg-slate-900 bg-white shadow-xl dark:border dark:border-slate-800 border-slate-200 hover:dark:border-slate-600 hover:border-slate-400 transition-all duration-300 hover:-translate-y-2 overflow-hidden"
+              >
+                {/* Hover Gradient Background */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
+                ></div>
+
+                <div className="relative z-10">
+                  <div className="mb-6 p-4 dark:bg-slate-950 bg-slate-100 rounded-2xl inline-block border dark:border-slate-800 border-slate-300 group-hover:dark:border-white/20 group-hover:border-slate-500/20 transition-colors">
+                    {service.icon}
+                  </div>
+                  <h4 className="text-2xl font-bold mb-4 dark:text-white text-slate-900 group-hover:dark:text-blue-200 group-hover:text-blue-700 transition-colors">
+                    {service.title}
+                  </h4>
+                  <p className="dark:text-slate-400 text-slate-600 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {service.tags.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="text-xs font-medium px-3 py-1 rounded-full dark:bg-slate-800 bg-slate-200 dark:text-slate-300 text-slate-700 border dark:border-slate-700 border-slate-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Process Section */}
@@ -491,11 +581,11 @@ export default function Home() {
                     <br />
                     &nbsp;&nbsp;&quot;Vutera Harmony&quot;,
                     <br />
-                    &nbsp;&nbsp;&quot;Vutera Wise&quot;,
+                    &nbsp;&nbsp;&quot;Vutera Flow&quot;,
                     <br />
                     &nbsp;&nbsp;&quot;Vutera Orbit&quot;,
                     <br />
-                    &nbsp;&nbsp;&quot;Vutera Flow&quot;,
+                    &nbsp;&nbsp;&quot;Vutera Spark&quot;,
                     <br />
                     ];
                     <br />
@@ -626,29 +716,37 @@ export default function Home() {
                 Sản phẩm
               </h4>
               <ul className="space-y-4 dark:text-slate-400 text-slate-600">
-                <li
-                  className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
-                  onClick={() => scrollToSection("services")}
-                >
-                  Vutera Harmony
+                <li>
+                  <a
+                    className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
+                    href="/harmony"
+                  >
+                    Vutera Harmony
+                  </a>
                 </li>
-                <li
-                  className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
-                  onClick={() => scrollToSection("services")}
-                >
-                  Vutera Wise
+                <li>
+                  <a
+                    className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
+                    href="/flow"
+                  >
+                    Vutera Flow
+                  </a>
                 </li>
-                <li
-                  className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
-                  onClick={() => scrollToSection("services")}
-                >
-                  Vutera Orbit
+                <li>
+                  <a
+                    className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
+                    href="/orbit"
+                  >
+                    Vutera Orbit
+                  </a>
                 </li>
-                <li
-                  className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
-                  onClick={() => scrollToSection("services")}
-                >
-                  Vutera Flow
+                <li>
+                  <a
+                    className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
+                    href="/spark"
+                  >
+                    Vutera Spark
+                  </a>
                 </li>
               </ul>
             </div>
