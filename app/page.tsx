@@ -7,14 +7,15 @@ import {
   Globe,
   GraduationCap,
   Mail,
+  MapPin,
   Menu,
+  Phone,
   Smartphone,
   TrendingUp,
-  Users,
   X,
 } from "lucide-react";
-import { ReactNode, useEffect, useState } from "react";
 import Image from "next/image";
+import { ReactNode, useEffect, useState } from "react";
 
 // Định nghĩa kiểu dữ liệu (Interface) cho TypeScript
 interface ServiceItem {
@@ -33,25 +34,25 @@ interface ProcessItem {
 
 const services: ServiceItem[] = [
   {
-    title: "Tử Vi & Phong Thủy",
+    title: "VUTERA Harmony",
     description:
-      "Số hóa huyền học phương Đông. Tích hợp thuật toán tính toán lá số chính xác, la bàn phong thủy AR và tư vấn trực tuyến.",
+      "Trụ cột về đời sống tinh thần, bao gồm các ứng dụng về tử vi AI, phong thủy và sự cân bằng âm dương.",
     icon: <Compass className="w-10 h-10 text-purple-400" />,
     color: "from-purple-900 to-indigo-900",
     tags: ["Lá số tử vi", "Cân xương tính số", "Kết nối chuyên gia"],
   },
   {
-    title: "Tài Chính Cá Nhân",
+    title: "VUTERA Flow",
     description:
-      "Ứng dụng Fintech giúp quản lý chi tiêu, đầu tư thông minh và theo dõi dòng tiền với bảo mật tiêu chuẩn ngân hàng.",
+      'Tập trung vào "dòng chảy" tài chính, giúp người dùng quản lý chi tiêu, tiết kiệm và đầu tư thông minh.',
     icon: <TrendingUp className="w-10 h-10 text-emerald-400" />,
     color: "from-emerald-900 to-teal-900",
     tags: ["Quản lý chi tiêu", "Biểu đồ trực quan", "Bảo mật cao"],
   },
   {
-    title: "Giáo Dục (EdTech)",
+    title: "VUTERA Orbit",
     description:
-      "Nền tảng học tập trực tuyến tương tác cao, LMS, ứng dụng học ngoại ngữ và thi thử với trải nghiệm người dùng tối ưu.",
+      "Quỹ đạo phát triển bản thân thông qua giáo dục công nghệ (EdTech), học tiếng Anh AI và định hướng sự nghiệp.",
     icon: <GraduationCap className="w-10 h-10 text-amber-400" />,
     color: "from-amber-900 to-orange-900",
     tags: ["E-Learning", "Gamification", "Lớp học ảo"],
@@ -585,8 +586,6 @@ export default function Home() {
                     <br />
                     &nbsp;&nbsp;&quot;Vutera Orbit&quot;,
                     <br />
-                    &nbsp;&nbsp;&quot;Vutera Spark&quot;,
-                    <br />
                     ];
                     <br />
                     <br />
@@ -691,6 +690,7 @@ export default function Home() {
       <footer className="dark:bg-slate-950 bg-slate-50 pt-16 pb-8 border-t dark:border-slate-900 border-slate-200">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            {/* Footer vutera */}
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-10 h-10 rounded-xl overflow-hidden cursor-pointer">
@@ -706,16 +706,17 @@ export default function Home() {
                   Vutera
                 </span>
               </div>
-              <p className="dark:text-slate-500 text-slate-600 leading-relaxed max-w-sm">
+              <p className="dark:text-slate-200 text-slate-800 leading-relaxed max-w-sm">
                 Đổi mới vì cuộc sống
               </p>
             </div>
 
+            {/* Footer Product */}
             <div>
               <h4 className="dark:text-white text-slate-900 font-bold mb-6">
                 Sản phẩm
               </h4>
-              <ul className="space-y-4 dark:text-slate-400 text-slate-600">
+              <ul className="space-y-4 dark:text-slate-300 text-slate-700">
                 <li>
                   <a
                     className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
@@ -740,7 +741,7 @@ export default function Home() {
                     Vutera Orbit
                   </a>
                 </li>
-                <li>
+                <li hidden={true}>
                   <a
                     className="hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer"
                     href="/spark"
@@ -751,26 +752,44 @@ export default function Home() {
               </ul>
             </div>
 
+            {/* Footer Contact Info */}
             <div>
               <h4 className="dark:text-white text-slate-900 font-bold mb-6">
                 Liên hệ
               </h4>
               <ul className="space-y-4 dark:text-slate-400 text-slate-600">
                 <li className="flex items-center">
-                  <Mail className="w-4 h-4 mr-2" /> vuterastudio@gmail.com
+                  <MapPin className="flex-shrink-0 h-5 w-5 text-gray-500" />
+                  <span className="ml-3 text-base dark:text-slate-300 text-slate-700">
+                    Hà Nội, Việt Nam
+                  </span>
                 </li>
                 <li className="flex items-center">
-                  <Smartphone className="w-4 h-4 mr-2" /> (+84) 948 148 078
+                  <Mail className="flex-shrink-0 h-5 w-5 text-gray-500" />
+                  <a
+                    href="mailto:vutera.net@gmail.com"
+                    className="ml-3 text-base dark:text-slate-300 text-slate-700 hover:text-blue-600 transition-colors"
+                  >
+                    vutera.net@gmail.com
+                  </a>
                 </li>
                 <li className="flex items-center">
-                  <Users className="w-4 h-4 mr-2" /> Hanoi, Vietnam
+                  <Phone className="flex-shrink-0 h-5 w-5 text-gray-500" />
+                  <a
+                    href="tel:+84968281331"
+                    className="ml-3 text-base dark:text-slate-300 text-slate-700 hover:text-blue-600 transition-colors"
+                  >
+                    (+84) 96 828 1331
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
 
           <div className="pt-8 border-t dark:border-slate-900 border-slate-200 flex flex-col md:flex-row justify-between items-center dark:text-slate-600 text-slate-500 text-sm">
-            <p>&copy; 2025 Vutera. All rights reserved.</p>
+            <p>
+              &copy; {new Date().getFullYear()} Vutera. All rights reserved.
+            </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a
                 href="/privacy"
