@@ -602,6 +602,107 @@ export default function Harmony() {
         </div>
       </section>
 
+      {/* Future Vision Section */}
+      <section id="future-vision" className="py-40 px-6 bg-zinc-950 relative overflow-hidden">
+        {/* Background glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[50vh] bg-indigo-950/20 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="max-w-4xl mx-auto relative">
+          <div className="text-center mb-20">
+            <p className="text-xs text-indigo-400/50 uppercase tracking-[0.4em] mb-5">
+              Roadmap
+            </p>
+            <h2 className="text-4xl md:text-5xl font-light mb-6 text-white">
+              Harmony đang tiến tới
+            </h2>
+            <p className="text-gray-500 text-lg max-w-xl mx-auto font-light">
+              Đây chỉ là phiên bản đầu tiên. Những gì đang được xây dựng tiếp theo sẽ thay đổi cách bạn nhìn vào cuộc đời mình.
+            </p>
+          </div>
+
+          {/* 2x2 Cards Grid */}
+          <div className="grid md:grid-cols-2 gap-5">
+            {/* Card 1 — AI hướng dẫn cá nhân */}
+            <div className="group relative p-8 rounded-2xl border border-zinc-800 bg-zinc-900/40 hover:border-indigo-800/60 hover:bg-indigo-950/10 transition-all duration-500">
+              <div className="absolute top-4 right-4 px-2 py-0.5 rounded-full bg-zinc-800 border border-zinc-700 text-[10px] text-zinc-500 uppercase tracking-widest">
+                Sắp ra mắt
+              </div>
+              <div className="w-12 h-12 rounded-xl bg-indigo-950/60 border border-indigo-800/40 flex items-center justify-center mb-6 group-hover:border-indigo-600/60 transition-colors duration-500">
+                <span className="text-xl">🤖</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white/90 mb-3">
+                AI hướng dẫn cá nhân
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Một AI hiểu sâu chu kỳ vận trình của bạn. Đưa ra lời khuyên đúng lúc — không phải lời khuyên chung chung.
+              </p>
+            </div>
+
+            {/* Card 2 — Timeline cuộc đời */}
+            <div className="group relative p-8 rounded-2xl border border-zinc-800 bg-zinc-900/40 hover:border-indigo-800/60 hover:bg-indigo-950/10 transition-all duration-500">
+              <div className="absolute top-4 right-4 px-2 py-0.5 rounded-full bg-zinc-800 border border-zinc-700 text-[10px] text-zinc-500 uppercase tracking-widest">
+                Sắp ra mắt
+              </div>
+              <div className="w-12 h-12 rounded-xl bg-indigo-950/60 border border-indigo-800/40 flex items-center justify-center mb-6 group-hover:border-indigo-600/60 transition-colors duration-500">
+                <span className="text-xl">📈</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white/90 mb-3">
+                Timeline cuộc đời
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Nhìn thấy toàn bộ hành trình — quá khứ, hiện tại, và những cột mốc tiềm năng phía trước theo chu kỳ vận trình.
+              </p>
+            </div>
+
+            {/* Card 3 — Decision companion */}
+            <div className="group relative p-8 rounded-2xl border border-zinc-800 bg-zinc-900/40 hover:border-indigo-800/60 hover:bg-indigo-950/10 transition-all duration-500">
+              <div className="absolute top-4 right-4 px-2 py-0.5 rounded-full bg-zinc-800 border border-zinc-700 text-[10px] text-zinc-500 uppercase tracking-widest">
+                Sắp ra mắt
+              </div>
+              <div className="w-12 h-12 rounded-xl bg-indigo-950/60 border border-indigo-800/40 flex items-center justify-center mb-6 group-hover:border-indigo-600/60 transition-colors duration-500">
+                <span className="text-xl">⚖️</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white/90 mb-3">
+                Decision companion
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Mỗi khi đứng trước quyết định lớn — sự nghiệp, tình yêu, tài chính — Harmony phân tích thời điểm và cho bạn góc nhìn riêng.
+              </p>
+            </div>
+
+            {/* Card 4 — Insight mỗi ngày */}
+            <div className="group relative p-8 rounded-2xl border border-yellow-900/40 bg-yellow-950/10 hover:border-yellow-700/50 hover:bg-yellow-950/20 transition-all duration-500">
+              <div className="absolute top-4 right-4 px-2 py-0.5 rounded-full bg-yellow-950/60 border border-yellow-800/40 text-[10px] text-yellow-600/70 uppercase tracking-widest">
+                Đang có
+              </div>
+              <div className="w-12 h-12 rounded-xl bg-yellow-950/60 border border-yellow-700/50 flex items-center justify-center mb-6 group-hover:border-yellow-500/60 transition-colors duration-500">
+                <span className="text-xl">✨</span>
+              </div>
+              <h3 className="text-xl font-semibold text-yellow-400/90 mb-3">
+                Insight mỗi ngày
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Thông điệp cá nhân hóa mỗi sáng, dựa trên chu kỳ vận trình và Ngũ Hành của bạn. Không ngày nào giống ngày nào.
+              </p>
+            </div>
+          </div>
+
+          {/* Closing statement */}
+          <div className="mt-20 text-center">
+            <p className="text-gray-600 text-sm uppercase tracking-[0.3em] mb-6">
+              Đây mới là sự khởi đầu
+            </p>
+            <a
+              href="https://anmenh.vutera.net"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-medium rounded-full hover:scale-105 transition-transform duration-300"
+            >
+              Tham gia ngay hôm nay
+              <span className="text-base">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-12 text-center text-zinc-600 text-sm border-t border-zinc-900">
         <p>© 2026 VUTERA Harmony. All rights reserved.</p>
