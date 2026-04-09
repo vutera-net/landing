@@ -120,7 +120,13 @@ export default function Harmony() {
             </p>
             <p className="text-white/45 text-base md:text-lg font-light leading-relaxed">
               Không phải ai cũng nên hành động giống nhau
-              <br className="hidden md:block" /> ở cùng một thời điểm.
+              <br className="hidden md:block" /> ở cùng một thời điểm.{" "}
+              <a
+                href="https://tuvi.vutera.net"
+                className="text-yellow-600/60 underline underline-offset-2 decoration-yellow-800/40 hover:text-yellow-400 transition-colors"
+              >
+                Khám phá chu kỳ riêng của bạn tại TuVi.
+              </a>
             </p>
           </div>
 
@@ -157,7 +163,14 @@ export default function Harmony() {
               Bạn đang ở đâu<br />trong vòng xoay của mình?
             </h2>
             <p className="text-gray-500 text-base max-w-md mx-auto font-light leading-relaxed">
-              Không ai ở mãi một giai đoạn. Harmony giúp bạn nhận ra mình đang ở chu kỳ nào — và điều gì phù hợp ngay lúc này.
+              Không ai ở mãi một giai đoạn. Harmony giúp bạn{" "}
+              <a
+                href="https://tuvi.vutera.net"
+                className="text-yellow-500/75 underline underline-offset-2 decoration-yellow-700/40 hover:text-yellow-400 transition-colors"
+              >
+                nhận ra mình đang ở chu kỳ nào
+              </a>{" "}
+              — và điều gì phù hợp ngay lúc này.
             </p>
           </div>
 
@@ -311,7 +324,14 @@ export default function Harmony() {
           </h2>
           <p className="text-gray-400 leading-relaxed text-lg mb-16">
             Chúng tôi không tin vào những lời phán truyền sáo rỗng. Harmony sử
-            dụng thuật toán AI để giải mã các học thuyết Tử Vi và Bát Tự cổ đại,
+            dụng thuật toán AI để giải mã các học thuyết{" "}
+            <a
+              href="https://tuvi.vutera.net"
+              className="text-yellow-500/75 underline underline-offset-2 decoration-yellow-700/40 hover:text-yellow-400 transition-colors"
+            >
+              Tử Vi
+            </a>{" "}
+            và Bát Tự cổ đại,
             mang đến góc nhìn hiện đại, trực diện và có tính ứng dụng cao cho
             cuộc sống của bạn.
           </p>
@@ -382,7 +402,13 @@ export default function Harmony() {
                 Là công cụ hiểu bản thân
               </h3>
               <p className="text-sm text-gray-500 leading-relaxed">
-                Bạn là người quyết định. Harmony chỉ giúp bạn nhìn rõ hơn — để chọn đúng hơn.
+                Bạn là người quyết định. Harmony chỉ giúp bạn nhìn rõ hơn — để chọn đúng hơn.{" "}
+                <a
+                  href="https://tuvi.vutera.net"
+                  className="text-yellow-600/60 underline underline-offset-2 decoration-yellow-800/40 hover:text-yellow-400 transition-colors"
+                >
+                  Bắt đầu tra cứu bản thân tại TuVi.
+                </a>
               </p>
             </div>
           </div>
@@ -406,7 +432,14 @@ export default function Harmony() {
               Harmony không nói &ldquo;bạn phải làm gì.&rdquo; Nó giúp bạn nhìn rõ hơn để tự quyết định tốt
               hơn. Dù bạn đang ở giai đoạn tăng trưởng, chuyển đổi hay dưỡng sức, Harmony đều có thể
               giúp bạn hành động đúng thời điểm — và tránh lãng phí năng lượng vào những điều chưa
-              phải lúc.
+              phải lúc. Lưu kết quả phân tích vào{" "}
+              <a
+                href="https://anmenh.vutera.net"
+                className="text-yellow-500/75 underline underline-offset-2 decoration-yellow-700/40 hover:text-yellow-400 transition-colors"
+              >
+                hồ sơ cá nhân tại An Mệnh
+              </a>{" "}
+              để theo dõi hành trình theo thời gian.
             </p>
           </div>
 
@@ -424,7 +457,14 @@ export default function Harmony() {
               Hành và chu kỳ thời gian để đưa ra nhận định có tính cá nhân hóa cao. Harmony sử dụng AI
               không phải để thay thế triết học cổ đại, mà để giải mã nó một cách nhất quán, khoa học và
               không thiên kiến. Kết quả là một hệ thống insight có thể áp dụng vào cuộc sống thực —
-              từ thời điểm ra quyết định đến hiểu sâu tính cách và năng lượng cá nhân của từng người.
+              từ thời điểm ra quyết định đến{" "}
+              <a
+                href="https://tuvi.vutera.net"
+                className="text-yellow-500/75 underline underline-offset-2 decoration-yellow-700/40 hover:text-yellow-400 transition-colors"
+              >
+                khám phá sâu tính cách và năng lượng cá nhân
+              </a>{" "}
+              của từng người.
             </p>
           </div>
 
@@ -442,7 +482,14 @@ export default function Harmony() {
               Hỏa, Thổ. Tổ hợp tám yếu tố này tạo nên một bản đồ năng lượng cá nhân độc nhất vô nhị.
               Khi đối chiếu với chu kỳ thời gian hiện tại — năm, tháng, ngày — Harmony xác định được
               giai đoạn thuận hay nghịch, thời điểm nên tiến hay nên dưỡng sức. Đây là nền tảng đằng
-              sau mọi insight mà Harmony cung cấp cho bạn.
+              sau mọi insight mà Harmony cung cấp cho bạn. Bạn có thể{" "}
+              <a
+                href="https://tuvi.vutera.net"
+                className="text-yellow-500/75 underline underline-offset-2 decoration-yellow-700/40 hover:text-yellow-400 transition-colors"
+              >
+                tra cứu Bát Tự của mình tại TuVi
+              </a>{" "}
+              để bắt đầu khám phá.
             </p>
           </div>
 
@@ -460,7 +507,14 @@ export default function Harmony() {
               theo cung hoàng đạo hay năm âm lịch. Mỗi insight trên Harmony được tính toán riêng cho
               từng cá nhân — dựa trên tổ hợp Bát Tự cụ thể và thời điểm hiện tại. Cá nhân hóa vận mệnh
               không có nghĩa là số phận đã định sẵn — mà là bạn hiểu đủ rõ về bản thân để đưa ra những
-              lựa chọn phù hợp nhất với chính mình ở từng giai đoạn cuộc đời.
+              lựa chọn phù hợp nhất với chính mình ở từng giai đoạn cuộc đời. Xây dựng{" "}
+              <a
+                href="https://anmenh.vutera.net"
+                className="text-yellow-500/75 underline underline-offset-2 decoration-yellow-700/40 hover:text-yellow-400 transition-colors"
+              >
+                hồ sơ cá nhân hóa của bạn tại An Mệnh
+              </a>{" "}
+              để ghi lại hành trình này.
             </p>
           </div>
 
@@ -554,6 +608,15 @@ export default function Harmony() {
                 </p>
                 <p className="text-sm text-gray-500 leading-relaxed mt-1">
                   Không có hai người nào nhận cùng một thông điệp.
+                </p>
+                <p className="text-sm leading-relaxed mt-1">
+                  <a
+                    href="https://anmenh.vutera.net"
+                    className="text-yellow-600/60 underline underline-offset-2 decoration-yellow-800/40 hover:text-yellow-400 transition-colors"
+                  >
+                    Lưu kết quả vào hồ sơ An Mệnh
+                  </a>{" "}
+                  để xem lại bất cứ lúc nào.
                 </p>
               </div>
             </div>
@@ -752,7 +815,13 @@ export default function Harmony() {
               </div>
               <h3 className="text-base font-semibold text-white mb-3">Tử Vi</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
-                Khám phá bản đồ vận mệnh. Đọc thông điệp hằng ngày. Học về bản
+                <a
+                  href="https://tuvi.vutera.net"
+                  className="text-yellow-500/70 underline underline-offset-2 decoration-yellow-800/40 hover:text-yellow-400 transition-colors"
+                >
+                  Khám phá bản đồ vận mệnh
+                </a>
+                . Đọc thông điệp hằng ngày. Học về bản
                 thân qua góc nhìn cổ học.
               </p>
             </div>
@@ -774,7 +843,14 @@ export default function Harmony() {
               </div>
               <h3 className="text-base font-semibold text-white mb-3">An Mệnh</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
-                Hồ sơ cá nhân sâu. Lưu trữ bản ngã số của bạn. Nơi mọi dữ
+                Hồ sơ cá nhân sâu.{" "}
+                <a
+                  href="https://anmenh.vutera.net"
+                  className="text-yellow-500/70 underline underline-offset-2 decoration-yellow-800/40 hover:text-yellow-400 transition-colors"
+                >
+                  Lưu trữ bản ngã số của bạn
+                </a>
+                . Nơi mọi dữ
                 liệu hội tụ về một chủ nhân.
               </p>
             </div>
@@ -864,6 +940,23 @@ export default function Harmony() {
               </span>
               &rdquo;
             </p>
+            <p className="mt-8 text-sm text-gray-600 not-italic">
+              Bắt đầu bằng{" "}
+              <a
+                href="https://tuvi.vutera.net"
+                className="text-yellow-600/60 underline underline-offset-2 decoration-yellow-800/40 hover:text-yellow-400 transition-colors"
+              >
+                khám phá tử vi cá nhân tại TuVi
+              </a>
+              , hoặc{" "}
+              <a
+                href="https://anmenh.vutera.net"
+                className="text-yellow-600/60 underline underline-offset-2 decoration-yellow-800/40 hover:text-yellow-400 transition-colors"
+              >
+                tạo hồ sơ An Mệnh
+              </a>{" "}
+              để lưu toàn bộ hành trình.
+            </p>
           </div>
         </div>
       </section>
@@ -948,7 +1041,14 @@ export default function Harmony() {
                 Insight mỗi ngày
               </h3>
               <p className="text-sm text-gray-500 leading-relaxed">
-                Thông điệp cá nhân hóa mỗi sáng, dựa trên chu kỳ vận trình và Ngũ Hành của bạn. Không ngày nào giống ngày nào.
+                Thông điệp cá nhân hóa mỗi sáng, dựa trên chu kỳ vận trình và Ngũ Hành của bạn. Không ngày nào giống ngày nào.{" "}
+                <a
+                  href="https://anmenh.vutera.net"
+                  className="text-yellow-600/60 underline underline-offset-2 decoration-yellow-800/40 hover:text-yellow-400 transition-colors"
+                >
+                  Lưu lại trong hồ sơ An Mệnh
+                </a>{" "}
+                để nhìn lại hành trình.
               </p>
             </div>
           </div>
