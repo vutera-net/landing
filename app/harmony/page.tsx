@@ -389,6 +389,84 @@ export default function Harmony() {
         </div>
       </section>
 
+      {/* SEO Semantic Sections */}
+      <section id="semantic-seo" className="py-24 px-6 bg-zinc-950 border-t border-zinc-900">
+        <div className="max-w-3xl mx-auto space-y-20">
+
+          {/* 1 — Harmony là gì */}
+          <div>
+            <p className="text-xs text-yellow-600/50 uppercase tracking-[0.3em] mb-4">01</p>
+            <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
+              Harmony là gì
+            </h2>
+            <p className="text-gray-400 leading-relaxed text-base md:text-lg font-light">
+              Harmony là nền tảng hiểu bản thân dựa trên triết học phương Đông và trí tuệ nhân tạo.
+              Thay vì phán đoán số phận, Harmony phân tích chu kỳ vận động cá nhân — từ nhịp hằng ngày
+              đến đại vận nhiều thập kỷ — để giúp bạn hiểu mình đang ở giai đoạn nào trong cuộc đời.
+              Harmony không nói &ldquo;bạn phải làm gì.&rdquo; Nó giúp bạn nhìn rõ hơn để tự quyết định tốt
+              hơn. Dù bạn đang ở giai đoạn tăng trưởng, chuyển đổi hay dưỡng sức, Harmony đều có thể
+              giúp bạn hành động đúng thời điểm — và tránh lãng phí năng lượng vào những điều chưa
+              phải lúc.
+            </p>
+          </div>
+
+          <div className="w-full h-px bg-zinc-800" />
+
+          {/* 2 — AI tử vi là gì */}
+          <div>
+            <p className="text-xs text-yellow-600/50 uppercase tracking-[0.3em] mb-4">02</p>
+            <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
+              AI tử vi là gì
+            </h2>
+            <p className="text-gray-400 leading-relaxed text-base md:text-lg font-light">
+              AI tử vi là ứng dụng trí tuệ nhân tạo vào hệ thống chiêm tinh học phương Đông truyền
+              thống. Thay vì dựa vào diễn giải thủ công, AI phân tích hàng triệu tổ hợp Bát Tự, Ngũ
+              Hành và chu kỳ thời gian để đưa ra nhận định có tính cá nhân hóa cao. Harmony sử dụng AI
+              không phải để thay thế triết học cổ đại, mà để giải mã nó một cách nhất quán, khoa học và
+              không thiên kiến. Kết quả là một hệ thống insight có thể áp dụng vào cuộc sống thực —
+              từ thời điểm ra quyết định đến hiểu sâu tính cách và năng lượng cá nhân của từng người.
+            </p>
+          </div>
+
+          <div className="w-full h-px bg-zinc-800" />
+
+          {/* 3 — Bát tự hoạt động thế nào */}
+          <div>
+            <p className="text-xs text-yellow-600/50 uppercase tracking-[0.3em] mb-4">03</p>
+            <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
+              Bát tự hoạt động thế nào
+            </h2>
+            <p className="text-gray-400 leading-relaxed text-base md:text-lg font-light">
+              Bát Tự — còn gọi là Tứ Trụ — là hệ thống phân tích dựa trên tám ký tự đại diện cho năm,
+              tháng, ngày và giờ sinh của một người. Mỗi ký tự mang một trong Ngũ Hành: Kim, Mộc, Thủy,
+              Hỏa, Thổ. Tổ hợp tám yếu tố này tạo nên một bản đồ năng lượng cá nhân độc nhất vô nhị.
+              Khi đối chiếu với chu kỳ thời gian hiện tại — năm, tháng, ngày — Harmony xác định được
+              giai đoạn thuận hay nghịch, thời điểm nên tiến hay nên dưỡng sức. Đây là nền tảng đằng
+              sau mọi insight mà Harmony cung cấp cho bạn.
+            </p>
+          </div>
+
+          <div className="w-full h-px bg-zinc-800" />
+
+          {/* 4 — Cá nhân hóa vận mệnh */}
+          <div>
+            <p className="text-xs text-yellow-600/50 uppercase tracking-[0.3em] mb-4">04</p>
+            <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
+              Cá nhân hóa vận mệnh
+            </h2>
+            <p className="text-gray-400 leading-relaxed text-base md:text-lg font-light">
+              Không có hai người nào có cùng một Bát Tự. Và dù cùng ngày sinh, giờ sinh khác nhau cũng
+              tạo ra hành trình hoàn toàn khác. Đó là lý do Harmony không cung cấp nội dung chung chung
+              theo cung hoàng đạo hay năm âm lịch. Mỗi insight trên Harmony được tính toán riêng cho
+              từng cá nhân — dựa trên tổ hợp Bát Tự cụ thể và thời điểm hiện tại. Cá nhân hóa vận mệnh
+              không có nghĩa là số phận đã định sẵn — mà là bạn hiểu đủ rõ về bản thân để đưa ra những
+              lựa chọn phù hợp nhất với chính mình ở từng giai đoạn cuộc đời.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
       {/* How It Works Section */}
       <section id="how-it-works" className="py-32 px-6 bg-zinc-950">
         <div className="max-w-4xl mx-auto">
