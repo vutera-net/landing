@@ -42,7 +42,11 @@ export default function Harmony() {
           </span>
         </h1>
 
-        <p className="text-lg md:text-xl text-gray-400 max-w-2xl mb-12 font-light">
+        <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-6 font-light">
+          Harmony giúp bạn hiểu bản thân và đưa ra quyết định đúng thời điểm của cuộc đời.
+        </p>
+
+        <p className="text-base md:text-lg text-gray-400 max-w-2xl mb-12 font-light">
           Khám phá bản đồ vận mệnh của bạn thông qua sự kết hợp của Bát tự, Ngũ
           hành và trí tuệ nhân tạo.
         </p>
