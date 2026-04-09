@@ -48,19 +48,14 @@ export default function Harmony() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] bg-yellow-900/10 rounded-full blur-[100px] pointer-events-none" />
 
         <h1 className="text-5xl md:text-7xl font-light tracking-tight max-w-4xl mb-6 leading-tight">
-          Nơi triết lý phương Đông <br />
+          Hiểu bản thân. <br />
           <span className="font-serif italic text-yellow-500/90">
-            gặp gỡ AI hiện đại.
+            Sống đúng thời điểm.
           </span>
         </h1>
 
-        <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-6 font-light">
-          Harmony giúp bạn hiểu bản thân và đưa ra quyết định đúng thời điểm của cuộc đời.
-        </p>
-
-        <p className="text-base md:text-lg text-gray-400 max-w-2xl mb-12 font-light">
-          Khám phá bản đồ vận mệnh của bạn thông qua sự kết hợp của Bát tự, Ngũ
-          hành và trí tuệ nhân tạo.
+        <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-12 font-light">
+          Harmony kết hợp triết lý phương Đông và AI để giúp bạn hiểu chu kỳ cuộc đời và đưa ra quyết định phù hợp với chính mình.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6">
@@ -68,13 +63,13 @@ export default function Harmony() {
             href="https://anmenh.vutera.net"
             className="px-8 py-4 bg-white text-black font-medium rounded-full hover:scale-105 transition-transform duration-300"
           >
-            Mở Khóa Vận Mệnh
+            Tạo hồ sơ cá nhân
           </a>
           <a
             href="https://tuvi.vutera.net"
             className="px-8 py-4 border border-zinc-800 text-white font-medium rounded-full hover:bg-zinc-900 transition-colors"
           >
-            Đọc Thông Điệp Ngày Mới
+            Khám phá miễn phí
           </a>
         </div>
       </main>
