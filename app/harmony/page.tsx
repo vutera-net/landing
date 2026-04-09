@@ -111,6 +111,48 @@ export default function Harmony() {
         </div>
       </section>
 
+      {/* Not Prediction Section */}
+      <section className="py-32 px-6 bg-black">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-light mb-4">
+            Harmony không phải là
+          </h2>
+          <p className="text-gray-500 text-lg mb-16">
+            dự đoán tương lai.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6 text-left">
+            <div className="p-8 border border-zinc-800 rounded-2xl bg-zinc-950/60">
+              <div className="text-2xl mb-4">❌</div>
+              <h3 className="text-lg font-semibold mb-3 text-white/90">
+                Không phán định số phận
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Harmony không nói bạn phải làm gì. Không có câu trả lời đúng duy nhất cho cuộc đời bạn.
+              </p>
+            </div>
+            <div className="p-8 border border-zinc-800 rounded-2xl bg-zinc-950/60">
+              <div className="text-2xl mb-4">❌</div>
+              <h3 className="text-lg font-semibold mb-3 text-white/90">
+                Không mê tín
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Dựa trên hệ thống quy luật và dữ liệu. Không có thần linh, không có lời nguyền, không có vận xui.
+              </p>
+            </div>
+            <div className="p-8 border border-yellow-900/40 rounded-2xl bg-yellow-950/10">
+              <div className="text-2xl mb-4">✅</div>
+              <h3 className="text-lg font-semibold mb-3 text-yellow-500/90">
+                Là công cụ hiểu bản thân
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Bạn là người quyết định. Harmony chỉ giúp bạn nhìn rõ hơn — để chọn đúng hơn.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-12 text-center text-zinc-600 text-sm border-t border-zinc-900">
         <p>© 2026 VUTERA Harmony. All rights reserved.</p>
