@@ -47,6 +47,27 @@ export default function Harmony() {
         {/* Subtle background glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] bg-yellow-900/10 rounded-full blur-[100px] pointer-events-none" />
 
+        {/* Hero orbit rings background */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+          <svg
+            className="w-[min(95vw,700px)] opacity-[0.18]"
+            viewBox="-280 -210 560 420"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <ellipse rx="82" ry="33" stroke="#a17825" strokeWidth="1" strokeDasharray="3 5" />
+            <ellipse rx="140" ry="56" stroke="#a17825" strokeWidth="0.9" strokeDasharray="4 7" />
+            <ellipse rx="198" ry="79" stroke="#a17825" strokeWidth="0.8" strokeDasharray="4 9" />
+            <ellipse rx="256" ry="102" stroke="#a17825" strokeWidth="0.7" strokeDasharray="5 11" />
+            <circle cx="82" cy="0" r="4" fill="#d4a853" />
+            <circle cx="0" cy="-56" r="3.5" fill="#d4a853" />
+            <circle cx="-150" cy="63" r="3" fill="#d4a853" />
+            <circle cx="256" cy="0" r="2.5" fill="#d4a853" />
+            <circle cx="0" cy="0" r="13" fill="#a17825" fillOpacity="0.3" />
+            <circle cx="0" cy="0" r="5" fill="#f5d78e" />
+          </svg>
+        </div>
+
         <h1 className="text-5xl md:text-7xl font-light tracking-tight max-w-4xl mb-6 leading-tight">
           Hiểu bản thân. <br />
           <span className="font-serif italic text-yellow-500/90">
@@ -110,6 +131,165 @@ export default function Harmony() {
             </p>
             <p className="text-2xl md:text-3xl font-light text-white/35 tracking-tight">
               điều gì nên chờ
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Life Cycles — Orbit Diagram + Timeline */}
+      <section className="py-32 px-6 bg-black overflow-hidden">
+        <div className="max-w-5xl mx-auto">
+
+          {/* Section header */}
+          <div className="text-center mb-20">
+            <p className="text-xs text-yellow-600/60 uppercase tracking-[0.35em] mb-4">
+              Chu Kỳ Cuộc Đời
+            </p>
+            <h2 className="text-3xl md:text-4xl font-light text-white mb-5">
+              Bạn đang ở đâu<br />trong vòng xoay của mình?
+            </h2>
+            <p className="text-gray-500 text-base max-w-md mx-auto font-light leading-relaxed">
+              Không ai ở mãi một giai đoạn. Harmony giúp bạn nhận ra mình đang ở chu kỳ nào — và điều gì phù hợp ngay lúc này.
+            </p>
+          </div>
+
+          {/* Orbit Diagram + Ring Descriptions */}
+          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20 justify-center">
+
+            {/* Orbit SVG */}
+            <div className="w-full max-w-[360px] md:max-w-[420px] flex-shrink-0">
+              <svg
+                viewBox="-240 -200 480 400"
+                className="w-full h-auto"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {/* Center glow */}
+                <circle cx="0" cy="0" r="44" fill="rgba(161,120,37,0.10)" />
+                <circle cx="0" cy="0" r="24" fill="rgba(161,120,37,0.16)" />
+
+                {/* Ring 4 — Đại Vận */}
+                <ellipse rx="226" ry="90" stroke="rgba(161,120,37,0.18)" strokeWidth="1" strokeDasharray="5 10" />
+                <circle cx="-226" cy="0" r="3" fill="rgba(212,168,83,0.36)" />
+                <text x="-226" y="-12" fill="rgba(212,168,83,0.36)" fontSize="10" fontFamily="Inter, sans-serif" textAnchor="middle">Đại Vận</text>
+
+                {/* Ring 3 — Năm */}
+                <ellipse rx="174" ry="70" stroke="rgba(161,120,37,0.26)" strokeWidth="1" strokeDasharray="4 8" />
+                <circle cx="0" cy="70" r="3" fill="rgba(212,168,83,0.47)" />
+                <text x="0" y="87" fill="rgba(212,168,83,0.47)" fontSize="10" fontFamily="Inter, sans-serif" textAnchor="middle">Năm</text>
+
+                {/* Ring 2 — Tháng */}
+                <ellipse rx="124" ry="50" stroke="rgba(161,120,37,0.36)" strokeWidth="1" strokeDasharray="4 6" />
+                <circle cx="0" cy="-50" r="3.5" fill="rgba(212,168,83,0.62)" />
+                <text x="0" y="-58" fill="rgba(212,168,83,0.62)" fontSize="10" fontFamily="Inter, sans-serif" textAnchor="middle">Tháng</text>
+
+                {/* Ring 1 — Ngày */}
+                <ellipse rx="76" ry="30" stroke="rgba(161,120,37,0.56)" strokeWidth="1.2" strokeDasharray="3 4" />
+                <circle cx="76" cy="0" r="4" fill="rgba(212,168,83,0.86)" />
+                <text x="90" y="4" fill="rgba(212,168,83,0.86)" fontSize="10" fontFamily="Inter, sans-serif" textAnchor="start">Ngày</text>
+
+                {/* Center: User */}
+                <circle cx="0" cy="0" r="16" fill="rgba(161,120,37,0.22)" />
+                <circle cx="0" cy="0" r="9" fill="rgba(161,120,37,0.45)" />
+                <circle cx="0" cy="0" r="4.5" fill="rgba(245,215,142,0.90)" />
+                <text x="0" y="26" fill="rgba(245,215,142,0.72)" fontSize="11" fontFamily="Inter, sans-serif" textAnchor="middle">Bạn</text>
+              </svg>
+            </div>
+
+            {/* Ring descriptions */}
+            <div className="space-y-5 max-w-xs">
+              <div className="flex gap-3 items-start">
+                <div className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0 bg-yellow-400/85" />
+                <div>
+                  <div className="text-white/85 text-sm font-medium mb-0.5">Chu kỳ Ngày</div>
+                  <div className="text-xs text-gray-600 leading-relaxed">Năng lượng và tâm trạng biến đổi trong từng ngày.</div>
+                </div>
+              </div>
+              <div className="flex gap-3 items-start">
+                <div className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0 bg-yellow-400/60" />
+                <div>
+                  <div className="text-white/70 text-sm font-medium mb-0.5">Chu kỳ Tháng</div>
+                  <div className="text-xs text-gray-600 leading-relaxed">Nhịp cảm xúc và công việc lên xuống theo tháng.</div>
+                </div>
+              </div>
+              <div className="flex gap-3 items-start">
+                <div className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0 bg-yellow-400/45" />
+                <div>
+                  <div className="text-white/55 text-sm font-medium mb-0.5">Chu kỳ Năm</div>
+                  <div className="text-xs text-gray-600 leading-relaxed">Giai đoạn tăng trưởng và chuyển đổi theo từng năm.</div>
+                </div>
+              </div>
+              <div className="flex gap-3 items-start">
+                <div className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0 bg-yellow-400/30" />
+                <div>
+                  <div className="text-white/40 text-sm font-medium mb-0.5">Đại Vận</div>
+                  <div className="text-xs text-gray-600 leading-relaxed">Chu kỳ lớn 10 năm — định hướng cả giai đoạn cuộc đời.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Life Stage Timeline */}
+          <div className="mt-24">
+            <p className="text-center text-xs text-gray-600 uppercase tracking-[0.3em] mb-10">
+              Hành Trình — Các Giai Đoạn
+            </p>
+            <div className="overflow-x-auto">
+              <svg
+                viewBox="0 0 840 150"
+                className="w-full min-w-[560px] h-auto"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {/* Wave path representing energy/life cycle */}
+                <path
+                  d="M 30 95 C 110 95, 150 38, 230 38 C 310 38, 320 95, 390 95 C 460 95, 480 38, 570 38 C 650 38, 660 95, 730 95 C 780 95, 800 65, 820 55"
+                  stroke="rgba(161,120,37,0.30)"
+                  strokeWidth="1.5"
+                  fill="none"
+                />
+
+                {/* Stage 1: Khởi đầu */}
+                <circle cx="30" cy="95" r="5" fill="rgba(161,120,37,0.50)" />
+                <text x="30" y="120" fill="rgba(212,168,83,0.50)" fontSize="9.5" fontFamily="Inter, sans-serif" textAnchor="middle">Khởi đầu</text>
+
+                {/* Stage 2: Xây dựng — with "Bạn?" indicator */}
+                <circle cx="140" cy="62" r="5.5" fill="rgba(212,168,83,0.75)" />
+                <circle cx="140" cy="62" r="10" fill="rgba(161,120,37,0.12)" />
+                <line x1="140" y1="52" x2="140" y2="16" stroke="rgba(245,215,142,0.40)" strokeWidth="1" strokeDasharray="2 3" />
+                <text x="140" y="10" fill="rgba(245,215,142,0.60)" fontSize="9" fontFamily="Inter, sans-serif" textAnchor="middle">Bạn đang ở đây?</text>
+                <text x="140" y="78" fill="rgba(212,168,83,0.70)" fontSize="9.5" fontFamily="Inter, sans-serif" textAnchor="middle">Xây dựng</text>
+
+                {/* Stage 3: Đỉnh cao — peak */}
+                <circle cx="230" cy="38" r="7.5" fill="rgba(212,168,83,0.82)" />
+                <circle cx="230" cy="38" r="14" fill="rgba(161,120,37,0.12)" />
+                <text x="230" y="24" fill="rgba(245,215,142,0.82)" fontSize="10" fontFamily="Inter, sans-serif" textAnchor="middle">Đỉnh cao</text>
+
+                {/* Stage 4: Chuyển đổi */}
+                <circle cx="390" cy="95" r="5" fill="rgba(161,120,37,0.40)" />
+                <text x="390" y="120" fill="rgba(212,168,83,0.40)" fontSize="9.5" fontFamily="Inter, sans-serif" textAnchor="middle">Chuyển đổi</text>
+
+                {/* Stage 5: Hồi phục */}
+                <circle cx="490" cy="60" r="5" fill="rgba(161,120,37,0.48)" />
+                <text x="490" y="50" fill="rgba(212,168,83,0.48)" fontSize="9.5" fontFamily="Inter, sans-serif" textAnchor="middle">Hồi phục</text>
+
+                {/* Stage 6: Viên mãn */}
+                <circle cx="570" cy="38" r="6.5" fill="rgba(212,168,83,0.68)" />
+                <circle cx="570" cy="38" r="12" fill="rgba(161,120,37,0.09)" />
+                <text x="570" y="24" fill="rgba(212,168,83,0.68)" fontSize="9.5" fontFamily="Inter, sans-serif" textAnchor="middle">Viên mãn</text>
+
+                {/* Stage 7: Vòng mới */}
+                <circle cx="730" cy="95" r="4" fill="rgba(161,120,37,0.28)" />
+                <text x="730" y="120" fill="rgba(212,168,83,0.28)" fontSize="9.5" fontFamily="Inter, sans-serif" textAnchor="middle">Vòng mới</text>
+
+                {/* Continuation fade */}
+                <circle cx="806" cy="62" r="2" fill="rgba(161,120,37,0.18)" />
+                <circle cx="818" cy="58" r="1.5" fill="rgba(161,120,37,0.12)" />
+                <circle cx="828" cy="55" r="1" fill="rgba(161,120,37,0.07)" />
+              </svg>
+            </div>
+            <p className="text-center text-xs text-gray-700 mt-4 font-light">
+              Mỗi người đi qua các giai đoạn với nhịp điệu khác nhau. Không ai ở mãi một nơi.
             </p>
           </div>
         </div>
