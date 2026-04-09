@@ -21,6 +21,12 @@ export default function Harmony() {
           >
             Cách Hoạt Động
           </Link>
+          <Link
+            href="#ecosystem"
+            className="hover:text-white transition-colors"
+          >
+            Hệ Sinh Thái
+          </Link>
           <a
             href="https://anmenh.vutera.net"
             className="hover:text-white transition-colors"
@@ -267,6 +273,209 @@ export default function Harmony() {
               Bắt đầu khám phá của bạn
               <span className="text-base">→</span>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Ecosystem Section */}
+      <section id="ecosystem" className="py-32 px-6 bg-zinc-950">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-20">
+            <p className="text-xs text-yellow-600/70 uppercase tracking-[0.3em] mb-4">
+              Hệ Sinh Thái
+            </p>
+            <h2 className="text-3xl md:text-4xl font-light mb-6">
+              Ba trong một. Một platform.
+            </h2>
+            <p className="text-gray-400 text-lg max-w-xl mx-auto">
+              Đây là đoạn biến bạn thành{" "}
+              <span className="text-white font-semibold tracking-widest">
+                PLATFORM.
+              </span>
+            </p>
+          </div>
+
+          {/* Desktop Orbit Diagram */}
+          <div
+            className="hidden md:block relative mx-auto"
+            style={{ maxWidth: "540px", height: "390px" }}
+          >
+            <svg
+              className="absolute inset-0 w-full h-full"
+              viewBox="0 0 540 390"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* Outer glow ring around Harmony */}
+              <circle
+                cx="270"
+                cy="80"
+                r="56"
+                stroke="rgba(161,120,37,0.12)"
+                strokeWidth="1"
+              />
+              {/* Connection: Harmony → TuVi */}
+              <line
+                x1="230"
+                y1="110"
+                x2="110"
+                y2="295"
+                stroke="rgba(161,120,37,0.4)"
+                strokeWidth="1.5"
+                strokeDasharray="6 5"
+              />
+              {/* Connection: Harmony → AnMenh */}
+              <line
+                x1="310"
+                y1="110"
+                x2="430"
+                y2="295"
+                stroke="rgba(161,120,37,0.4)"
+                strokeWidth="1.5"
+                strokeDasharray="6 5"
+              />
+              {/* Connection: TuVi → AnMenh */}
+              <line
+                x1="155"
+                y1="318"
+                x2="385"
+                y2="318"
+                stroke="rgba(113,113,122,0.25)"
+                strokeWidth="1"
+                strokeDasharray="4 5"
+              />
+              {/* Arrow dots at endpoints */}
+              <circle cx="110" cy="295" r="2.5" fill="rgba(161,120,37,0.5)" />
+              <circle cx="430" cy="295" r="2.5" fill="rgba(161,120,37,0.5)" />
+            </svg>
+
+            {/* Harmony — Top Center (Hub) */}
+            <div
+              className="absolute flex flex-col items-center"
+              style={{ top: "12px", left: "50%", transform: "translateX(-50%)" }}
+            >
+              <div className="w-[88px] h-[88px] rounded-full bg-yellow-950/50 border border-yellow-700/60 flex items-center justify-center mb-3 shadow-[0_0_30px_rgba(161,120,37,0.15)]">
+                <span className="text-3xl">☯</span>
+              </div>
+              <div className="text-sm font-bold text-yellow-400/90 tracking-widest uppercase">
+                Harmony
+              </div>
+              <div className="text-xs text-yellow-700/70 mt-1 text-center">
+                Triết lý &amp; hệ dẫn đường
+              </div>
+              <div className="text-[10px] text-yellow-900 mt-0.5">
+                Hệ thống kết nối tất cả
+              </div>
+            </div>
+
+            {/* TuVi — Bottom Left */}
+            <div
+              className="absolute flex flex-col items-center"
+              style={{ bottom: "20px", left: "20px", width: "160px" }}
+            >
+              <div className="w-[72px] h-[72px] rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center mb-3">
+                <span className="text-2xl">📖</span>
+              </div>
+              <div className="text-sm font-semibold text-white/80 tracking-wide">
+                Tử Vi
+              </div>
+              <div className="text-xs text-gray-500 mt-1 text-center">
+                Khám phá &amp; học hỏi
+              </div>
+              <div className="text-[10px] text-gray-600 mt-0.5">Nơi bắt đầu</div>
+            </div>
+
+            {/* AnMenh — Bottom Right */}
+            <div
+              className="absolute flex flex-col items-center"
+              style={{ bottom: "20px", right: "20px", width: "160px" }}
+            >
+              <div className="w-[72px] h-[72px] rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center mb-3">
+                <span className="text-2xl">🗂️</span>
+              </div>
+              <div className="text-sm font-semibold text-white/80 tracking-wide">
+                An Mệnh
+              </div>
+              <div className="text-xs text-gray-500 mt-1 text-center">
+                Hồ sơ cá nhân
+              </div>
+              <div className="text-[10px] text-gray-600 mt-0.5">
+                Nơi thuộc về bạn
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile — Vertical Stack */}
+          <div className="md:hidden flex flex-col items-center gap-0">
+            {/* Harmony */}
+            <div className="flex flex-col items-center p-6 border border-yellow-900/40 rounded-2xl bg-yellow-950/10 w-full max-w-xs text-center">
+              <div className="w-16 h-16 rounded-full bg-yellow-950/50 border border-yellow-700/60 flex items-center justify-center mb-3">
+                <span className="text-2xl">☯</span>
+              </div>
+              <div className="text-sm font-bold text-yellow-400/90 tracking-widest uppercase mb-1">
+                Harmony
+              </div>
+              <div className="text-xs text-gray-500">Triết lý &amp; hệ dẫn đường</div>
+              <div className="text-[10px] text-yellow-800 mt-1">
+                Hệ thống kết nối tất cả
+              </div>
+            </div>
+            <div className="w-px h-8 bg-gradient-to-b from-yellow-800/40 to-zinc-700/30" />
+            {/* TuVi */}
+            <div className="flex flex-col items-center p-6 border border-zinc-800 rounded-2xl bg-zinc-900/30 w-full max-w-xs text-center">
+              <div className="w-16 h-16 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center mb-3">
+                <span className="text-2xl">📖</span>
+              </div>
+              <div className="text-sm font-semibold text-white/80 mb-1">Tử Vi</div>
+              <div className="text-xs text-gray-500">Khám phá &amp; học hỏi</div>
+              <div className="text-[10px] text-gray-600 mt-1">Nơi bắt đầu</div>
+            </div>
+            <div className="w-px h-8 bg-gradient-to-b from-zinc-700/30 to-zinc-700/10" />
+            {/* AnMenh */}
+            <div className="flex flex-col items-center p-6 border border-zinc-800 rounded-2xl bg-zinc-900/30 w-full max-w-xs text-center">
+              <div className="w-16 h-16 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center mb-3">
+                <span className="text-2xl">🗂️</span>
+              </div>
+              <div className="text-sm font-semibold text-white/80 mb-1">An Mệnh</div>
+              <div className="text-xs text-gray-500">Hồ sơ cá nhân</div>
+              <div className="text-[10px] text-gray-600 mt-1">Nơi thuộc về bạn</div>
+            </div>
+          </div>
+
+          {/* 3-column role descriptions */}
+          <div className="grid md:grid-cols-3 gap-0 mt-20 border border-zinc-800 rounded-2xl overflow-hidden">
+            <div className="p-8 text-center bg-zinc-900/20">
+              <div className="text-[10px] text-yellow-700 uppercase tracking-[0.25em] mb-3">
+                Nơi bắt đầu
+              </div>
+              <h3 className="text-base font-semibold text-white mb-3">Tử Vi</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Khám phá bản đồ vận mệnh. Đọc thông điệp hằng ngày. Học về bản
+                thân qua góc nhìn cổ học.
+              </p>
+            </div>
+            <div className="p-8 text-center border-x border-zinc-800 bg-yellow-950/10">
+              <div className="text-[10px] text-yellow-600/80 uppercase tracking-[0.25em] mb-3">
+                Hệ thống kết nối
+              </div>
+              <h3 className="text-base font-semibold text-yellow-400/90 mb-3">
+                Harmony
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Nền tảng triết học dẫn đường. Kết hợp dữ liệu từ Tử Vi và hồ
+                sơ từ An Mệnh thành insight sống.
+              </p>
+            </div>
+            <div className="p-8 text-center bg-zinc-900/20">
+              <div className="text-[10px] text-yellow-700 uppercase tracking-[0.25em] mb-3">
+                Nơi thuộc về bạn
+              </div>
+              <h3 className="text-base font-semibold text-white mb-3">An Mệnh</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Hồ sơ cá nhân sâu. Lưu trữ bản ngã số của bạn. Nơi mọi dữ
+                liệu hội tụ về một chủ nhân.
+              </p>
+            </div>
           </div>
         </div>
       </section>
