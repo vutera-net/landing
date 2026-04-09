@@ -1,46 +1,54 @@
-import Link from "next/link";
 
 export default function Harmony() {
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-yellow-600/30">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full p-6 flex justify-between items-center z-50 mix-blend-difference">
-        <div className="text-xl font-bold tracking-widest uppercase">
-          Harmony
-        </div>
-        <div className="space-x-6 text-sm text-gray-400">
-          <Link
-            href="#why-harmony"
-            className="hover:text-white transition-colors"
-          >
-            Triết Lý
-          </Link>
-          <Link
-            href="#how-it-works"
-            className="hover:text-white transition-colors"
-          >
-            Cách Hoạt Động
-          </Link>
-          <Link
-            href="#ecosystem"
-            className="hover:text-white transition-colors"
-          >
-            Hệ Sinh Thái
-          </Link>
+      {/* Sticky Header */}
+      <nav className="fixed top-0 w-full z-50 bg-black/85 backdrop-blur-md border-b border-zinc-900">
+        <div className="max-w-6xl mx-auto px-6 py-3.5 flex items-center justify-between">
+          {/* Logo + Brand */}
+          <div className="flex items-center gap-2.5">
+            <div className="w-7 h-7 rounded-full bg-yellow-950/60 border border-yellow-700/50 flex items-center justify-center">
+              <span className="text-sm leading-none">☯</span>
+            </div>
+            <span className="text-sm font-bold tracking-[0.2em] uppercase text-white/90">
+              Harmony
+            </span>
+          </div>
+
+          {/* Nav links */}
+          <div className="hidden md:flex items-center gap-7 text-sm text-gray-500">
+            <a
+              href="https://tuvi.vutera.net"
+              className="hover:text-white transition-colors"
+            >
+              TuVi
+            </a>
+            <a
+              href="https://anmenh.vutera.net"
+              className="hover:text-white transition-colors"
+            >
+              AnMenh
+            </a>
+          </div>
+
+          {/* CTA */}
           <a
             href="https://anmenh.vutera.net"
-            className="hover:text-white transition-colors"
+            className="px-4 py-2 bg-white text-black text-sm font-medium rounded-full hover:scale-105 transition-transform duration-200"
           >
-            An Mệnh
-          </a>
-          <a
-            href="https://tuvi.vutera.net"
-            className="hover:text-white transition-colors"
-          >
-            Tử Vi
+            Bắt đầu
           </a>
         </div>
       </nav>
+
+      {/* Sticky floating CTA */}
+      <a
+        href="https://anmenh.vutera.net"
+        className="fixed bottom-8 right-8 z-40 px-5 py-3 bg-yellow-500 text-black text-sm font-semibold rounded-full shadow-[0_4px_24px_rgba(161,120,37,0.45)] hover:bg-yellow-400 hover:scale-105 transition-all duration-300 hidden md:inline-flex items-center gap-2"
+      >
+        Tạo Hồ Sơ Harmony
+        <span className="text-base leading-none">→</span>
+      </a>
 
       {/* Hero Section */}
       <main className="relative flex flex-col items-center justify-center min-h-screen px-4 text-center pb-20 pt-32">
@@ -878,6 +886,60 @@ export default function Harmony() {
             >
               Tham gia ngay hôm nay
               <span className="text-base">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="py-40 px-6 bg-black relative overflow-hidden">
+        {/* Background glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[50vh] bg-yellow-900/8 rounded-full blur-[120px] pointer-events-none" />
+        {/* Orbit rings */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <svg
+            className="w-[min(90vw,600px)] opacity-[0.07]"
+            viewBox="-240 -180 480 360"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <ellipse rx="80" ry="32" stroke="#a17825" strokeWidth="1" strokeDasharray="3 6" />
+            <ellipse rx="140" ry="56" stroke="#a17825" strokeWidth="0.8" strokeDasharray="4 8" />
+            <ellipse rx="200" ry="80" stroke="#a17825" strokeWidth="0.7" strokeDasharray="4 10" />
+            <circle cx="0" cy="0" r="5" fill="#f5d78e" />
+          </svg>
+        </div>
+
+        <div className="relative max-w-2xl mx-auto text-center">
+          <p className="text-xs text-yellow-600/50 uppercase tracking-[0.4em] mb-8">
+            Hành Trình Của Bạn
+          </p>
+
+          <h2 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-white">
+            Bắt đầu hiểu bản thân
+            <br />
+            <span className="font-serif italic text-yellow-500/90">
+              từ hôm nay.
+            </span>
+          </h2>
+
+          <p className="text-gray-500 text-base md:text-lg font-light mb-14 max-w-md mx-auto leading-relaxed">
+            Chỉ cần ngày sinh. Harmony sẽ làm phần còn lại.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+            <a
+              href="https://anmenh.vutera.net"
+              className="px-10 py-5 bg-white text-black font-semibold text-base rounded-full hover:scale-105 transition-transform duration-300 shadow-[0_4px_30px_rgba(255,255,255,0.12)]"
+            >
+              Tạo Hồ Sơ Harmony
+            </a>
+            <a
+              href="https://tuvi.vutera.net"
+              className="text-sm text-gray-500 hover:text-white transition-colors flex items-center gap-2"
+            >
+              Xem thử trước
+              <span className="text-yellow-600/70">→ TuVi</span>
             </a>
           </div>
         </div>
