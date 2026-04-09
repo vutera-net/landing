@@ -15,6 +15,12 @@ export default function Harmony() {
           >
             Triết Lý
           </Link>
+          <Link
+            href="#how-it-works"
+            className="hover:text-white transition-colors"
+          >
+            Cách Hoạt Động
+          </Link>
           <a
             href="https://anmenh.vutera.net"
             className="hover:text-white transition-colors"
@@ -149,6 +155,118 @@ export default function Harmony() {
                 Bạn là người quyết định. Harmony chỉ giúp bạn nhìn rõ hơn — để chọn đúng hơn.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section id="how-it-works" className="py-32 px-6 bg-zinc-950">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-4xl font-light mb-4">
+              Harmony hoạt động như thế nào
+            </h2>
+            <p className="text-gray-500 text-lg">
+              Ba bước từ dữ liệu cá nhân đến insight thực sự.
+            </p>
+          </div>
+
+          {/* Flow Steps */}
+          <div className="relative">
+            {/* Connector line (desktop) */}
+            <div className="hidden md:block absolute top-[3.25rem] left-[calc(16.667%+2rem)] right-[calc(16.667%+2rem)] h-px bg-gradient-to-r from-transparent via-yellow-600/40 to-transparent" />
+
+            <div className="grid md:grid-cols-3 gap-8 md:gap-6">
+              {/* Step 1 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="relative mb-6">
+                  <div className="w-16 h-16 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center">
+                    <span className="text-2xl">📅</span>
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-yellow-600/20 border border-yellow-600/60 flex items-center justify-center">
+                    <span className="text-xs font-bold text-yellow-500">1</span>
+                  </div>
+                </div>
+                <div className="mb-3 px-3 py-1 rounded-full bg-zinc-800 border border-zinc-700 text-xs text-gray-400 uppercase tracking-widest">
+                  Đầu vào
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3">
+                  Ngày sinh & dữ liệu cá nhân
+                </h3>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  Harmony nhận ngày, giờ, năm sinh của bạn.
+                </p>
+                <p className="text-sm text-gray-500 leading-relaxed mt-1">
+                  Từ đó tính toán Bát Tự và cân bằng Ngũ Hành cá nhân.
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="relative mb-6">
+                  <div className="w-16 h-16 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center">
+                    <span className="text-2xl">⚡</span>
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-yellow-600/20 border border-yellow-600/60 flex items-center justify-center">
+                    <span className="text-xs font-bold text-yellow-500">2</span>
+                  </div>
+                </div>
+                <div className="mb-3 px-3 py-1 rounded-full bg-zinc-800 border border-zinc-700 text-xs text-gray-400 uppercase tracking-widest">
+                  Phân tích
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3">
+                  AI phân tích chu kỳ vận động
+                </h3>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  Bát Tự và Ngũ Hành được đối chiếu với chu kỳ thời gian thực.
+                </p>
+                <p className="text-sm text-gray-500 leading-relaxed mt-1">
+                  AI xác định giai đoạn mạnh—yếu, thuận—nghịch trong vận trình.
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="relative mb-6">
+                  <div className="w-16 h-16 rounded-full bg-yellow-900/30 border border-yellow-700/50 flex items-center justify-center">
+                    <span className="text-2xl">✨</span>
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-yellow-600/20 border border-yellow-600/60 flex items-center justify-center">
+                    <span className="text-xs font-bold text-yellow-500">3</span>
+                  </div>
+                </div>
+                <div className="mb-3 px-3 py-1 rounded-full bg-yellow-950/40 border border-yellow-800/40 text-xs text-yellow-600 uppercase tracking-widest">
+                  Kết quả
+                </div>
+                <h3 className="text-lg font-semibold text-yellow-400/90 mb-3">
+                  Insight cá nhân hóa
+                </h3>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  Bạn nhận được insight riêng về tình yêu, sự nghiệp và sức khỏe.
+                </p>
+                <p className="text-sm text-gray-500 leading-relaxed mt-1">
+                  Không có hai người nào nhận cùng một thông điệp.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile connectors */}
+          <div className="md:hidden flex flex-col items-center gap-0 mt-0">
+            {[0, 1].map((i) => (
+              <div key={i} className="w-px h-8 bg-gradient-to-b from-zinc-700 to-transparent" />
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="mt-20 text-center">
+            <a
+              href="https://anmenh.vutera.net"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-medium rounded-full hover:scale-105 transition-transform duration-300"
+            >
+              Bắt đầu khám phá của bạn
+              <span className="text-base">→</span>
+            </a>
           </div>
         </div>
       </section>
