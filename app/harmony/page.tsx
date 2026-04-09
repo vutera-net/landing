@@ -10,7 +10,7 @@ export default function Harmony() {
         </div>
         <div className="space-x-6 text-sm text-gray-400">
           <Link
-            href="#philosophy"
+            href="#why-harmony"
             className="hover:text-white transition-colors"
           >
             Triết Lý
@@ -471,6 +471,92 @@ export default function Harmony() {
                 liệu hội tụ về một chủ nhân.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Harmony — Triết Lý Section */}
+      <section id="why-harmony" className="py-32 px-6 bg-black">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-20">
+            <p className="text-xs text-yellow-600/70 uppercase tracking-[0.3em] mb-4">
+              Triết Lý Harmony
+            </p>
+            <h2 className="text-3xl md:text-4xl font-light">
+              Vì sao là Harmony?
+            </h2>
+          </div>
+
+          {/* Three-panel convergence */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* East */}
+            <div className="p-8 border border-zinc-800 rounded-2xl bg-zinc-950/60 text-center flex flex-col items-center">
+              <div className="w-14 h-14 rounded-full bg-amber-950/40 border border-amber-800/40 flex items-center justify-center mb-5">
+                <span className="text-2xl">♻</span>
+              </div>
+              <div className="text-[10px] text-amber-600/60 uppercase tracking-[0.25em] mb-3">
+                Phương Đông
+              </div>
+              <p className="text-white/80 text-lg font-light mb-4">
+                nhìn đời là{" "}
+                <span className="text-amber-400/80 font-semibold">chu kỳ</span>
+              </p>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Vạn vật sinh diệt theo quy luật. Thời gian không tuyến tính —
+                mà xoay vòng có nhịp.
+              </p>
+            </div>
+
+            {/* Harmony — Bridge (highlighted) */}
+            <div className="p-8 border border-yellow-800/50 rounded-2xl bg-yellow-950/20 text-center flex flex-col items-center relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-yellow-950 border border-yellow-800/60 text-[10px] text-yellow-500/80 uppercase tracking-widest">
+                Giao điểm
+              </div>
+              <div className="w-14 h-14 rounded-full bg-yellow-950/60 border border-yellow-700/60 flex items-center justify-center mb-5 mt-2 shadow-[0_0_20px_rgba(161,120,37,0.15)]">
+                <span className="text-2xl">☯</span>
+              </div>
+              <div className="text-[10px] text-yellow-500/70 uppercase tracking-[0.25em] mb-3">
+                Harmony
+              </div>
+              <p className="text-yellow-400/90 text-lg font-semibold mb-4">
+                kết nối hai góc nhìn
+              </p>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Không loại bỏ cái nào. Harmony là nơi chu kỳ gặp dữ liệu —
+                và tạo ra hiểu biết sâu hơn cả hai.
+              </p>
+            </div>
+
+            {/* AI */}
+            <div className="p-8 border border-zinc-800 rounded-2xl bg-zinc-950/60 text-center flex flex-col items-center">
+              <div className="w-14 h-14 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center mb-5">
+                <span className="text-2xl">⬡</span>
+              </div>
+              <div className="text-[10px] text-sky-600/50 uppercase tracking-[0.25em] mb-3">
+                AI
+              </div>
+              <p className="text-white/80 text-lg font-light mb-4">
+                nhìn đời là{" "}
+                <span className="text-sky-400/70 font-semibold">dữ liệu</span>
+              </p>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Mọi sự kiện đều là pattern. Máy học từ hàng triệu điểm dữ liệu
+                để tìm quy luật ẩn.
+              </p>
+            </div>
+          </div>
+
+          {/* Closing quote */}
+          <div className="mt-16 text-center">
+            <p className="text-gray-500 text-base md:text-lg italic font-light max-w-2xl mx-auto leading-relaxed">
+              &ldquo;Phương Đông có ngàn năm quan sát.
+              <br className="hidden md:block" /> AI có triệu điểm dữ liệu.
+              <br />
+              <span className="text-yellow-600/70 not-italic">
+                Harmony là nơi cả hai nói chuyện với nhau.
+              </span>
+              &rdquo;
+            </p>
           </div>
         </div>
       </section>
