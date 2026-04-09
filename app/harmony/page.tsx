@@ -74,6 +74,47 @@ export default function Harmony() {
         </div>
       </main>
 
+      {/* North Star — Founder Intent */}
+      <section id="north-star" className="py-40 px-6 bg-black">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="text-xs text-yellow-600/60 uppercase tracking-[0.35em] mb-8">
+            Sứ Mệnh
+          </p>
+
+          <h2 className="text-4xl md:text-5xl font-light leading-tight mb-16 text-white">
+            Harmony tồn tại để làm gì?
+          </h2>
+
+          <div className="space-y-4 mb-16">
+            <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed">
+              Mỗi người đều sống trong những chu kỳ khác nhau.
+            </p>
+            <p className="text-white/45 text-base md:text-lg font-light leading-relaxed">
+              Không phải ai cũng nên hành động giống nhau
+              <br className="hidden md:block" /> ở cùng một thời điểm.
+            </p>
+          </div>
+
+          <div className="w-px h-12 bg-yellow-800/40 mx-auto mb-12" />
+
+          <p className="text-gray-500 text-xs uppercase tracking-[0.25em] mb-10">
+            Harmony giúp bạn hiểu
+          </p>
+
+          <div className="space-y-7">
+            <p className="text-2xl md:text-3xl font-light text-white/90 tracking-tight">
+              bạn đang ở giai đoạn nào
+            </p>
+            <p className="text-2xl md:text-3xl font-light text-white/60 tracking-tight">
+              điều gì nên tiến
+            </p>
+            <p className="text-2xl md:text-3xl font-light text-white/35 tracking-tight">
+              điều gì nên chờ
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Philosophy Section */}
       <section id="philosophy" className="py-32 px-6 bg-zinc-950">
         <div className="max-w-4xl mx-auto text-center">
