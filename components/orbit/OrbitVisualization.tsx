@@ -90,7 +90,7 @@ export const OrbitVisualization = () => {
       </div>
 
       <div className="mt-20 z-10 text-center italic text-purple-300/40">
-        "Không học nhiều hơn. Học đúng hơn."
+        &quot;Không học nhiều hơn. Học đúng hơn.&quot;
       </div>
     </section>
   );
