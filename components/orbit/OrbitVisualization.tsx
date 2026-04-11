@@ -2,61 +2,95 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export const OrbitVisualization = () => {
+  const points = [
+    { label: "English", angle: 0, color: "from-blue-400 to-blue-600", glow: "rgba(59, 130, 246, 0.5)" },
+    { label: "Career", angle: 120, color: "from-purple-400 to-purple-600", glow: "rgba(147, 51, 234, 0.5)" },
+    { label: "Skills", angle: 240, color: "from-cyan-400 to-cyan-600", glow: "rgba(34, 211, 238, 0.5)" },
+  ];
+
   return (
-    <section className="relative flex items-center justify-center min-h-screen bg-gray-900 overflow-hidden py-16">
-      <div className="relative w-96 h-96 md:w-[600px] md:h-[600px] rounded-full border-2 border-purple-500 flex items-center justify-center">
-        {/* Center "You" point */}
-        <motion.div
-          className="absolute w-24 h-24 rounded-full bg-purple-700 flex items-center justify-center text-white text-lg font-bold shadow-lg"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
+    <section className="relative flex flex-col items-center justify-center min-h-screen bg-[#050510] overflow-hidden py-24">
+      {/* Background Starfield effect */}
+      <div className="absolute inset-0 opacity-30">
+        {[...Array(20)].map((_, i) => (
+          <div 
+            key={i}
+            className="absolute rounded-full bg-white"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: `${Math.random() * 3}px`,
+              height: `${Math.random() * 3}px`,
+              animation: `pulse ${2 + Math.random() * 3}s infinite`
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="container mx-auto px-4 z-10 text-center mb-16">
+        <motion.h2 
+          className="text-4xl md:text-6xl font-bold text-white mb-6"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
         >
-          Bạn
+          Mỗi người đều có một quỹ đạo phát triển riêng
+        </motion.h2>
+        <motion.p 
+          className="text-xl text-purple-200/60 max-w-2xl mx-auto"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+        >
+          Thay vì học lan man, Orbit giúp bạn xây dựng một lộ trình rõ ràng
+        </motion.p>
+      </div>
+
+      <div className="relative w-72 h-72 md:w-[500px] md:h-[500px] flex items-center justify-center">
+        {/* Orbit Rings */}
+        <div className="absolute w-full h-full rounded-full border border-purple-500/10" />
+        <div className="absolute w-[80%] h-[80%] rounded-full border border-purple-500/20" />
+        <div className="absolute w-[60%] h-[60%] rounded-full border border-purple-500/30" />
+
+        {/* Center Point */}
+        <motion.div
+          className="absolute z-20 w-16 h-16 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-purple-600 to-indigo-800 flex items-center justify-center text-white font-bold shadow-[0_0_40px_rgba(147,51,234,0.4)]"
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <span className="text-sm md:text-base">Bạn</span>
         </motion.div>
 
-        {/* Orbiting points */}
-        {[
-          { label: "Tài chính", angle: 0, color: "red" },
-          { label: "Sự nghiệp", angle: 90, color: "blue" },
-          { label: "Tình cảm", angle: 180, color: "green" },
-          { label: "Sức khỏe", angle: 270, color: "yellow" },
-        ].map((item, index) => (
-          <motion.div
-            key={item.label}
-            className={`absolute w-16 h-16 rounded-full bg-${item.color}-500 flex items-center justify-center text-white text-xs font-semibold shadow-md`}
-            initial={{ opacity: 0, rotate: 0 }}
-            animate={{
-              opacity: 1,
-              rotate: 360,
-              x: [
-                0,
-                Math.cos((item.angle + 0) * (Math.PI / 180)) * 200,
-                Math.cos((item.angle + 90) * (Math.PI / 180)) * 200,
-                Math.cos((item.angle + 180) * (Math.PI / 180)) * 200,
-                Math.cos((item.angle + 270) * (Math.PI / 180)) * 200,
-                Math.cos((item.angle + 360) * (Math.PI / 180)) * 200,
-              ],
-              y: [
-                0,
-                Math.sin((item.angle + 0) * (Math.PI / 180)) * 200,
-                Math.sin((item.angle + 90) * (Math.PI / 180)) * 200,
-                Math.sin((item.angle + 180) * (Math.PI / 180)) * 200,
-                Math.sin((item.angle + 270) * (Math.PI / 180)) * 200,
-                Math.sin((item.angle + 360) * (Math.PI / 180)) * 200,
-              ],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear",
-              delay: 1 + index * 0.2,
-            }}
-            style={{ x: 0, y: 0 }} // Initial position relative to the center of the parent
-          >
-            {item.label}
-          </motion.div>
-        ))}
+        {/* Rotating Orbital Container */}
+        <motion.div 
+          className="absolute w-full h-full"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+        >
+          {points.map((item) => (
+            <div
+              key={item.label}
+              className="absolute top-1/2 left-1/2"
+              style={{
+                transform: `rotate(${item.angle}deg) translateX(${typeof window !== 'undefined' && window.innerWidth < 768 ? '140px' : '250px'}) rotate(-${item.angle}deg)`
+              }}
+            >
+              <motion.div
+                className={`w-12 h-12 md:w-20 md:h-20 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br ${item.color} flex flex-col items-center justify-center text-white shadow-lg backdrop-blur-md`}
+                style={{ boxShadow: `0 0 20px ${item.glow}` }}
+                animate={{ rotate: -360 }} // Counter-rotate to stay upright
+                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+              >
+                <span className="text-[10px] md:text-xs font-bold uppercase tracking-tighter">{item.label}</span>
+              </motion.div>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+
+      <div className="mt-20 z-10 text-center italic text-purple-300/40">
+        "Không học nhiều hơn. Học đúng hơn."
       </div>
     </section>
   );

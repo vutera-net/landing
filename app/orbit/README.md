@@ -1,330 +1,128 @@
-# 📘 1. PRODUCT REQUIREMENT DOCUMENT (PRD)
+# 📘 VUTERA Orbit - PRODUCT REQUIREMENT DOCUMENT (Merged V2)
 
-## 1.1. Product Name
-
-**VUTERA Orbit**
+> Tài liệu này được nhất quán sau khi hợp nhất mục tiêu phát triển sản phẩm (v2-orbit) và phong cách định vị nguyên bản của VUTERA (Orbit README).
 
 ---
 
-## 1.2. Product Overview
+## 🚀 1. Product Overview & Vision
 
-**Orbit** là landing page trung tâm của hệ sinh thái VUTERA.
+**Product Name:** VUTERA Orbit
+**Domain:** `/orbit`
 
-Mục tiêu:
+**Định vị (Positioning):**  
+**Self-Development OS qua EdTech + AI** (Hệ điều hành phát triển bản thân).
+Orbit là nền tảng giúp người dùng phát triển **Outer Growth** (Sự phát triển bên ngoài) thông qua:
+* Học tiếng Anh với AI
+* Định hướng nghề nghiệp (Career Path)
+* Xây dựng kỹ năng (Skill Builder)
 
-- Là entry point cho user mới
-- Kết nối các sản phẩm:
-  - TuVi (SEO traffic)
-  - AnMenh (user profile)
-  - Harmony (content/triết lý)
-
-- Tạo trải nghiệm “cá nhân hóa ngay lập tức” chỉ với ngày sinh
-
----
-
-## 1.3. Product Vision
-
-> “Giúp mỗi người hiểu quỹ đạo cuộc đời của mình”
-
-Orbit không chỉ là landing page, mà là:
-
-- một trải nghiệm
-- một narrative
-- một hệ thống dẫn dắt user
+**Product Vision:**  
+> “Giúp mỗi người xây dựng quỹ đạo phát triển của riêng mình”
 
 ---
 
-## 1.4. Target Users
+## 🎯 2. Target Users & Core Value
 
-### Primary
+### Target Users
+* **Primary:** 18–35 tuổi.
+* **Nhu cầu:** Cải thiện tiếng Anh thực chiến, tìm định hướng hoặc chuyển đổi nghề nghiệp / tăng thu nhập, cần xây dựng lộ trình bản thân một cách rõ ràng.
 
-- Người 20–40 tuổi
-- Quan tâm:
-  - tử vi
-  - bản thân
-  - định hướng cuộc sống
+### Core Value Proposition
+* Thay vì học lan man, cung cấp lộ trình (Orbit) đi đúng hướng.
+* Tối ưu và cá nhân hóa lộ trình bằng AI dựa trên nhu cầu của user.
 
-### Secondary
-
-- Người tò mò / traffic từ SEO
-- Người dùng quay lại
-
----
-
-## 1.5. Core Value Proposition
-
-- Không cần đăng ký
-- Nhập ngày sinh → có insight ngay
-- Trải nghiệm mượt, nhanh, đẹp
+### Success Metrics
+* Conversion rate từ Hero Section (Click qua Onboarding / Chọn mục tiêu học).
+* Tỉ lệ tương tác (Time on site / Thử nghiệm module Demo).
 
 ---
 
-## 1.6. Success Metrics
+## 🎨 3. UX/UI GUIDELINES (Theo tiêu chuẩn Vutera Gốc)
 
-- Conversion rate (visit → nhập ngày sinh)
-- CTR sang TuVi / AnMenh
-- Time on page
-- Bounce rate
+Dù mang định vị Tech / Education, Orbit **BẮT BUỘC giữ nguyên bản sắc thị giác cốt lõi** để đảm bảo tính đồng nhất của toàn hệ sinh thái VUTERA:
 
----
-
-# 🧩 2. FEATURE REQUIREMENTS
+* **Theme:** **Dark mode (Space theme)** làm nền tảng chủ đạo. 
+* **Màu sắc & Hiệu ứng:** Sử dụng tone màu vũ trụ (Tím, Xanh dương thẫm, Gradient tinh tế) kết hợp với các hiệu ứng **Glow effect** ánh sáng mạnh mẽ. Không sử dụng thiết kế nền sáng bình thường của EdTech giáo dục đại trà.
+* **Typography:** Headline hiển thị lớn, gọn gàng, tạo impact bao trùm không gian.
+* **Interaction:** Sử dụng Framer Motion tạo cảm giác mượt mà (smooth), bay bổng mang âm hưởng thiên hà nhưng phải đảm bảo không gây lag hay có quá nhiều hiệu ứng thừa.
 
 ---
 
-## 2.1. Hero Section
+## 🧩 4. FEATURE REQUIREMENTS & UI COPY
 
-### Mục tiêu
+### 4.1. HERO SECTION
+* **Mục tiêu:** User hiểu ngay giá trị sản phẩm trong 3s.
+* **Headline:** `Xây dựng Quỹ Đạo Phát Triển Của Bạn`
+* **Subheadline:** `Học tiếng Anh, định hướng nghề nghiệp và phát triển bản thân trong một hệ thống duy nhất – được cá nhân hóa bởi AI`
+* **CTA Button:** `Bắt đầu miễn phí`
+* **Quick Choices:** 
+  ```text
+  Tôi muốn:
+  [ Học tiếng Anh ] | [ Định hướng nghề nghiệp ] | [ Phát triển bản thân ]
+  ```
 
-- Hiểu ngay trong 3 giây
-- Thu thập ngày sinh
+### 4.2. PROBLEM SECTION
+* **Headline:** `Bạn không thiếu nỗ lực. Bạn đang thiếu một quỹ đạo đúng.`
+* **Content:** Học rất nhiều nhưng không tiến bộ rõ ràng. Không biết nên chọn nghề gì phù hợp. Vấn đề không phải là bạn chưa đủ cố gắng, mà là bạn chưa có một hệ thống dẫn đường.
 
-### Components
+### 4.3. THE ORBIT CONCEPT (Animation & Visualization)
+* **Visual Experience:** Một đồ họa quỹ đạo sống động ở trung tâm (các vòng xoay có animation nhẹ kết hợp không gian vũ trụ dark theme).
+* **Headline:** `Mỗi người đều có một quỹ đạo phát triển riêng`
+* **Thành phần quỹ đạo hiển thị:** 
+  1. English (Ngoại ngữ AI)
+  2. Career (Định hướng sự nghiệp)
+  3. Skills (Kỹ năng phát triển)
 
-- Headline
-- Subheadline
-- Input ngày sinh
-- CTA button
+### 4.4. PRODUCT MODULES
+* **🎧 English AI:** Học tiếng Anh với AI (Luyện nghe, nói và phản xạ).
+* **🧭 Career Path:** Định hướng nghề nghiệp (Khám phá hướng đi và xây lộ trình).
+* **📚 Skill Builder:** Phát triển kỹ năng (Học từng bước nhỏ đúng hướng).
 
-### Behavior
+### 4.5. HOW IT WORKS
+* Trình bày 3 bước tinh gọn: 
+  1. Chọn mục tiêu 
+  2. Orbit (AI) tạo lộ trình 
+  3. Học mỗi ngày.
 
-- Nhập DOB → click CTA → redirect
+### 4.6. DEMO / EXPERIENCE LITE
+* **Tính năng:** Block tương tác giúp User thử chức năng AI ngay trên Landing. Vd: Form giả lập Chat Voice Tiếng Anh hoặc Preview Lộ trình Career.
+* Gắn Data Social proof mồi: `Hàng ngàn người đang bắt đầu lại – đúng cách`.
 
----
-
-## 2.2. Orbit Visualization Section
-
-### Mục tiêu
-
-- Truyền tải concept “quỹ đạo cuộc đời”
-
-### Components
-
-- Vòng tròn (orbit)
-- Các điểm:
-  - Tài chính
-  - Sự nghiệp
-  - Tình cảm
-  - Sức khỏe
-
-### Behavior
-
-- Có animation nhẹ (optional)
-- Không cần interactive phức tạp (v1)
-
----
-
-## 2.3. Product Stack Section
-
-### Mục tiêu
-
-- Giới thiệu hệ sinh thái
-
-### Items
-
-- TuVi
-- AnMenh
-- Harmony
-
-### Mỗi item gồm:
-
-- Title
-- Description
-- CTA
+### 4.7. FINAL CTA
+* **Headline:** `Bắt đầu quỹ đạo của bạn hôm nay`
+* **CTA Button:** Gọi lại action funnel về luồng Onboarding.
 
 ---
 
-## 2.4. Personalization Flow
-
-### Mục tiêu
-
-- Tạo cảm giác “AI hiểu bạn”
-
-### Input
-
-- Ngày sinh
-
-### Output (v1 – fake hoặc rule-based)
-
-- Mệnh
-- 1–2 câu insight
-
----
-
-## 2.5. Trust / Philosophy Section
-
-### Nội dung
-
-- Không mê tín
-- Là hệ thống định hướng
-
----
-
-## 2.6. Final CTA
-
-- “Bắt đầu hành trình”
-- Redirect giống hero
-
----
-
-# 🔄 3. USER FLOW
+## 🔄 5. USER FLOW CHI TIẾT
 
 ```text
 User vào /orbit
    ↓
-Nhập ngày sinh
+Tương tác nội dung & Chọn mong muốn 
+(VD: Focus vào Tiếng Anh hoặc Career)
    ↓
-Click CTA
+Click CTA (Thực hiện Action)
    ↓
-Redirect:
-   /tuvi?dob=YYYY-MM-DD
+Hệ thống Redirect bằng param sang:
+   /orbit/onboarding (hoặc /orbit/app)
    ↓
-(Optional)
-→ gợi ý tạo account ở AnMenh
+AI đánh giá dữ liệu và Generate Plan phù hợp cho User
 ```
 
 ---
 
-# ⚙️ 4. TECHNICAL REQUIREMENTS
+## ⚙️ 6. TECHNICAL REQUIREMENTS
 
-## 4.1. Frontend
-
-- Next.js (App Router)
-- TailwindCSS
-- Framer Motion (animation nhẹ)
+* **Frontend MVP:** Next.js (App Router), TailwindCSS, Framer Motion (Xử lý các visual vòng lặp quỹ đạo).
+* **Backend logic (V1):** Landing page ở dạng tĩnh nâng cao, lưu trạng thái selection của người dùng truyền dưới dạng query param hoặc context sang thẳng trang sinh Lộ trình AI. Không đòi cơ sở dữ liệu riêng tại trang giới thiệu này.
 
 ---
 
-## 4.2. Backend
+## ⚠️ 7. NON-GOALS (Quy Tắc Tuyệt Đối)
 
-👉 V1:
-
-- KHÔNG cần backend riêng
-
-👉 Chỉ cần:
-
-- xử lý query param (dob)
-
----
-
-## 4.3. Data
-
-- Không cần DB cho Orbit
-- Data nằm ở TuVi / AnMenh
-
----
-
-## 4.4. SEO
-
-- Meta title / description
-- Open Graph
-- Schema (optional)
-
----
-
-# 🧱 5. IMPLEMENTATION PLAN
-
----
-
-## Phase 1 – MVP (2–3 ngày)
-
-### Day 1 – Layout + Hero
-
-- Setup route `/orbit`
-- Build Hero:
-  - input DOB
-  - CTA
-
-- Basic styling
-
----
-
-### Day 2 – Sections
-
-- Orbit visualization (static + animation nhẹ)
-- Product stack
-- Philosophy section
-
----
-
-### Day 3 – Flow + polish
-
-- Redirect logic:
-
-```ts
-router.push(`/tuvi?dob=${dob}`);
-```
-
-- Responsive
-- Performance optimize
-
----
-
-## Phase 2 – Enhancement
-
-- Thêm preview insight (fake AI)
-- Thêm animation đẹp hơn
-- A/B test CTA
-
----
-
-## Phase 3 – Advanced
-
-- Connect AnMenh API
-- Save profile
-- AI-generated insight
-
----
-
-# 🎨 6. UI/UX GUIDELINES
-
-## Style
-
-- Dark mode (space theme)
-- Gradient nhẹ
-- Glow effect
-
----
-
-## Typography
-
-- Headline: lớn, đơn giản
-- Nội dung: dễ đọc
-
----
-
-## Interaction
-
-- Smooth
-- Không lag
-- Không quá nhiều hiệu ứng
-
----
-
-# ⚠️ 7. NON-GOALS (rất quan trọng)
-
-KHÔNG làm:
-
-- ❌ Login system
-- ❌ Dashboard
-- ❌ Tính toán tử vi phức tạp tại đây
-- ❌ Over-engineering
-
----
-
-# 🔥 8. KEY STRATEGIC NOTE (QUAN TRỌNG NHẤT)
-
-Orbit không phải là feature.
-
-Nó là:
-
-> **Funnel + Story + Identity của VUTERA**
-
-Nếu build đúng:
-
-- tăng conversion toàn hệ
-- tạo brand mạnh
-
-Nếu build sai:
-
-- chỉ là landing page vô nghĩa
+**Phạm vi KHÔNG LÀM đối với Orbit Landing:**
+* ❌ Tính năng nhập `Ngày Sinh` (DOB). Không lấy insight / concept Tử Vi, Bát tự, Tâm linh (Chức năng này độc quyền cho App nhánh `Harmony`).
+* ❌ Giao diện Light-mode sáng chói, tông màu thuần trắng lệch lạc khỏi phong cách Universe chung của Vutera.
+* ❌ Ép buộc Login / Sign-up bằng Email rườm rà tại trang chủ (Wall-gate).
+* ❌ Dashboard hiển thị quá nhiều data kĩ thuật phức tạp.
