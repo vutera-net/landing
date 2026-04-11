@@ -1,30 +1,19 @@
-// import Footer from "@/components/Footer";
-// import Header from "@/components/Header";
+"use client";
 
-export default function Orbit() {
+import { OrbitHero } from "@/components/orbit/OrbitHero";
+import { OrbitProductStack } from "@/components/orbit/OrbitProductStack";
+import { OrbitPhilosophy } from "@/components/orbit/OrbitPhilosophy";
+import { OrbitVisualization } from "@/components/orbit/OrbitVisualization";
+import { FinalCTA } from "@/components/orbit/FinalCTA";
+
+export default function OrbitPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* <Header /> */}
-      <main className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-sm p-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            VUTERA Orbit: Cho quỹ đạo phát triển bản thân vươn xa.
-          </h1>
-
-          <div className="text-center mt-8">
-            <p className="text-lg font-bold text-gray-900 mb-2">
-              VUTERA Orbit sắp sửa phát hành!
-            </p>
-            <p className="text-gray-600">
-              Hãy truy cập lại trang sau một lúc để trải nghiệm!
-            </p>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              Cập nhật tin bài
-            </button>
-          </div>
-        </div>
-      </main>
-      {/* <Footer /> */}
-    </div>
+    <main className="min-h-screen bg-gray-900 text-white">
+      <OrbitHero />
+      <OrbitVisualization />
+      <OrbitProductStack />
+      <OrbitPhilosophy />
+      <FinalCTA />
+    </main>
   );
 }
