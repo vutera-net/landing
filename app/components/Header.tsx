@@ -58,23 +58,32 @@ export default function Header() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <button onClick={() => scrollToSection("about")} className="text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
-            Về Vutera
-          </button>
+          <Link href="/" className="text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
+            Trang chủ
+          </Link>
           <Link href="/harmony" className="text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
             Harmony
           </Link>
+          <Link href="/flow" className="text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
+            Flow
+          </Link>
+          <Link href="/orbit" className="text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
+            Orbit
+          </Link>
           <button onClick={() => scrollToSection("services")} className="text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
-            Sản phẩm
+            Hệ sinh thái
           </button>
+          <Link href="/blog" className="text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
+            Blog
+          </Link>
 
           {isAuthenticated ? (
             <div className="flex items-center space-x-4">
               <Link
-                href="https://anmenh.vutera.net"
+                href="https://accounts.vutera.net"
                 className="px-6 py-2 bg-slate-900 dark:bg-slate-100 dark:text-slate-900 text-white rounded-full font-medium transition-all transform hover:scale-105"
               >
-                Dashboard
+                Tài khoản
               </Link>
               <button 
                 onClick={() => setIsAuthenticated(false)} 
@@ -99,7 +108,7 @@ export default function Header() {
                 Bắt đầu miễn phí
               </Link>
               {/* Nút demo login */}
-              <button onClick={() => setIsAuthenticated(true)} className="text-xs text-slate-400 underline absolute -top-8">(Test Login)</button>
+              <button onClick={() => setIsAuthenticated(true)} className="text-[10px] text-slate-400 underline absolute -top-8">(Test Login)</button>
             </div>
           )}
         </div>
@@ -115,11 +124,17 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-slate-100 dark:bg-slate-900 border-b dark:border-slate-800 border-slate-200 p-6 flex flex-col space-y-4 shadow-xl">
-          <button onClick={() => scrollToSection("about")} className="text-left py-2 text-slate-800 dark:text-slate-200 font-medium hover:text-blue-600 dark:hover:text-blue-400">
-            Về Vutera
-          </button>
+          <Link href="/" className="text-left py-2 text-slate-800 dark:text-slate-200 font-medium hover:text-blue-600 dark:hover:text-blue-400">
+            Trang chủ
+          </Link>
           <Link href="/harmony" className="text-left py-2 text-slate-800 dark:text-slate-200 font-medium hover:text-blue-600 dark:hover:text-blue-400">
             Harmony
+          </Link>
+          <Link href="/flow" className="text-left py-2 text-slate-800 dark:text-slate-200 font-medium hover:text-blue-600 dark:hover:text-blue-400">
+            Flow
+          </Link>
+          <Link href="/orbit" className="text-left py-2 text-slate-800 dark:text-slate-200 font-medium hover:text-blue-600 dark:hover:text-blue-400">
+            Orbit
           </Link>
           <button onClick={() => scrollToSection("services")} className="text-left py-2 text-slate-800 dark:text-slate-200 font-medium hover:text-blue-600 dark:hover:text-blue-400">
             Sản phẩm

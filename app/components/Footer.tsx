@@ -43,14 +43,20 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <span className="cursor-not-allowed opacity-60">
-                  Vutera Flow (Sắp ra mắt)
-                </span>
+                <Link
+                  className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  href="/flow"
+                >
+                  Vutera Flow
+                </Link>
               </li>
               <li>
-                <span className="cursor-not-allowed opacity-60">
-                  Vutera Orbit (Sắp ra mắt)
-                </span>
+                <Link
+                  className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  href="/orbit"
+                >
+                  Vutera Orbit
+                </Link>
               </li>
             </ul>
           </div>

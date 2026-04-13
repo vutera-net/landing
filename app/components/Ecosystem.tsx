@@ -47,21 +47,19 @@ export default function Ecosystem() {
           <div className="group relative p-8 rounded-3xl dark:bg-slate-900 bg-white shadow-lg dark:border dark:border-slate-800 border-slate-200 hover:border-emerald-400/50 dark:hover:border-emerald-400/50 transition-all duration-300 hover:-translate-y-2 overflow-hidden flex flex-col h-full">
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 to-teal-900 opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
             <div className="relative z-10 flex flex-col flex-grow">
-              <div className="mb-6 p-4 bg-slate-100 dark:bg-slate-950 rounded-2xl inline-block border dark:border-slate-800 border-slate-200">
-                <TrendingUp className="w-8 h-8 text-emerald-500 dark:text-emerald-400 grayscale group-hover:grayscale-0 transition-all" />
+              <div className="mb-6 p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl inline-block border dark:border-emerald-800 border-emerald-100">
+                <TrendingUp className="w-8 h-8 text-emerald-500 dark:text-emerald-400" />
               </div>
-              <h4 className="text-2xl font-bold mb-4 dark:text-white text-slate-900">
+              <h4 className="text-2xl font-bold mb-4 dark:text-white text-slate-900 group-hover:text-emerald-500 transition-colors">
                 Vutera Flow
               </h4>
               <p className="dark:text-slate-400 text-slate-600 flex-grow leading-relaxed">
-                Quản lý "dòng chảy" tài chính cá nhân thông minh. Biến chi tiêu và đầu tư trở thành thói quen kiến tạo thịnh vượng bền vững.
+                Quản lý dòng chảy tài chính thông minh – Chi tiêu, tiết kiệm, đầu tư. Tạo ra sự thịnh vượng bền vững cho tương lai.
               </p>
               
-              <div className="mt-8">
-                <span className="inline-flex items-center text-slate-400 dark:text-slate-500 font-medium">
-                  Tìm hiểu Flow (Sắp ra mắt)
-                </span>
-              </div>
+              <Link href="/flow" className="mt-8 inline-flex items-center text-emerald-600 dark:text-emerald-400 font-bold hover:text-emerald-800 dark:hover:text-emerald-300 group/link">
+                Tìm hiểu Flow <ArrowRight className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
 
@@ -69,21 +67,19 @@ export default function Ecosystem() {
           <div className="group relative p-8 rounded-3xl dark:bg-slate-900 bg-white shadow-lg dark:border dark:border-slate-800 border-slate-200 hover:border-amber-400/50 dark:hover:border-amber-400/50 transition-all duration-300 hover:-translate-y-2 overflow-hidden flex flex-col h-full">
             <div className="absolute inset-0 bg-gradient-to-br from-amber-900 to-orange-900 opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
             <div className="relative z-10 flex flex-col flex-grow">
-              <div className="mb-6 p-4 bg-slate-100 dark:bg-slate-950 rounded-2xl inline-block border dark:border-slate-800 border-slate-200">
-                <GraduationCap className="w-8 h-8 text-amber-500 dark:text-amber-400 grayscale group-hover:grayscale-0 transition-all" />
+              <div className="mb-6 p-4 bg-amber-50 dark:bg-amber-900/20 rounded-2xl inline-block border dark:border-amber-800 border-amber-100">
+                <GraduationCap className="w-8 h-8 text-amber-500 dark:text-amber-400" />
               </div>
-              <h4 className="text-2xl font-bold mb-4 dark:text-white text-slate-900">
+              <h4 className="text-2xl font-bold mb-4 dark:text-white text-slate-900 group-hover:text-amber-500 transition-colors">
                 Vutera Orbit
               </h4>
               <p className="dark:text-slate-400 text-slate-600 flex-grow leading-relaxed">
-                Quỹ đạo phát triển bản thân. Hệ thống giáo dục và định hướng sự nghiệp được AI thiết kế riêng để bạn đạt đến trần năng lực.
+                Hành trình phát triển bản thân – Giáo dục công nghệ, học tập AI, định hướng sự nghiệp rực rỡ nhất.
               </p>
               
-              <div className="mt-8">
-                 <span className="inline-flex items-center text-slate-400 dark:text-slate-500 font-medium">
-                  Tìm hiểu Orbit (Sắp ra mắt)
-                </span>
-              </div>
+              <Link href="/orbit" className="mt-8 inline-flex items-center text-amber-600 dark:text-amber-400 font-bold hover:text-amber-800 dark:hover:text-amber-300 group/link">
+                Tìm hiểu Orbit <ArrowRight className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
         </div>
