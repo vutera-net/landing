@@ -3,10 +3,8 @@
 import { 
   TrendingUp, 
   Wallet, 
-  BarChart3, 
   ShieldCheck, 
   ArrowRight, 
-  Star, 
   Compass, 
   Rocket, 
   Zap,
@@ -195,7 +193,7 @@ export default function FlowPage() {
          <div className="container mx-auto px-6">
             <div className="text-center mb-20">
                <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-6">Tính Năng Chủ Chốt</h2>
-               <p className="text-slate-500 text-lg font-medium">Mọi công cụ bạn cần để làm chủ "dòng chảy" của mình.</p>
+               <p className="text-slate-500 text-lg font-medium">Mọi công cụ bạn cần để làm chủ &quot;dòng chảy&quot; của mình.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -248,7 +246,7 @@ export default function FlowPage() {
                   </div>
                   <h4 className="text-2xl font-bold mb-4">AI Financial Coach</h4>
                   <p className="text-slate-400 mb-6 leading-relaxed font-medium">
-                    Tư vấn cá nhân hóa: "Với tình hình hiện tại, bạn nên ưu tiên gì tháng này?". Kết nối nhẹ nhàng với năng lượng cá nhân từ Harmony.
+                    Tư vấn cá nhân hóa: &quot;Với tình hình hiện tại, bạn nên ưu tiên gì tháng này?&quot;. Kết nối nhẹ nhàng với năng lượng cá nhân từ Harmony.
                   </p>
                   <div className="pt-4 flex items-center text-emerald-400 text-xs font-bold uppercase tracking-widest">
                      <Clock className="w-4 h-4 mr-2" /> Đang phát triển
@@ -310,7 +308,7 @@ export default function FlowPage() {
                         
                         <div className="relative z-10 pt-12">
                            <div className="p-4 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 text-slate-300 text-sm italic">
-                              "Lời khuyên AI: Bạn có thêm một khoản thặng dư nhỏ. Tiết kiệm 50% vào quỹ đầu tư dài hạn sẽ tối ưu lãi kép của bạn."
+                              &quot;Lời khuyên AI: Bạn có thêm một khoản thặng dư nhỏ. Tiết kiệm 50% vào quỹ đầu tư dài hạn sẽ tối ưu lãi kép của bạn.&quot;
                            </div>
                         </div>
                      </div>

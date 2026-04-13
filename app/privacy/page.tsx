@@ -155,7 +155,7 @@ export default function PrivacyPolicy() {
   );
 }
 
-function MailIcon(props: any) {
+function MailIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}

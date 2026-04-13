@@ -1,22 +1,19 @@
 "use client";
 
-import { 
-  Rocket, 
-  Target, 
-  Zap, 
-  ArrowRight, 
-  Star, 
-  Quote, 
-  Compass, 
-  TrendingUp, 
-  GraduationCap,
+import {
+  Rocket,
+  Target,
+  Zap,
+  ArrowRight,
+  Star,
+  Compass,
+  TrendingUp,
   Mic,
   Map,
   BookOpen,
   CheckCircle2,
   ChevronRight,
-  Globe,
-  Plus
+  Globe
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -151,7 +148,7 @@ export default function OrbitPage() {
             <h3 className="text-3xl md:text-5xl font-bold mb-10 leading-tight">Phát triển không phải là làm nhiều hơn. <br className="hidden md:block"/> Mà là làm đúng thứ – vào đúng thời điểm.</h3>
             <div className="aspect-[21/9] bg-gradient-to-br from-slate-800 to-slate-900 rounded-[3rem] border border-slate-700 flex items-center justify-center p-12 relative shadow-2xl">
                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
-               <p className="text-2xl md:text-4xl font-serif italic text-blue-300 opacity-90 leading-relaxed">"Ngừng học lan man. <br/> Bắt đầu học đúng."</p>
+               <p className="text-2xl md:text-4xl font-serif italic text-blue-300 opacity-90 leading-relaxed">&quot;Ngừng học lan man. <br/> Bắt đầu học đúng.&quot;</p>
                
                {/* Decorative orbit dots */}
                <div className="absolute w-2 h-2 bg-blue-400 rounded-full top-1/4 left-1/4 shadow-[0_0_10px_#60A5FA]"></div>
@@ -270,7 +267,7 @@ export default function OrbitPage() {
                ].map((testi, i) => (
                   <div key={i} className="bg-white p-8 rounded-3xl border border-slate-200 text-left space-y-4 hover:shadow-xl transition-shadow">
                      <div className="flex text-amber-400 gap-1"><Star className="fill-current w-4 h-4" /><Star className="fill-current w-4 h-4" /><Star className="fill-current w-4 h-4" /><Star className="fill-current w-4 h-4" /><Star className="fill-current w-4 h-4" /></div>
-                     <p className="text-slate-600 font-medium italic">"{testi.content}"</p>
+                     <p className="text-slate-600 font-medium italic">&quot;{testi.content}&quot;</p>
                      <div className="flex items-center gap-4 pt-4">
                         <div className="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-900">{testi.name[0]}</div>
                         <div>

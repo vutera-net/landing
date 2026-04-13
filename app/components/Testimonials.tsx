@@ -79,7 +79,7 @@ export default function Testimonials() {
               </div>
               
               <p className="text-slate-600 dark:text-slate-400 italic relative z-10 text-lg leading-relaxed">
-                "{review.content}"
+                &quot;{review.content}&quot;
               </p>
             </div>
           ))}

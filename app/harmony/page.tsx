@@ -1,23 +1,19 @@
 "use client";
 
-import { 
-  Compass, 
-  Sparkles, 
-  Shield, 
-  Users, 
-  ArrowRight, 
-  Star, 
-  Quote, 
-  Zap, 
-  Moon, 
-  Sun,
+import {
+  Compass,
+  Sparkles,
+  Shield,
+  Users,
+  ArrowRight,
+  Star,
+  Quote,
+  Moon,
   LayoutGrid,
-  Heart,
   Calendar,
   Layers,
   ChevronRight
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -113,7 +109,7 @@ export default function HarmonyPage() {
                </div>
                {/* Decorative tag */}
                <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-3xl shadow-xl border border-teal-100 max-w-[200px] animate-bounce-slow">
-                  <p className="text-teal-700 font-serif italic text-lg leading-tight">"Công nghệ khai sáng, phụng sự con người"</p>
+                  <p className="text-teal-700 font-serif italic text-lg leading-tight">&quot;Công nghệ khai sáng, phụng sự con người&quot;</p>
                </div>
             </div>
             
@@ -247,7 +243,7 @@ export default function HarmonyPage() {
                   <div className="bg-white/10 backdrop-blur-md p-10 rounded-[3rem] border border-white/20 relative">
                      <Quote className="absolute top-10 left-10 w-12 h-12 text-teal-400 opacity-20" />
                      <p className="text-xl md:text-2xl text-teal-50 font-serif italic mb-8 relative z-10 leading-relaxed">
-                       "Tôi luôn tìm kiếm sự kết nối giữa công nghệ và đời sống tâm linh phương Đông. Harmony đã giúp tôi nhìn nhận các chu kỳ cá nhân một cách khách quan và chính xác đến ngạc nhiên."
+                       &quot;Tôi luôn tìm kiếm sự kết nối giữa công nghệ và đời sống tâm linh phương Đông. Harmony đã giúp tôi nhìn nhận các chu kỳ cá nhân một cách khách quan và chính xác đến ngạc nhiên.&quot;
                      </p>
                      <div className="flex items-center gap-4">
                         <div className="w-12 h-12 bg-teal-400 rounded-full flex items-center justify-center font-bold text-teal-900">MH</div>
