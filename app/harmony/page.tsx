@@ -1,1132 +1,357 @@
+"use client";
 
-export default function Harmony() {
+import { 
+  Compass, 
+  Sparkles, 
+  Shield, 
+  Users, 
+  ArrowRight, 
+  Star, 
+  Quote, 
+  Zap, 
+  Moon, 
+  Sun,
+  LayoutGrid,
+  Heart,
+  Calendar,
+  Layers,
+  ChevronRight
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+
+export default function HarmonyPage() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-yellow-600/30">
-      {/* Sticky Header */}
-      <nav className="fixed top-0 w-full z-50 bg-black/85 backdrop-blur-md border-b border-zinc-900">
-        <div className="max-w-6xl mx-auto px-6 py-3.5 flex items-center justify-between">
-          {/* Logo + Brand */}
-          <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 rounded-full bg-yellow-950/60 border border-yellow-700/50 flex items-center justify-center">
-              <span className="text-sm leading-none">☯</span>
+    <div className="min-h-screen bg-[#FDFCF9] text-slate-800 font-sans selection:bg-teal-100 selection:text-teal-900">
+      {/* Navigation */}
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-white/80 backdrop-blur-xl border-b border-teal-100/50 py-3 shadow-sm' : 'bg-transparent py-6'}`}>
+        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-teal-400 to-emerald-500 flex items-center justify-center shadow-lg shadow-teal-200/50 group-hover:rotate-12 transition-transform duration-500">
+               <span className="text-white text-lg">☯</span>
             </div>
-            <span className="text-sm font-bold tracking-[0.2em] uppercase text-white/90">
-              Harmony
-            </span>
+            <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-teal-800 to-slate-800">Harmony</span>
+          </Link>
+          
+          <div className="hidden md:flex items-center gap-8">
+            <Link href="https://tuvi.vutera.net" className="text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors">TuVi App</Link>
+            <Link href="https://anmenh.vutera.net" className="text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors">AnMenh Sanctuary</Link>
+            <Link href="https://accounts.vutera.net" className="px-5 py-2 bg-slate-900 text-white text-sm font-semibold rounded-full hover:bg-teal-800 transition-all hover:shadow-lg hover:shadow-teal-900/10">Bắt đầu</Link>
           </div>
-
-          {/* Nav links */}
-          <div className="hidden md:flex items-center gap-7 text-sm text-gray-500">
-            <a
-              href="https://tuvi.vutera.net"
-              className="hover:text-white transition-colors"
-            >
-              TuVi
-            </a>
-            <a
-              href="https://anmenh.vutera.net"
-              className="hover:text-white transition-colors"
-            >
-              AnMenh
-            </a>
-          </div>
-
-          {/* CTA */}
-          <a
-            href="https://anmenh.vutera.net"
-            className="px-4 py-2 bg-white text-black text-sm font-medium rounded-full hover:scale-105 transition-transform duration-200"
-          >
-            Bắt đầu
-          </a>
+          
+          <button className="md:hidden">
+            <div className="w-6 h-0.5 bg-slate-800 mb-1.5"></div>
+            <div className="w-6 h-0.5 bg-slate-800 mb-1.5"></div>
+            <div className="w-4 h-0.5 bg-slate-800"></div>
+          </button>
         </div>
       </nav>
 
-      {/* Sticky floating CTA */}
-      <a
-        href="https://anmenh.vutera.net"
-        className="fixed bottom-8 right-8 z-40 px-5 py-3 bg-yellow-500 text-black text-sm font-semibold rounded-full shadow-[0_4px_24px_rgba(161,120,37,0.45)] hover:bg-yellow-400 hover:scale-105 transition-all duration-300 hidden md:inline-flex items-center gap-2"
-      >
-        Tạo Hồ Sơ Harmony
-        <span className="text-base leading-none">→</span>
-      </a>
-
       {/* Hero Section */}
-      <main className="relative flex flex-col items-center justify-center min-h-screen px-4 text-center pb-20 pt-32">
-        {/* Subtle background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] bg-yellow-900/10 rounded-full blur-[100px] pointer-events-none" />
-
-        {/* Hero orbit rings background */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
-          <svg
-            className="w-[min(95vw,700px)] opacity-[0.18]"
-            viewBox="-280 -210 560 420"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <ellipse rx="82" ry="33" stroke="#a17825" strokeWidth="1" strokeDasharray="3 5" />
-            <ellipse rx="140" ry="56" stroke="#a17825" strokeWidth="0.9" strokeDasharray="4 7" />
-            <ellipse rx="198" ry="79" stroke="#a17825" strokeWidth="0.8" strokeDasharray="4 9" />
-            <ellipse rx="256" ry="102" stroke="#a17825" strokeWidth="0.7" strokeDasharray="5 11" />
-            <circle cx="82" cy="0" r="4" fill="#d4a853" />
-            <circle cx="0" cy="-56" r="3.5" fill="#d4a853" />
-            <circle cx="-150" cy="63" r="3" fill="#d4a853" />
-            <circle cx="256" cy="0" r="2.5" fill="#d4a853" />
-            <circle cx="0" cy="0" r="13" fill="#a17825" fillOpacity="0.3" />
-            <circle cx="0" cy="0" r="5" fill="#f5d78e" />
-          </svg>
-        </div>
-
-        <h1 className="text-5xl md:text-7xl font-light tracking-tight max-w-4xl mb-6 leading-tight">
-          Hiểu bản thân. <br />
-          <span className="font-serif italic text-yellow-500/90">
-            Sống đúng thời điểm.
-          </span>
-        </h1>
-
-        <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-12 font-light">
-          Harmony kết hợp triết lý phương Đông và AI để giúp bạn hiểu chu kỳ cuộc đời và đưa ra quyết định phù hợp với chính mình.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-6">
-          <a
-            href="https://anmenh.vutera.net"
-            className="px-8 py-4 bg-white text-black font-medium rounded-full hover:scale-105 transition-transform duration-300"
-          >
-            Tạo hồ sơ cá nhân
-          </a>
-          <a
-            href="https://tuvi.vutera.net"
-            className="px-8 py-4 border border-zinc-800 text-white font-medium rounded-full hover:bg-zinc-900 transition-colors"
-          >
-            Khám phá miễn phí
-          </a>
-        </div>
-      </main>
-
-      {/* North Star — Founder Intent */}
-      <section id="north-star" className="py-40 px-6 bg-black">
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="text-xs text-yellow-600/60 uppercase tracking-[0.35em] mb-8">
-            Sứ Mệnh
+      <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-[radial-gradient(circle_at_top_right,_#E6FFFA,_transparent),radial-gradient(circle_at_bottom_left,_#FFF9E6,_transparent)]">
+        <div className="container mx-auto px-6 relative z-10 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md border border-teal-100 shadow-sm mb-8 animate-fade-in">
+            <Sparkles className="w-4 h-4 text-teal-500" />
+            <span className="text-xs font-bold tracking-widest uppercase text-teal-700">Hệ sinh thái Tâm linh Công nghệ</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-slate-900 mb-8 leading-[1.1]">
+            <span className="block italic font-serif text-teal-600">Harmony</span>
+            Cõi Riêng Của Sự Bình An
+          </h1>
+          
+          <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed">
+            Khai sáng vận mệnh, kiến tạo cuộc sống cân bằng qua hệ sinh thái Tử Vi & Phong Thủy AI tiên phong, kết hợp tri thức cổ truyền với công nghệ hiện đại.
           </p>
-
-          <h2 className="text-4xl md:text-5xl font-light leading-tight mb-16 text-white">
-            Harmony tồn tại để làm gì?
-          </h2>
-
-          <div className="space-y-4 mb-16">
-            <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed">
-              Mỗi người đều sống trong những chu kỳ khác nhau.
-            </p>
-            <p className="text-white/45 text-base md:text-lg font-light leading-relaxed">
-              Không phải ai cũng nên hành động giống nhau
-              <br className="hidden md:block" /> ở cùng một thời điểm.{" "}
-              <a
-                href="https://tuvi.vutera.net"
-                className="text-yellow-600/60 underline underline-offset-2 decoration-yellow-800/40 hover:text-yellow-400 transition-colors"
-              >
-                Khám phá chu kỳ riêng của bạn tại TuVi.
-              </a>
-            </p>
-          </div>
-
-          <div className="w-px h-12 bg-yellow-800/40 mx-auto mb-12" />
-
-          <p className="text-gray-500 text-xs uppercase tracking-[0.25em] mb-10">
-            Harmony giúp bạn hiểu
-          </p>
-
-          <div className="space-y-7">
-            <p className="text-2xl md:text-3xl font-light text-white/90 tracking-tight">
-              bạn đang ở giai đoạn nào
-            </p>
-            <p className="text-2xl md:text-3xl font-light text-white/60 tracking-tight">
-              điều gì nên tiến
-            </p>
-            <p className="text-2xl md:text-3xl font-light text-white/35 tracking-tight">
-              điều gì nên chờ
-            </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Link href="https://tuvi.vutera.net" className="w-full sm:w-auto px-10 py-5 bg-teal-600 text-white font-bold rounded-2xl hover:bg-teal-700 transition-all shadow-xl shadow-teal-500/20 flex items-center justify-center gap-2 group">
+              Khám phá miễn phí ngay
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link href="https://anmenh.vutera.net" className="w-full sm:w-auto px-10 py-5 bg-white text-teal-700 border-2 border-teal-100 font-bold rounded-2xl hover:bg-teal-50 transition-all shadow-sm">
+              AnMenh Sanctuary
+            </Link>
           </div>
         </div>
+
+        {/* Abstract shapes */}
+        <div className="absolute top-1/2 left-0 w-64 h-64 bg-teal-200/20 rounded-full blur-[100px] -z-10 animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-amber-100/30 rounded-full blur-[120px] -z-10"></div>
       </section>
 
-      {/* Life Cycles — Orbit Diagram + Timeline */}
-      <section className="py-32 px-6 bg-black overflow-hidden">
-        <div className="max-w-5xl mx-auto">
-
-          {/* Section header */}
-          <div className="text-center mb-20">
-            <p className="text-xs text-yellow-600/60 uppercase tracking-[0.35em] mb-4">
-              Chu Kỳ Cuộc Đời
-            </p>
-            <h2 className="text-3xl md:text-4xl font-light text-white mb-5">
-              Bạn đang ở đâu<br />trong vòng xoay của mình?
-            </h2>
-            <p className="text-gray-500 text-base max-w-md mx-auto font-light leading-relaxed">
-              Không ai ở mãi một giai đoạn. Harmony giúp bạn{" "}
-              <a
-                href="https://tuvi.vutera.net"
-                className="text-yellow-500/75 underline underline-offset-2 decoration-yellow-700/40 hover:text-yellow-400 transition-colors"
-              >
-                nhận ra mình đang ở chu kỳ nào
-              </a>{" "}
-              — và điều gì phù hợp ngay lúc này.
-            </p>
-          </div>
-
-          {/* Orbit Diagram + Ring Descriptions */}
-          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-20 justify-center">
-
-            {/* Orbit SVG */}
-            <div className="w-full max-w-[360px] md:max-w-[420px] flex-shrink-0">
-              <svg
-                viewBox="-240 -200 480 400"
-                className="w-full h-auto"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* Center glow */}
-                <circle cx="0" cy="0" r="44" fill="rgba(161,120,37,0.10)" />
-                <circle cx="0" cy="0" r="24" fill="rgba(161,120,37,0.16)" />
-
-                {/* Ring 4 — Đại Vận */}
-                <ellipse rx="226" ry="90" stroke="rgba(161,120,37,0.18)" strokeWidth="1" strokeDasharray="5 10" />
-                <circle cx="-226" cy="0" r="3" fill="rgba(212,168,83,0.36)" />
-                <text x="-226" y="-12" fill="rgba(212,168,83,0.36)" fontSize="10" fontFamily="Inter, sans-serif" textAnchor="middle">Đại Vận</text>
-
-                {/* Ring 3 — Năm */}
-                <ellipse rx="174" ry="70" stroke="rgba(161,120,37,0.26)" strokeWidth="1" strokeDasharray="4 8" />
-                <circle cx="0" cy="70" r="3" fill="rgba(212,168,83,0.47)" />
-                <text x="0" y="87" fill="rgba(212,168,83,0.47)" fontSize="10" fontFamily="Inter, sans-serif" textAnchor="middle">Năm</text>
-
-                {/* Ring 2 — Tháng */}
-                <ellipse rx="124" ry="50" stroke="rgba(161,120,37,0.36)" strokeWidth="1" strokeDasharray="4 6" />
-                <circle cx="0" cy="-50" r="3.5" fill="rgba(212,168,83,0.62)" />
-                <text x="0" y="-58" fill="rgba(212,168,83,0.62)" fontSize="10" fontFamily="Inter, sans-serif" textAnchor="middle">Tháng</text>
-
-                {/* Ring 1 — Ngày */}
-                <ellipse rx="76" ry="30" stroke="rgba(161,120,37,0.56)" strokeWidth="1.2" strokeDasharray="3 4" />
-                <circle cx="76" cy="0" r="4" fill="rgba(212,168,83,0.86)" />
-                <text x="90" y="4" fill="rgba(212,168,83,0.86)" fontSize="10" fontFamily="Inter, sans-serif" textAnchor="start">Ngày</text>
-
-                {/* Center: User */}
-                <circle cx="0" cy="0" r="16" fill="rgba(161,120,37,0.22)" />
-                <circle cx="0" cy="0" r="9" fill="rgba(161,120,37,0.45)" />
-                <circle cx="0" cy="0" r="4.5" fill="rgba(245,215,142,0.90)" />
-                <text x="0" y="26" fill="rgba(245,215,142,0.72)" fontSize="11" fontFamily="Inter, sans-serif" textAnchor="middle">Bạn</text>
-              </svg>
-            </div>
-
-            {/* Ring descriptions */}
-            <div className="space-y-5 max-w-xs">
-              <div className="flex gap-3 items-start">
-                <div className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0 bg-yellow-400/85" />
-                <div>
-                  <div className="text-white/85 text-sm font-medium mb-0.5">Chu kỳ Ngày</div>
-                  <div className="text-xs text-gray-600 leading-relaxed">Năng lượng và tâm trạng biến đổi trong từng ngày.</div>
-                </div>
-              </div>
-              <div className="flex gap-3 items-start">
-                <div className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0 bg-yellow-400/60" />
-                <div>
-                  <div className="text-white/70 text-sm font-medium mb-0.5">Chu kỳ Tháng</div>
-                  <div className="text-xs text-gray-600 leading-relaxed">Nhịp cảm xúc và công việc lên xuống theo tháng.</div>
-                </div>
-              </div>
-              <div className="flex gap-3 items-start">
-                <div className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0 bg-yellow-400/45" />
-                <div>
-                  <div className="text-white/55 text-sm font-medium mb-0.5">Chu kỳ Năm</div>
-                  <div className="text-xs text-gray-600 leading-relaxed">Giai đoạn tăng trưởng và chuyển đổi theo từng năm.</div>
-                </div>
-              </div>
-              <div className="flex gap-3 items-start">
-                <div className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0 bg-yellow-400/30" />
-                <div>
-                  <div className="text-white/40 text-sm font-medium mb-0.5">Đại Vận</div>
-                  <div className="text-xs text-gray-600 leading-relaxed">Chu kỳ lớn 10 năm — định hướng cả giai đoạn cuộc đời.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Life Stage Timeline */}
-          <div className="mt-24">
-            <p className="text-center text-xs text-gray-600 uppercase tracking-[0.3em] mb-10">
-              Hành Trình — Các Giai Đoạn
-            </p>
-            <div className="overflow-x-auto">
-              <svg
-                viewBox="0 0 840 150"
-                className="w-full min-w-[560px] h-auto"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* Wave path representing energy/life cycle */}
-                <path
-                  d="M 30 95 C 110 95, 150 38, 230 38 C 310 38, 320 95, 390 95 C 460 95, 480 38, 570 38 C 650 38, 660 95, 730 95 C 780 95, 800 65, 820 55"
-                  stroke="rgba(161,120,37,0.30)"
-                  strokeWidth="1.5"
-                  fill="none"
-                />
-
-                {/* Stage 1: Khởi đầu */}
-                <circle cx="30" cy="95" r="5" fill="rgba(161,120,37,0.50)" />
-                <text x="30" y="120" fill="rgba(212,168,83,0.50)" fontSize="9.5" fontFamily="Inter, sans-serif" textAnchor="middle">Khởi đầu</text>
-
-                {/* Stage 2: Xây dựng — with "Bạn?" indicator */}
-                <circle cx="140" cy="62" r="5.5" fill="rgba(212,168,83,0.75)" />
-                <circle cx="140" cy="62" r="10" fill="rgba(161,120,37,0.12)" />
-                <line x1="140" y1="52" x2="140" y2="16" stroke="rgba(245,215,142,0.40)" strokeWidth="1" strokeDasharray="2 3" />
-                <text x="140" y="10" fill="rgba(245,215,142,0.60)" fontSize="9" fontFamily="Inter, sans-serif" textAnchor="middle">Bạn đang ở đây?</text>
-                <text x="140" y="78" fill="rgba(212,168,83,0.70)" fontSize="9.5" fontFamily="Inter, sans-serif" textAnchor="middle">Xây dựng</text>
-
-                {/* Stage 3: Đỉnh cao — peak */}
-                <circle cx="230" cy="38" r="7.5" fill="rgba(212,168,83,0.82)" />
-                <circle cx="230" cy="38" r="14" fill="rgba(161,120,37,0.12)" />
-                <text x="230" y="24" fill="rgba(245,215,142,0.82)" fontSize="10" fontFamily="Inter, sans-serif" textAnchor="middle">Đỉnh cao</text>
-
-                {/* Stage 4: Chuyển đổi */}
-                <circle cx="390" cy="95" r="5" fill="rgba(161,120,37,0.40)" />
-                <text x="390" y="120" fill="rgba(212,168,83,0.40)" fontSize="9.5" fontFamily="Inter, sans-serif" textAnchor="middle">Chuyển đổi</text>
-
-                {/* Stage 5: Hồi phục */}
-                <circle cx="490" cy="60" r="5" fill="rgba(161,120,37,0.48)" />
-                <text x="490" y="50" fill="rgba(212,168,83,0.48)" fontSize="9.5" fontFamily="Inter, sans-serif" textAnchor="middle">Hồi phục</text>
-
-                {/* Stage 6: Viên mãn */}
-                <circle cx="570" cy="38" r="6.5" fill="rgba(212,168,83,0.68)" />
-                <circle cx="570" cy="38" r="12" fill="rgba(161,120,37,0.09)" />
-                <text x="570" y="24" fill="rgba(212,168,83,0.68)" fontSize="9.5" fontFamily="Inter, sans-serif" textAnchor="middle">Viên mãn</text>
-
-                {/* Stage 7: Vòng mới */}
-                <circle cx="730" cy="95" r="4" fill="rgba(161,120,37,0.28)" />
-                <text x="730" y="120" fill="rgba(212,168,83,0.28)" fontSize="9.5" fontFamily="Inter, sans-serif" textAnchor="middle">Vòng mới</text>
-
-                {/* Continuation fade */}
-                <circle cx="806" cy="62" r="2" fill="rgba(161,120,37,0.18)" />
-                <circle cx="818" cy="58" r="1.5" fill="rgba(161,120,37,0.12)" />
-                <circle cx="828" cy="55" r="1" fill="rgba(161,120,37,0.07)" />
-              </svg>
-            </div>
-            <p className="text-center text-xs text-gray-700 mt-4 font-light">
-              Mỗi người đi qua các giai đoạn với nhịp điệu khác nhau. Không ai ở mãi một nơi.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Philosophy Section */}
-      <section id="philosophy" className="py-32 px-6 bg-zinc-950">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-light mb-8">
-            Không phải ma thuật. Là dữ liệu và triết học.
-          </h2>
-          <p className="text-gray-400 leading-relaxed text-lg mb-16">
-            Chúng tôi không tin vào những lời phán truyền sáo rỗng. Harmony sử
-            dụng thuật toán AI để giải mã các học thuyết{" "}
-            <a
-              href="https://tuvi.vutera.net"
-              className="text-yellow-500/75 underline underline-offset-2 decoration-yellow-700/40 hover:text-yellow-400 transition-colors"
-            >
-              Tử Vi
-            </a>{" "}
-            và Bát Tự cổ đại,
-            mang đến góc nhìn hiện đại, trực diện và có tính ứng dụng cao cho
-            cuộc sống của bạn.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8 text-left">
-            <div className="p-8 border border-zinc-800 rounded-2xl bg-zinc-900/30">
-              <h3 className="text-xl font-bold mb-3 text-yellow-500/80">
-                Hyper-Personalized
-              </h3>
-              <p className="text-sm text-gray-500">
-                Bản đồ sao chính xác từng phút. Không có hai người nào nhận cùng
-                một thông điệp.
-              </p>
-            </div>
-            <div className="p-8 border border-zinc-800 rounded-2xl bg-zinc-900/30">
-              <h3 className="text-xl font-bold mb-3 text-yellow-500/80">
-                Straight-Talk
-              </h3>
-              <p className="text-sm text-gray-500">
-                Không dùng từ ngữ sáo rỗng. Nhận thông điệp trực diện về Tình
-                yêu, Công việc và Cuộc sống.
-              </p>
-            </div>
-            <div className="p-8 border border-zinc-800 rounded-2xl bg-zinc-900/30">
-              <h3 className="text-xl font-bold mb-3 text-yellow-500/80">
-                Social Compatibility
-              </h3>
-              <p className="text-sm text-gray-500">
-                So sánh mức độ tương hợp ngũ hành với bạn bè và người thương.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Not Prediction Section */}
-      <section className="py-32 px-6 bg-black">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-light mb-4">
-            Harmony không phải là
-          </h2>
-          <p className="text-gray-500 text-lg mb-16">
-            dự đoán tương lai.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-6 text-left">
-            <div className="p-8 border border-zinc-800 rounded-2xl bg-zinc-950/60">
-              <div className="text-2xl mb-4">❌</div>
-              <h3 className="text-lg font-semibold mb-3 text-white/90">
-                Không phán định số phận
-              </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                Harmony không nói bạn phải làm gì. Không có câu trả lời đúng duy nhất cho cuộc đời bạn.
-              </p>
-            </div>
-            <div className="p-8 border border-zinc-800 rounded-2xl bg-zinc-950/60">
-              <div className="text-2xl mb-4">❌</div>
-              <h3 className="text-lg font-semibold mb-3 text-white/90">
-                Không mê tín
-              </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                Dựa trên hệ thống quy luật và dữ liệu. Không có thần linh, không có lời nguyền, không có vận xui.
-              </p>
-            </div>
-            <div className="p-8 border border-yellow-900/40 rounded-2xl bg-yellow-950/10">
-              <div className="text-2xl mb-4">✅</div>
-              <h3 className="text-lg font-semibold mb-3 text-yellow-500/90">
-                Là công cụ hiểu bản thân
-              </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                Bạn là người quyết định. Harmony chỉ giúp bạn nhìn rõ hơn — để chọn đúng hơn.{" "}
-                <a
-                  href="https://tuvi.vutera.net"
-                  className="text-yellow-600/60 underline underline-offset-2 decoration-yellow-800/40 hover:text-yellow-400 transition-colors"
-                >
-                  Bắt đầu tra cứu bản thân tại TuVi.
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SEO Semantic Sections */}
-      <section id="semantic-seo" className="py-24 px-6 bg-zinc-950 border-t border-zinc-900">
-        <div className="max-w-3xl mx-auto space-y-20">
-
-          {/* 1 — Harmony là gì */}
-          <div>
-            <p className="text-xs text-yellow-600/50 uppercase tracking-[0.3em] mb-4">01</p>
-            <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
-              Harmony là gì
-            </h2>
-            <p className="text-gray-400 leading-relaxed text-base md:text-lg font-light">
-              Harmony là nền tảng hiểu bản thân dựa trên triết học phương Đông và trí tuệ nhân tạo.
-              Thay vì phán đoán số phận, Harmony phân tích chu kỳ vận động cá nhân — từ nhịp hằng ngày
-              đến đại vận nhiều thập kỷ — để giúp bạn hiểu mình đang ở giai đoạn nào trong cuộc đời.
-              Harmony không nói &ldquo;bạn phải làm gì.&rdquo; Nó giúp bạn nhìn rõ hơn để tự quyết định tốt
-              hơn. Dù bạn đang ở giai đoạn tăng trưởng, chuyển đổi hay dưỡng sức, Harmony đều có thể
-              giúp bạn hành động đúng thời điểm — và tránh lãng phí năng lượng vào những điều chưa
-              phải lúc. Lưu kết quả phân tích vào{" "}
-              <a
-                href="https://anmenh.vutera.net"
-                className="text-yellow-500/75 underline underline-offset-2 decoration-yellow-700/40 hover:text-yellow-400 transition-colors"
-              >
-                hồ sơ cá nhân tại An Mệnh
-              </a>{" "}
-              để theo dõi hành trình theo thời gian.
-            </p>
-          </div>
-
-          <div className="w-full h-px bg-zinc-800" />
-
-          {/* 2 — AI tử vi là gì */}
-          <div>
-            <p className="text-xs text-yellow-600/50 uppercase tracking-[0.3em] mb-4">02</p>
-            <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
-              AI tử vi là gì
-            </h2>
-            <p className="text-gray-400 leading-relaxed text-base md:text-lg font-light">
-              AI tử vi là ứng dụng trí tuệ nhân tạo vào hệ thống chiêm tinh học phương Đông truyền
-              thống. Thay vì dựa vào diễn giải thủ công, AI phân tích hàng triệu tổ hợp Bát Tự, Ngũ
-              Hành và chu kỳ thời gian để đưa ra nhận định có tính cá nhân hóa cao. Harmony sử dụng AI
-              không phải để thay thế triết học cổ đại, mà để giải mã nó một cách nhất quán, khoa học và
-              không thiên kiến. Kết quả là một hệ thống insight có thể áp dụng vào cuộc sống thực —
-              từ thời điểm ra quyết định đến{" "}
-              <a
-                href="https://tuvi.vutera.net"
-                className="text-yellow-500/75 underline underline-offset-2 decoration-yellow-700/40 hover:text-yellow-400 transition-colors"
-              >
-                khám phá sâu tính cách và năng lượng cá nhân
-              </a>{" "}
-              của từng người.
-            </p>
-          </div>
-
-          <div className="w-full h-px bg-zinc-800" />
-
-          {/* 3 — Bát tự hoạt động thế nào */}
-          <div>
-            <p className="text-xs text-yellow-600/50 uppercase tracking-[0.3em] mb-4">03</p>
-            <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
-              Bát tự hoạt động thế nào
-            </h2>
-            <p className="text-gray-400 leading-relaxed text-base md:text-lg font-light">
-              Bát Tự — còn gọi là Tứ Trụ — là hệ thống phân tích dựa trên tám ký tự đại diện cho năm,
-              tháng, ngày và giờ sinh của một người. Mỗi ký tự mang một trong Ngũ Hành: Kim, Mộc, Thủy,
-              Hỏa, Thổ. Tổ hợp tám yếu tố này tạo nên một bản đồ năng lượng cá nhân độc nhất vô nhị.
-              Khi đối chiếu với chu kỳ thời gian hiện tại — năm, tháng, ngày — Harmony xác định được
-              giai đoạn thuận hay nghịch, thời điểm nên tiến hay nên dưỡng sức. Đây là nền tảng đằng
-              sau mọi insight mà Harmony cung cấp cho bạn. Bạn có thể{" "}
-              <a
-                href="https://tuvi.vutera.net"
-                className="text-yellow-500/75 underline underline-offset-2 decoration-yellow-700/40 hover:text-yellow-400 transition-colors"
-              >
-                tra cứu Bát Tự của mình tại TuVi
-              </a>{" "}
-              để bắt đầu khám phá.
-            </p>
-          </div>
-
-          <div className="w-full h-px bg-zinc-800" />
-
-          {/* 4 — Cá nhân hóa vận mệnh */}
-          <div>
-            <p className="text-xs text-yellow-600/50 uppercase tracking-[0.3em] mb-4">04</p>
-            <h2 className="text-2xl md:text-3xl font-light text-white mb-6">
-              Cá nhân hóa vận mệnh
-            </h2>
-            <p className="text-gray-400 leading-relaxed text-base md:text-lg font-light">
-              Không có hai người nào có cùng một Bát Tự. Và dù cùng ngày sinh, giờ sinh khác nhau cũng
-              tạo ra hành trình hoàn toàn khác. Đó là lý do Harmony không cung cấp nội dung chung chung
-              theo cung hoàng đạo hay năm âm lịch. Mỗi insight trên Harmony được tính toán riêng cho
-              từng cá nhân — dựa trên tổ hợp Bát Tự cụ thể và thời điểm hiện tại. Cá nhân hóa vận mệnh
-              không có nghĩa là số phận đã định sẵn — mà là bạn hiểu đủ rõ về bản thân để đưa ra những
-              lựa chọn phù hợp nhất với chính mình ở từng giai đoạn cuộc đời. Xây dựng{" "}
-              <a
-                href="https://anmenh.vutera.net"
-                className="text-yellow-500/75 underline underline-offset-2 decoration-yellow-700/40 hover:text-yellow-400 transition-colors"
-              >
-                hồ sơ cá nhân hóa của bạn tại An Mệnh
-              </a>{" "}
-              để ghi lại hành trình này.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section id="how-it-works" className="py-32 px-6 bg-zinc-950">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-4xl font-light mb-4">
-              Harmony hoạt động như thế nào
-            </h2>
-            <p className="text-gray-500 text-lg">
-              Ba bước từ dữ liệu cá nhân đến insight thực sự.
-            </p>
-          </div>
-
-          {/* Flow Steps */}
-          <div className="relative">
-            {/* Connector line (desktop) */}
-            <div className="hidden md:block absolute top-[3.25rem] left-[calc(16.667%+2rem)] right-[calc(16.667%+2rem)] h-px bg-gradient-to-r from-transparent via-yellow-600/40 to-transparent" />
-
-            <div className="grid md:grid-cols-3 gap-8 md:gap-6">
-              {/* Step 1 */}
-              <div className="flex flex-col items-center text-center">
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center">
-                    <span className="text-2xl">📅</span>
+      {/* About Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="w-full lg:w-1/2 relative">
+               <div className="aspect-square bg-gradient-to-br from-teal-50 to-white rounded-[4rem] border-2 border-teal-100/50 flex items-center justify-center p-12 relative overflow-hidden group shadow-inner">
+                  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] opacity-30"></div>
+                  <Compass className="w-48 h-48 text-teal-500/20 group-hover:rotate-45 transition-transform duration-1000" />
+                  <div className="absolute inset-x-0 bottom-0 top-0 bg-gradient-to-t from-teal-50/50 via-transparent to-transparent"></div>
+                  
+                  {/* Yin-Yang symbol absolute center with glow */}
+                  <div className="absolute w-32 h-32 rounded-full overflow-hidden flex flex-col border border-teal-200/50 shadow-2xl animate-spin-slow">
+                     <div className="h-1/2 bg-slate-900 w-full flex items-end justify-center">
+                        <div className="w-8 h-8 rounded-full bg-white mb-[-1rem] z-10 border border-slate-900"></div>
+                     </div>
+                     <div className="h-1/2 bg-white w-full flex items-start justify-center">
+                        <div className="w-8 h-8 rounded-full bg-slate-900 mt-[-1rem] z-10 border border-white"></div>
+                     </div>
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-yellow-600/20 border border-yellow-600/60 flex items-center justify-center">
-                    <span className="text-xs font-bold text-yellow-500">1</span>
-                  </div>
-                </div>
-                <div className="mb-3 px-3 py-1 rounded-full bg-zinc-800 border border-zinc-700 text-xs text-gray-400 uppercase tracking-widest">
-                  Đầu vào
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-3">
-                  Ngày sinh & dữ liệu cá nhân
-                </h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  Harmony nhận ngày, giờ, năm sinh của bạn.
-                </p>
-                <p className="text-sm text-gray-500 leading-relaxed mt-1">
-                  Từ đó tính toán Bát Tự và cân bằng Ngũ Hành cá nhân.
-                </p>
-              </div>
-
-              {/* Step 2 */}
-              <div className="flex flex-col items-center text-center">
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center">
-                    <span className="text-2xl">⚡</span>
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-yellow-600/20 border border-yellow-600/60 flex items-center justify-center">
-                    <span className="text-xs font-bold text-yellow-500">2</span>
-                  </div>
-                </div>
-                <div className="mb-3 px-3 py-1 rounded-full bg-zinc-800 border border-zinc-700 text-xs text-gray-400 uppercase tracking-widest">
-                  Phân tích
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-3">
-                  AI phân tích chu kỳ vận động
-                </h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  Bát Tự và Ngũ Hành được đối chiếu với chu kỳ thời gian thực.
-                </p>
-                <p className="text-sm text-gray-500 leading-relaxed mt-1">
-                  AI xác định giai đoạn mạnh—yếu, thuận—nghịch trong vận trình.
-                </p>
-              </div>
-
-              {/* Step 3 */}
-              <div className="flex flex-col items-center text-center">
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 rounded-full bg-yellow-900/30 border border-yellow-700/50 flex items-center justify-center">
-                    <span className="text-2xl">✨</span>
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-yellow-600/20 border border-yellow-600/60 flex items-center justify-center">
-                    <span className="text-xs font-bold text-yellow-500">3</span>
-                  </div>
-                </div>
-                <div className="mb-3 px-3 py-1 rounded-full bg-yellow-950/40 border border-yellow-800/40 text-xs text-yellow-600 uppercase tracking-widest">
-                  Kết quả
-                </div>
-                <h3 className="text-lg font-semibold text-yellow-400/90 mb-3">
-                  Insight cá nhân hóa
-                </h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  Bạn nhận được insight riêng về tình yêu, sự nghiệp và sức khỏe.
-                </p>
-                <p className="text-sm text-gray-500 leading-relaxed mt-1">
-                  Không có hai người nào nhận cùng một thông điệp.
-                </p>
-                <p className="text-sm leading-relaxed mt-1">
-                  <a
-                    href="https://anmenh.vutera.net"
-                    className="text-yellow-600/60 underline underline-offset-2 decoration-yellow-800/40 hover:text-yellow-400 transition-colors"
-                  >
-                    Lưu kết quả vào hồ sơ An Mệnh
-                  </a>{" "}
-                  để xem lại bất cứ lúc nào.
-                </p>
-              </div>
+               </div>
+               {/* Decorative tag */}
+               <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-3xl shadow-xl border border-teal-100 max-w-[200px] animate-bounce-slow">
+                  <p className="text-teal-700 font-serif italic text-lg leading-tight">"Công nghệ khai sáng, phụng sự con người"</p>
+               </div>
             </div>
-          </div>
-
-          {/* Mobile connectors */}
-          <div className="md:hidden flex flex-col items-center gap-0 mt-0">
-            {[0, 1].map((i) => (
-              <div key={i} className="w-px h-8 bg-gradient-to-b from-zinc-700 to-transparent" />
-            ))}
-          </div>
-
-          {/* CTA */}
-          <div className="mt-20 text-center">
-            <a
-              href="https://anmenh.vutera.net"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-medium rounded-full hover:scale-105 transition-transform duration-300"
-            >
-              Bắt đầu khám phá của bạn
-              <span className="text-base">→</span>
-            </a>
+            
+            <div className="w-full lg:w-1/2">
+               <h2 className="text-teal-600 font-bold uppercase tracking-widest text-sm mb-4">Harmony là gì?</h2>
+               <h3 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">Sống Hài Hòa Với <br/> Dòng Chảy Vũ Trụ</h3>
+               <div className="space-y-6 text-lg text-slate-600 leading-relaxed max-w-xl">
+                  <p>
+                    Harmony không phải công cụ bói toán, mà là <strong>“người bạn đồng hành”</strong> giúp bạn tự chủ vận mệnh thông qua sự thấu hiểu sâu sắc năng lượng bản thân.
+                  </p>
+                  <p>
+                    Triết lý của chúng tôi đặt con người làm trọng tâm, ứng dụng công nghệ để làm sáng tỏ những tri thức cổ truyền, giúp bạn cân bằng ngũ hành, đón lành tránh dữ và tìm thấy sự bình an trong tâm hồn.
+                  </p>
+               </div>
+               
+               <div className="mt-12 grid grid-cols-2 gap-8">
+                  <div>
+                    <p className="text-3xl font-bold text-teal-600 mb-1">Cân bằng</p>
+                    <p className="text-sm text-slate-500 font-medium tracking-wide uppercase">Năng lượng cá nhân</p>
+                  </div>
+                  <div>
+                    <p className="text-3xl font-bold text-teal-600 mb-1">AI-Driven</p>
+                    <p className="text-sm text-slate-500 font-medium tracking-wide uppercase">Insight thông thái</p>
+                  </div>
+               </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Ecosystem Section */}
-      <section id="ecosystem" className="py-32 px-6 bg-zinc-950">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-20">
-            <p className="text-xs text-yellow-600/70 uppercase tracking-[0.3em] mb-4">
-              Hệ Sinh Thái
-            </p>
-            <h2 className="text-3xl md:text-4xl font-light mb-6">
-              Ba trong một. Một platform.
-            </h2>
-            <p className="text-gray-400 text-lg max-w-xl mx-auto">
-              Đây là đoạn biến bạn thành{" "}
-              <span className="text-white font-semibold tracking-widest">
-                PLATFORM.
-              </span>
-            </p>
-          </div>
+      <section className="py-24 bg-[#F8FAFC]">
+        <div className="container mx-auto px-6 text-center">
+           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">Hệ Sinh Thái Harmony</h2>
+           <p className="text-slate-500 mb-16 max-w-2xl mx-auto text-lg">Từ vệ tinh thu hút hàng triệu người đến lõi sanctuary siêu cá nhân hóa.</p>
+           
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
+              {/* TuVi Card */}
+              <div className="group bg-white rounded-[3rem] p-10 shadow-xl shadow-slate-200/50 border border-slate-100 hover:-translate-y-2 transition-all duration-500 text-left overflow-hidden relative">
+                 <div className="absolute top-0 right-0 w-32 h-32 bg-teal-50 rounded-bl-[10rem] -z-0 group-hover:scale-110 transition-transform"></div>
+                 <div className="relative z-10">
+                    <div className="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mb-8">
+                       <LayoutGrid className="w-8 h-8 text-teal-600" />
+                    </div>
+                    <div className="inline-block px-3 py-1 bg-teal-50 text-teal-600 text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Mở cửa miễn phí</div>
+                    <h4 className="text-3xl font-bold text-slate-900 mb-4">TuVi App</h4>
+                    <p className="text-slate-600 text-lg mb-8 leading-relaxed">
+                      Cổng thông tin vệ tinh, cho phép khám phá tử vi nhẹ nhàng, lập lá số tức thời cho hàng triệu người dùng mới.
+                    </p>
+                    <Link href="https://tuvi.vutera.net" className="flex items-center text-teal-600 font-bold group/link">
+                       Bắt đầu trải nghiệm ngay <ChevronRight className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" />
+                    </Link>
+                 </div>
+              </div>
 
-          {/* Desktop Orbit Diagram */}
-          <div
-            className="hidden md:block relative mx-auto"
-            style={{ maxWidth: "540px", height: "390px" }}
-          >
-            <svg
-              className="absolute inset-0 w-full h-full"
-              viewBox="0 0 540 390"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {/* Outer glow ring around Harmony */}
-              <circle
-                cx="270"
-                cy="80"
-                r="56"
-                stroke="rgba(161,120,37,0.12)"
-                strokeWidth="1"
-              />
-              {/* Connection: Harmony → TuVi */}
-              <line
-                x1="230"
-                y1="110"
-                x2="110"
-                y2="295"
-                stroke="rgba(161,120,37,0.4)"
-                strokeWidth="1.5"
-                strokeDasharray="6 5"
-              />
-              {/* Connection: Harmony → AnMenh */}
-              <line
-                x1="310"
-                y1="110"
-                x2="430"
-                y2="295"
-                stroke="rgba(161,120,37,0.4)"
-                strokeWidth="1.5"
-                strokeDasharray="6 5"
-              />
-              {/* Connection: TuVi → AnMenh */}
-              <line
-                x1="155"
-                y1="318"
-                x2="385"
-                y2="318"
-                stroke="rgba(113,113,122,0.25)"
-                strokeWidth="1"
-                strokeDasharray="4 5"
-              />
-              {/* Arrow dots at endpoints */}
-              <circle cx="110" cy="295" r="2.5" fill="rgba(161,120,37,0.5)" />
-              <circle cx="430" cy="295" r="2.5" fill="rgba(161,120,37,0.5)" />
-            </svg>
-
-            {/* Harmony — Top Center (Hub) */}
-            <div
-              className="absolute flex flex-col items-center"
-              style={{ top: "12px", left: "50%", transform: "translateX(-50%)" }}
-            >
-              <div className="w-[88px] h-[88px] rounded-full bg-yellow-950/50 border border-yellow-700/60 flex items-center justify-center mb-3 shadow-[0_0_30px_rgba(161,120,37,0.15)]">
-                <span className="text-3xl">☯</span>
+              {/* AnMenh Card */}
+              <div className="group bg-slate-900 rounded-[3rem] p-10 shadow-2xl shadow-indigo-900/10 border border-slate-800 hover:-translate-y-2 transition-all duration-500 text-left overflow-hidden relative">
+                 <div className="absolute top-0 right-0 w-32 h-32 bg-slate-800 rounded-bl-[10rem] -z-0"></div>
+                 <div className="relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-teal-400 to-indigo-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-indigo-500/20">
+                       <Shield className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="inline-block px-3 py-1 bg-teal-900/50 text-teal-300 text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Premium Sanctuary</div>
+                    <h4 className="text-3xl font-bold text-white mb-4">AnMenh App</h4>
+                    <p className="text-slate-400 text-lg mb-8 leading-relaxed">
+                      Lõi của cả hệ sinh thái. Không gian lưu trữ cá nhân hóa sâu sắc, theo dõi vận hạn hằng ngày và quản lý lá số nâng cao.
+                    </p>
+                    <Link href="https://anmenh.vutera.net" className="flex items-center text-teal-400 font-bold group/link">
+                       Khám phá Sanctuary chuyên sâu <ChevronRight className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" />
+                    </Link>
+                 </div>
               </div>
-              <div className="text-sm font-bold text-yellow-400/90 tracking-widest uppercase">
-                Harmony
-              </div>
-              <div className="text-xs text-yellow-700/70 mt-1 text-center">
-                Triết lý &amp; hệ dẫn đường
-              </div>
-              <div className="text-[10px] text-yellow-900 mt-0.5">
-                Hệ thống kết nối tất cả
-              </div>
-            </div>
-
-            {/* TuVi — Bottom Left */}
-            <div
-              className="absolute flex flex-col items-center"
-              style={{ bottom: "20px", left: "20px", width: "160px" }}
-            >
-              <div className="w-[72px] h-[72px] rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center mb-3">
-                <span className="text-2xl">📖</span>
-              </div>
-              <div className="text-sm font-semibold text-white/80 tracking-wide">
-                Tử Vi
-              </div>
-              <div className="text-xs text-gray-500 mt-1 text-center">
-                Khám phá &amp; học hỏi
-              </div>
-              <div className="text-[10px] text-gray-600 mt-0.5">Nơi bắt đầu</div>
-            </div>
-
-            {/* AnMenh — Bottom Right */}
-            <div
-              className="absolute flex flex-col items-center"
-              style={{ bottom: "20px", right: "20px", width: "160px" }}
-            >
-              <div className="w-[72px] h-[72px] rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center mb-3">
-                <span className="text-2xl">🗂️</span>
-              </div>
-              <div className="text-sm font-semibold text-white/80 tracking-wide">
-                An Mệnh
-              </div>
-              <div className="text-xs text-gray-500 mt-1 text-center">
-                Hồ sơ cá nhân
-              </div>
-              <div className="text-[10px] text-gray-600 mt-0.5">
-                Nơi thuộc về bạn
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile — Vertical Stack */}
-          <div className="md:hidden flex flex-col items-center gap-0">
-            {/* Harmony */}
-            <div className="flex flex-col items-center p-6 border border-yellow-900/40 rounded-2xl bg-yellow-950/10 w-full max-w-xs text-center">
-              <div className="w-16 h-16 rounded-full bg-yellow-950/50 border border-yellow-700/60 flex items-center justify-center mb-3">
-                <span className="text-2xl">☯</span>
-              </div>
-              <div className="text-sm font-bold text-yellow-400/90 tracking-widest uppercase mb-1">
-                Harmony
-              </div>
-              <div className="text-xs text-gray-500">Triết lý &amp; hệ dẫn đường</div>
-              <div className="text-[10px] text-yellow-800 mt-1">
-                Hệ thống kết nối tất cả
-              </div>
-            </div>
-            <div className="w-px h-8 bg-gradient-to-b from-yellow-800/40 to-zinc-700/30" />
-            {/* TuVi */}
-            <div className="flex flex-col items-center p-6 border border-zinc-800 rounded-2xl bg-zinc-900/30 w-full max-w-xs text-center">
-              <div className="w-16 h-16 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center mb-3">
-                <span className="text-2xl">📖</span>
-              </div>
-              <div className="text-sm font-semibold text-white/80 mb-1">Tử Vi</div>
-              <div className="text-xs text-gray-500">Khám phá &amp; học hỏi</div>
-              <div className="text-[10px] text-gray-600 mt-1">Nơi bắt đầu</div>
-            </div>
-            <div className="w-px h-8 bg-gradient-to-b from-zinc-700/30 to-zinc-700/10" />
-            {/* AnMenh */}
-            <div className="flex flex-col items-center p-6 border border-zinc-800 rounded-2xl bg-zinc-900/30 w-full max-w-xs text-center">
-              <div className="w-16 h-16 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center mb-3">
-                <span className="text-2xl">🗂️</span>
-              </div>
-              <div className="text-sm font-semibold text-white/80 mb-1">An Mệnh</div>
-              <div className="text-xs text-gray-500">Hồ sơ cá nhân</div>
-              <div className="text-[10px] text-gray-600 mt-1">Nơi thuộc về bạn</div>
-            </div>
-          </div>
-
-          {/* 3-column role descriptions */}
-          <div className="grid md:grid-cols-3 gap-0 mt-20 border border-zinc-800 rounded-2xl overflow-hidden">
-            <div className="p-8 text-center bg-zinc-900/20">
-              <div className="text-[10px] text-yellow-700 uppercase tracking-[0.25em] mb-3">
-                Nơi bắt đầu
-              </div>
-              <h3 className="text-base font-semibold text-white mb-3">Tử Vi</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                <a
-                  href="https://tuvi.vutera.net"
-                  className="text-yellow-500/70 underline underline-offset-2 decoration-yellow-800/40 hover:text-yellow-400 transition-colors"
-                >
-                  Khám phá bản đồ vận mệnh
-                </a>
-                . Đọc thông điệp hằng ngày. Học về bản
-                thân qua góc nhìn cổ học.
-              </p>
-            </div>
-            <div className="p-8 text-center border-x border-zinc-800 bg-yellow-950/10">
-              <div className="text-[10px] text-yellow-600/80 uppercase tracking-[0.25em] mb-3">
-                Hệ thống kết nối
-              </div>
-              <h3 className="text-base font-semibold text-yellow-400/90 mb-3">
-                Harmony
-              </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                Nền tảng triết học dẫn đường. Kết hợp dữ liệu từ Tử Vi và hồ
-                sơ từ An Mệnh thành insight sống.
-              </p>
-            </div>
-            <div className="p-8 text-center bg-zinc-900/20">
-              <div className="text-[10px] text-yellow-700 uppercase tracking-[0.25em] mb-3">
-                Nơi thuộc về bạn
-              </div>
-              <h3 className="text-base font-semibold text-white mb-3">An Mệnh</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                Hồ sơ cá nhân sâu.{" "}
-                <a
-                  href="https://anmenh.vutera.net"
-                  className="text-yellow-500/70 underline underline-offset-2 decoration-yellow-800/40 hover:text-yellow-400 transition-colors"
-                >
-                  Lưu trữ bản ngã số của bạn
-                </a>
-                . Nơi mọi dữ
-                liệu hội tụ về một chủ nhân.
-              </p>
-            </div>
-          </div>
+           </div>
         </div>
       </section>
 
-      {/* Why Harmony — Triết Lý Section */}
-      <section id="why-harmony" className="py-32 px-6 bg-black">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-20">
-            <p className="text-xs text-yellow-600/70 uppercase tracking-[0.3em] mb-4">
-              Triết Lý Harmony
-            </p>
-            <h2 className="text-3xl md:text-4xl font-light">
-              Vì sao là Harmony?
-            </h2>
-          </div>
-
-          {/* Three-panel convergence */}
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* East */}
-            <div className="p-8 border border-zinc-800 rounded-2xl bg-zinc-950/60 text-center flex flex-col items-center">
-              <div className="w-14 h-14 rounded-full bg-amber-950/40 border border-amber-800/40 flex items-center justify-center mb-5">
-                <span className="text-2xl">♻</span>
-              </div>
-              <div className="text-[10px] text-amber-600/60 uppercase tracking-[0.25em] mb-3">
-                Phương Đông
-              </div>
-              <p className="text-white/80 text-lg font-light mb-4">
-                nhìn đời là{" "}
-                <span className="text-amber-400/80 font-semibold">chu kỳ</span>
-              </p>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Vạn vật sinh diệt theo quy luật. Thời gian không tuyến tính —
-                mà xoay vòng có nhịp.
-              </p>
+      {/* Benefits Section */}
+      <section className="py-24 bg-white relative">
+         <div className="container mx-auto px-6">
+            <div className="text-center mb-20">
+               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Lợi Ích Của Harmony</h2>
             </div>
-
-            {/* Harmony — Bridge (highlighted) */}
-            <div className="p-8 border border-yellow-800/50 rounded-2xl bg-yellow-950/20 text-center flex flex-col items-center relative">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-yellow-950 border border-yellow-800/60 text-[10px] text-yellow-500/80 uppercase tracking-widest">
-                Giao điểm
-              </div>
-              <div className="w-14 h-14 rounded-full bg-yellow-950/60 border border-yellow-700/60 flex items-center justify-center mb-5 mt-2 shadow-[0_0_20px_rgba(161,120,37,0.15)]">
-                <span className="text-2xl">☯</span>
-              </div>
-              <div className="text-[10px] text-yellow-500/70 uppercase tracking-[0.25em] mb-3">
-                Harmony
-              </div>
-              <p className="text-yellow-400/90 text-lg font-semibold mb-4">
-                kết nối hai góc nhìn
-              </p>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                Không loại bỏ cái nào. Harmony là nơi chu kỳ gặp dữ liệu —
-                và tạo ra hiểu biết sâu hơn cả hai.
-              </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+               {[
+                  { icon: <Compass className="text-teal-500" />, title: "Hiểu rõ vận mệnh", desc: "Giải mã chính xác xu hướng cuộc sống" },
+                  { icon: <Calendar className="text-amber-500" />, title: "Ngày tốt - Giờ đẹp", desc: "Chọn thời điểm hoàn hảo cho đại sự" },
+                  { icon: <Moon className="text-purple-500" />, title: "Phong thủy cá nhân", desc: "Ứng dụng ngũ hành vào không gian sống" },
+                  { icon: <Layers className="text-indigo-500" />, title: "Cân bằng Ngũ Hành", desc: "Điều tiết năng lượng nội tại" },
+                  { icon: <Users className="text-emerald-500" />, title: "Cộng đồng tinh thức", desc: "Kết nối những tâm hồn đồng điệu" }
+               ].map((item, i) => (
+                  <div key={i} className="flex flex-col items-center text-center p-8 rounded-[2rem] bg-slate-50 hover:bg-white hover:shadow-xl hover:shadow-teal-100/50 transition-all group">
+                     <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        {item.icon}
+                     </div>
+                     <h4 className="font-bold text-slate-900 mb-3">{item.title}</h4>
+                     <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+                  </div>
+               ))}
             </div>
-
-            {/* AI */}
-            <div className="p-8 border border-zinc-800 rounded-2xl bg-zinc-950/60 text-center flex flex-col items-center">
-              <div className="w-14 h-14 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center mb-5">
-                <span className="text-2xl">⬡</span>
-              </div>
-              <div className="text-[10px] text-sky-600/50 uppercase tracking-[0.25em] mb-3">
-                AI
-              </div>
-              <p className="text-white/80 text-lg font-light mb-4">
-                nhìn đời là{" "}
-                <span className="text-sky-400/70 font-semibold">dữ liệu</span>
-              </p>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Mọi sự kiện đều là pattern. Máy học từ hàng triệu điểm dữ liệu
-                để tìm quy luật ẩn.
-              </p>
-            </div>
-          </div>
-
-          {/* Closing quote */}
-          <div className="mt-16 text-center">
-            <p className="text-gray-500 text-base md:text-lg italic font-light max-w-2xl mx-auto leading-relaxed">
-              &ldquo;Phương Đông có ngàn năm quan sát.
-              <br className="hidden md:block" /> AI có triệu điểm dữ liệu.
-              <br />
-              <span className="text-yellow-600/70 not-italic">
-                Harmony là nơi cả hai nói chuyện với nhau.
-              </span>
-              &rdquo;
-            </p>
-            <p className="mt-8 text-sm text-gray-600 not-italic">
-              Bắt đầu bằng{" "}
-              <a
-                href="https://tuvi.vutera.net"
-                className="text-yellow-600/60 underline underline-offset-2 decoration-yellow-800/40 hover:text-yellow-400 transition-colors"
-              >
-                khám phá tử vi cá nhân tại TuVi
-              </a>
-              , hoặc{" "}
-              <a
-                href="https://anmenh.vutera.net"
-                className="text-yellow-600/60 underline underline-offset-2 decoration-yellow-800/40 hover:text-yellow-400 transition-colors"
-              >
-                tạo hồ sơ An Mệnh
-              </a>{" "}
-              để lưu toàn bộ hành trình.
-            </p>
-          </div>
-        </div>
+         </div>
       </section>
 
-      {/* Future Vision Section */}
-      <section id="future-vision" className="py-40 px-6 bg-zinc-950 relative overflow-hidden">
-        {/* Background glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[50vh] bg-indigo-950/20 rounded-full blur-[120px] pointer-events-none" />
-
-        <div className="max-w-4xl mx-auto relative">
-          <div className="text-center mb-20">
-            <p className="text-xs text-indigo-400/50 uppercase tracking-[0.4em] mb-5">
-              Roadmap
-            </p>
-            <h2 className="text-4xl md:text-5xl font-light mb-6 text-white">
-              Harmony đang tiến tới
-            </h2>
-            <p className="text-gray-500 text-lg max-w-xl mx-auto font-light">
-              Đây chỉ là phiên bản đầu tiên. Những gì đang được xây dựng tiếp theo sẽ thay đổi cách bạn nhìn vào cuộc đời mình.
-            </p>
-          </div>
-
-          {/* 2x2 Cards Grid */}
-          <div className="grid md:grid-cols-2 gap-5">
-            {/* Card 1 — AI hướng dẫn cá nhân */}
-            <div className="group relative p-8 rounded-2xl border border-zinc-800 bg-zinc-900/40 hover:border-indigo-800/60 hover:bg-indigo-950/10 transition-all duration-500">
-              <div className="absolute top-4 right-4 px-2 py-0.5 rounded-full bg-zinc-800 border border-zinc-700 text-[10px] text-zinc-500 uppercase tracking-widest">
-                Sắp ra mắt
-              </div>
-              <div className="w-12 h-12 rounded-xl bg-indigo-950/60 border border-indigo-800/40 flex items-center justify-center mb-6 group-hover:border-indigo-600/60 transition-colors duration-500">
-                <span className="text-xl">🤖</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white/90 mb-3">
-                AI hướng dẫn cá nhân
-              </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                Một AI hiểu sâu chu kỳ vận trình của bạn. Đưa ra lời khuyên đúng lúc — không phải lời khuyên chung chung.
-              </p>
+      {/* Social Proof */}
+      <section className="py-24 bg-teal-600 overflow-hidden relative">
+         <div className="absolute top-0 right-0 p-32 bg-teal-700/50 rounded-full scale-150 blur-3xl"></div>
+         <div className="container mx-auto px-6 relative z-10">
+            <div className="flex flex-col lg:flex-row items-center gap-16">
+               <div className="w-full lg:w-1/2 text-white">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-8">Hành trình ngàn năm, công nghệ dẫn lối</h2>
+                  <div className="grid grid-cols-2 gap-12">
+                     <div>
+                        <p className="text-5xl font-bold mb-2">100K+</p>
+                        <p className="text-teal-100 font-medium">Lá số đã được lập</p>
+                     </div>
+                     <div>
+                        <p className="text-5xl font-bold mb-2">4.9/5</p>
+                        <div className="flex text-amber-300 gap-1 mb-2">
+                           <Star className="fill-current w-4 h-4" />
+                           <Star className="fill-current w-4 h-4" />
+                           <Star className="fill-current w-4 h-4" />
+                           <Star className="fill-current w-4 h-4" />
+                           <Star className="fill-current w-4 h-4" />
+                        </div>
+                        <p className="text-teal-100 font-medium">Đánh giá hài lòng</p>
+                     </div>
+                  </div>
+               </div>
+               
+               <div className="w-full lg:w-1/2">
+                  <div className="bg-white/10 backdrop-blur-md p-10 rounded-[3rem] border border-white/20 relative">
+                     <Quote className="absolute top-10 left-10 w-12 h-12 text-teal-400 opacity-20" />
+                     <p className="text-xl md:text-2xl text-teal-50 font-serif italic mb-8 relative z-10 leading-relaxed">
+                       "Tôi luôn tìm kiếm sự kết nối giữa công nghệ và đời sống tâm linh phương Đông. Harmony đã giúp tôi nhìn nhận các chu kỳ cá nhân một cách khách quan và chính xác đến ngạc nhiên."
+                     </p>
+                     <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 bg-teal-400 rounded-full flex items-center justify-center font-bold text-teal-900">MH</div>
+                        <div>
+                           <p className="text-white font-bold">Minh Huy</p>
+                           <p className="text-teal-200 text-sm">Doanh nhân / Người dùng AnMenh</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-
-            {/* Card 2 — Timeline cuộc đời */}
-            <div className="group relative p-8 rounded-2xl border border-zinc-800 bg-zinc-900/40 hover:border-indigo-800/60 hover:bg-indigo-950/10 transition-all duration-500">
-              <div className="absolute top-4 right-4 px-2 py-0.5 rounded-full bg-zinc-800 border border-zinc-700 text-[10px] text-zinc-500 uppercase tracking-widest">
-                Sắp ra mắt
-              </div>
-              <div className="w-12 h-12 rounded-xl bg-indigo-950/60 border border-indigo-800/40 flex items-center justify-center mb-6 group-hover:border-indigo-600/60 transition-colors duration-500">
-                <span className="text-xl">📈</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white/90 mb-3">
-                Timeline cuộc đời
-              </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                Nhìn thấy toàn bộ hành trình — quá khứ, hiện tại, và những cột mốc tiềm năng phía trước theo chu kỳ vận trình.
-              </p>
-            </div>
-
-            {/* Card 3 — Decision companion */}
-            <div className="group relative p-8 rounded-2xl border border-zinc-800 bg-zinc-900/40 hover:border-indigo-800/60 hover:bg-indigo-950/10 transition-all duration-500">
-              <div className="absolute top-4 right-4 px-2 py-0.5 rounded-full bg-zinc-800 border border-zinc-700 text-[10px] text-zinc-500 uppercase tracking-widest">
-                Sắp ra mắt
-              </div>
-              <div className="w-12 h-12 rounded-xl bg-indigo-950/60 border border-indigo-800/40 flex items-center justify-center mb-6 group-hover:border-indigo-600/60 transition-colors duration-500">
-                <span className="text-xl">⚖️</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white/90 mb-3">
-                Decision companion
-              </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                Mỗi khi đứng trước quyết định lớn — sự nghiệp, tình yêu, tài chính — Harmony phân tích thời điểm và cho bạn góc nhìn riêng.
-              </p>
-            </div>
-
-            {/* Card 4 — Insight mỗi ngày */}
-            <div className="group relative p-8 rounded-2xl border border-yellow-900/40 bg-yellow-950/10 hover:border-yellow-700/50 hover:bg-yellow-950/20 transition-all duration-500">
-              <div className="absolute top-4 right-4 px-2 py-0.5 rounded-full bg-yellow-950/60 border border-yellow-800/40 text-[10px] text-yellow-600/70 uppercase tracking-widest">
-                Đang có
-              </div>
-              <div className="w-12 h-12 rounded-xl bg-yellow-950/60 border border-yellow-700/50 flex items-center justify-center mb-6 group-hover:border-yellow-500/60 transition-colors duration-500">
-                <span className="text-xl">✨</span>
-              </div>
-              <h3 className="text-xl font-semibold text-yellow-400/90 mb-3">
-                Insight mỗi ngày
-              </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                Thông điệp cá nhân hóa mỗi sáng, dựa trên chu kỳ vận trình và Ngũ Hành của bạn. Không ngày nào giống ngày nào.{" "}
-                <a
-                  href="https://anmenh.vutera.net"
-                  className="text-yellow-600/60 underline underline-offset-2 decoration-yellow-800/40 hover:text-yellow-400 transition-colors"
-                >
-                  Lưu lại trong hồ sơ An Mệnh
-                </a>{" "}
-                để nhìn lại hành trình.
-              </p>
-            </div>
-          </div>
-
-          {/* Closing statement */}
-          <div className="mt-20 text-center">
-            <p className="text-gray-600 text-sm uppercase tracking-[0.3em] mb-6">
-              Đây mới là sự khởi đầu
-            </p>
-            <a
-              href="https://anmenh.vutera.net"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-medium rounded-full hover:scale-105 transition-transform duration-300"
-            >
-              Tham gia ngay hôm nay
-              <span className="text-base">→</span>
-            </a>
-          </div>
-        </div>
+         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="py-40 px-6 bg-black relative overflow-hidden">
-        {/* Background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[50vh] bg-yellow-900/8 rounded-full blur-[120px] pointer-events-none" />
-        {/* Orbit rings */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <svg
-            className="w-[min(90vw,600px)] opacity-[0.07]"
-            viewBox="-240 -180 480 360"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <ellipse rx="80" ry="32" stroke="#a17825" strokeWidth="1" strokeDasharray="3 6" />
-            <ellipse rx="140" ry="56" stroke="#a17825" strokeWidth="0.8" strokeDasharray="4 8" />
-            <ellipse rx="200" ry="80" stroke="#a17825" strokeWidth="0.7" strokeDasharray="4 10" />
-            <circle cx="0" cy="0" r="5" fill="#f5d78e" />
-          </svg>
-        </div>
+      {/* Path Section */}
+      <section className="py-32 bg-white">
+         <div className="container mx-auto px-6 max-w-4xl text-center">
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-20">Hành Trình Cùng Harmony</h2>
+            
+            <div className="relative">
+               <div className="hidden md:block absolute top-[2.75rem] left-[15%] right-[15%] h-1 bg-dashed bg-gradient-to-r from-teal-100 via-teal-400 to-indigo-200"></div>
+               
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 relative z-10">
+                  <div className="flex flex-col items-center">
+                     <div className="w-24 h-24 bg-teal-50 rounded-full flex items-center justify-center border-4 border-white shadow-xl shadow-teal-100 mb-8">
+                        <span className="text-3xl font-bold text-teal-600">01</span>
+                     </div>
+                     <h4 className="text-2xl font-bold mb-4">Bắt đầu nhẹ nhàng</h4>
+                     <p className="text-slate-500 mb-8">Trải nghiệm những phân tích cơ bản miễn phí tại TuVi App để nhen nhóm sự thấu hiểu.</p>
+                     <Link href="https://tuvi.vutera.net" className="px-6 py-2 bg-teal-50 text-teal-600 rounded-full font-bold hover:bg-teal-100 transition-colors">Vào TuVi App</Link>
+                  </div>
+                  
+                  <div className="flex flex-col items-center">
+                     <div className="w-24 h-24 bg-indigo-50 rounded-full flex items-center justify-center border-4 border-white shadow-xl shadow-indigo-100 mb-8">
+                        <span className="text-3xl font-bold text-indigo-600">02</span>
+                     </div>
+                     <h4 className="text-2xl font-bold mb-4">Nâng tầm Sanctuary</h4>
+                     <p className="text-slate-500 mb-8">Chuyển sang AnMenh Sanctuary để quản lý sâu sát, theo dõi vận trình hằng ngày cá nhân hóa.</p>
+                     <Link href="https://anmenh.vutera.net" className="px-6 py-2 bg-indigo-50 text-indigo-600 rounded-full font-bold hover:bg-indigo-100 transition-colors">Vào AnMenh Sanctuary</Link>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
 
-        <div className="relative max-w-2xl mx-auto text-center">
-          <p className="text-xs text-yellow-600/50 uppercase tracking-[0.4em] mb-8">
-            Hành Trình Của Bạn
-          </p>
-
-          <h2 className="text-4xl md:text-6xl font-light leading-tight mb-6 text-white">
-            Bắt đầu hiểu bản thân
-            <br />
-            <span className="font-serif italic text-yellow-500/90">
-              từ hôm nay.
-            </span>
-          </h2>
-
-          <p className="text-gray-500 text-base md:text-lg font-light mb-14 max-w-md mx-auto leading-relaxed">
-            Chỉ cần ngày sinh. Harmony sẽ làm phần còn lại.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-            <a
-              href="https://anmenh.vutera.net"
-              className="px-10 py-5 bg-white text-black font-semibold text-base rounded-full hover:scale-105 transition-transform duration-300 shadow-[0_4px_30px_rgba(255,255,255,0.12)]"
-            >
-              Tạo Hồ Sơ Harmony
-            </a>
-            <a
-              href="https://tuvi.vutera.net"
-              className="text-sm text-gray-500 hover:text-white transition-colors flex items-center gap-2"
-            >
-              Xem thử trước
-              <span className="text-yellow-600/70">→ TuVi</span>
-            </a>
-          </div>
-        </div>
+      {/* Final CTA */}
+      <section className="py-32 bg-[radial-gradient(circle_at_center,_#E6FFFA,_#FDFCF9)]">
+         <div className="container mx-auto px-6 text-center max-w-4xl">
+            <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-12 shadow-2xl border border-teal-50 animate-spin-slow">
+               <span className="text-4xl">☯</span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8">Bắt đầu hành trình <br/> bình an ngay hôm nay</h2>
+            <p className="text-lg md:text-xl text-slate-600 mb-12">Tham gia cùng hàng trăm nghìn người đang kiến tạo cuộc sống cân bằng và ý nghĩa hơn cùng Harmony.</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+               <Link href="https://tuvi.vutera.net" className="w-full sm:w-auto px-10 py-5 bg-teal-600 text-white font-bold rounded-2xl hover:bg-teal-700 transition-all shadow-xl shadow-teal-500/30">Lập lá số miễn phí</Link>
+               <Link href="https://accounts.vutera.net/register" className="w-full sm:w-auto px-10 py-5 bg-white text-slate-900 border border-slate-200 font-bold rounded-2xl hover:bg-slate-50 transition-all">Đăng ký tài khoản</Link>
+            </div>
+         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 text-center text-zinc-600 text-sm border-t border-zinc-900">
-        <p>© 2026 VUTERA Harmony. All rights reserved.</p>
+      <footer className="py-12 bg-white border-t border-teal-50">
+         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="flex items-center gap-2">
+               <div className="w-8 h-8 rounded-full bg-teal-600 flex items-center justify-center">
+                  <span className="text-white text-sm">☯</span>
+               </div>
+               <span className="text-lg font-bold">Harmony</span>
+            </div>
+            
+            <div className="flex gap-8 text-sm font-medium text-slate-500">
+               <Link href="/" className="hover:text-teal-600 transition-colors">Vutera Home</Link>
+               <Link href="https://tuvi.vutera.net" className="hover:text-teal-600 transition-colors">TuVi</Link>
+               <Link href="https://anmenh.vutera.net" className="hover:text-teal-600 transition-colors">AnMenh</Link>
+               <Link href="/privacy" className="hover:text-teal-600 transition-colors">Chính sách</Link>
+            </div>
+            
+            <p className="text-sm text-slate-400">&copy; {new Date().getFullYear()} Harmony Ecosystem by Vutera.</p>
+         </div>
       </footer>
+
+      <style jsx global>{`
+        @keyframes fade-in {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        @keyframes bounce-slow {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-15px); }
+        }
+        .animate-fade-in {
+          animation: fade-in 1s ease-out forwards;
+        }
+        .animate-spin-slow {
+          animation: spin-slow 20s linear infinite;
+        }
+        .animate-bounce-slow {
+          animation: bounce-slow 4s ease-in-out infinite;
+        }
+      `}</style>
     </div>
   );
 }
